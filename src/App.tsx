@@ -23,6 +23,13 @@ function App() {
       >
         Targrt Button
       </FRCButton>
+      <FRCButton
+        onClick={() => console.log('default')}
+        loading
+        style={{marginRight: 16}}
+      >
+        Targrt Button
+      </FRCButton>
       <Divider style={{backgroundColor: '#1e1e1e', height: 1, marginTop: 16}} />
 
       <h3>button - primary</h3>
@@ -57,6 +64,59 @@ function App() {
         style={{marginRight: 16}}
       >
         Primary Button
+      </FRCButton>
+      <FRCButton
+        type="primary"
+        onClick={() => console.log('primary')}
+        loading
+        style={{marginRight: 16}}
+      >
+        Primary Button
+      </FRCButton>
+      <FRCButton
+        work
+        type="primary"
+        onClick={() => console.log('primary')}
+        loading
+        style={{marginRight: 16}}
+      >
+        Primary Button
+      </FRCButton>
+      <FRCButton
+        work
+        workType="high-light"
+        type="primary"
+        onClick={() => console.log('primary')}
+        loading
+        style={{marginRight: 16}}
+      >
+        Primary Button
+      </FRCButton>
+      <Divider style={{backgroundColor: '#1e1e1e', height: 1, marginTop: 16}} />
+
+      <h3>button - lead</h3>
+      <FRCButton
+        type="lead"
+        onClick={() => console.log('lead')}
+        style={{marginRight: 16}}
+      >
+        Lead Button
+      </FRCButton>
+      <FRCButton
+        type="lead"
+        onClick={() => console.log('lead')}
+        disabled
+        style={{marginRight: 16}}
+      >
+        Lead Button
+      </FRCButton>
+      <FRCButton
+        type="lead"
+        onClick={() => console.log('lead')}
+        loading
+        style={{marginRight: 16}}
+      >
+        Lead Button
       </FRCButton>
       <Divider style={{backgroundColor: '#1e1e1e', height: 1, marginTop: 16}} />
 
