@@ -36,9 +36,31 @@
   }
 }
 
-// .btn-primary {
-//   @include button-style($primary, $primary, $white);
-// }
+.btn-primary {
+  @include button-style(
+    $btn-background-primary,
+    $words-normal,
+    $btn-background-hover,
+    $words-normal,
+    $btn-background-active
+  );
+  &.disabled,
+  &[disabled] {
+    cursor: not-allowed;
+    background: #253330;
+    color: $words-disable;
+  }
+
+  &.btn-work-default {
+    color: $words-high-light;
+    background: $btn-background-primary;
+  }
+
+  &.btn-work-high-light {
+    color: $words-black;
+    background: linear-gradient($high-light-area-top, $high-light-area-bottom);
+  }
+}
 
 // .btn-danger {
 //   @include button-style($danger, $danger, $white);

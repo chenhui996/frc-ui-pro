@@ -2,7 +2,7 @@ import React, {FC} from 'react'
 import classNames from 'classnames'
 import Button, {ButtonProps} from 'antd/es/button'
 
-export type ButtonWorkType = 'default' | 'hightLight'
+export type ButtonWorkType = 'default' | 'high-light'
 
 interface BaseButtonProps {
   /** 启动激活 status */

@@ -1,19 +1,64 @@
 import React from 'react'
 import {Button, Divider} from 'antd'
-import Button2 from './components/button/index'
+import FRCButton from './components/button/index'
 
 function App() {
   return (
     <div className="App">
       <h3>antd button</h3>
       <Button>try again</Button>
-      <Divider />
+      <Divider style={{backgroundColor: '#1e1e1e', height: 1, marginTop: 16}} />
 
-      <h3>custom button</h3>
-      <Button2 type="primary" onClick={() => console.log('click')}>
+      <h3>button - default</h3>
+      <FRCButton
+        onClick={() => console.log('default')}
+        style={{marginRight: 16}}
+      >
         Targrt Button
-      </Button2>
-      <Divider />
+      </FRCButton>
+      <FRCButton
+        onClick={() => console.log('default')}
+        disabled
+        style={{marginRight: 16}}
+      >
+        Targrt Button
+      </FRCButton>
+      <Divider style={{backgroundColor: '#1e1e1e', height: 1, marginTop: 16}} />
+
+      <h3>button - primary</h3>
+      <FRCButton
+        type="primary"
+        onClick={() => console.log('primary')}
+        style={{marginRight: 16}}
+      >
+        Primary Button
+      </FRCButton>
+      <FRCButton
+        type="primary"
+        onClick={() => console.log('primary')}
+        disabled
+        style={{marginRight: 16}}
+      >
+        Primary Button
+      </FRCButton>
+      <FRCButton
+        work
+        type="primary"
+        onClick={() => console.log('primary')}
+        style={{marginRight: 16}}
+      >
+        Primary Button
+      </FRCButton>
+      <FRCButton
+        work
+        workType="high-light"
+        type="primary"
+        onClick={() => console.log('primary')}
+        style={{marginRight: 16}}
+      >
+        Primary Button
+      </FRCButton>
+      <Divider style={{backgroundColor: '#1e1e1e', height: 1, marginTop: 16}} />
 
       <header className="App-header">
         <p>
