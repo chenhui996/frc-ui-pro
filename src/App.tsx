@@ -1,12 +1,21 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import {Button, Divider} from 'antd'
+import Button2 from './components/button/index'
 
 function App() {
   return (
     <div className="App">
+      <h3>antd button</h3>
+      <Button>try again</Button>
+      <Divider />
+
+      <h3>custom button</h3>
+      <Button2 type="primary" onClick={() => console.log('click')}>
+        Targrt Button
+      </Button2>
+      <Divider />
+
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
@@ -20,7 +29,7 @@ function App() {
         </a>
       </header>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
