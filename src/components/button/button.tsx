@@ -4,7 +4,7 @@ import Button, {ButtonProps} from 'antd/es/button'
 
 import {CaretRightOutlined} from '@ant-design/icons'
 
-export type ButtonType = 'primary' | 'link' | 'lead'
+export type ButtonType = 'primary' | 'link' | 'lead' | 'gray'
 export type ButtonWorkType = 'default' | 'high-light'
 
 interface BaseButtonProps {
@@ -38,6 +38,7 @@ export const FRCButton: FC<FRCButtonProps> = (props) => {
     [`btn-${size}`]: size,
     [`btn-work-${workType}`]: work,
     [`btn-loading`]: loading,
+    [`btn-icon-only`]: !children,
   })
 
   // main
@@ -50,7 +51,9 @@ export const FRCButton: FC<FRCButtonProps> = (props) => {
     >
       <span className="lead-child-box">
         {children}
-        {type === 'lead' && <CaretRightOutlined style={{marginLeft: 8}} />}
+        {type === 'lead' && children && (
+          <CaretRightOutlined style={{marginLeft: 8}} />
+        )}
       </span>
     </Button>
   )

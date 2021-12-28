@@ -191,10 +191,20 @@ $btn-background-primary-active:  $btn-background-active !default;
 // ----------------------------------------------------------------
 
 // type - lead
-
 $btn-padding-lead-y:               0px !default;
 $btn-padding-lead-left:            9px !default;
 $btn-padding-lead-right:           6px !default;
+
+// ----------------------------------------------------------------
+
+// type - gray
+$btn-background-gray:         #4A4D4C !default;
+
+// hover
+$btn-background-gray-hover:   #1E1E1E !default;
+
+// active
+$btn-background-gray-active:  #1E2423  !default;
 
 // ----------------------------------------------------------------
 

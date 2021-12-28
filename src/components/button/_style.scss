@@ -1,5 +1,5 @@
 .btn {
-  min-width: 120px;
+  // min-width: 120px;
   min-height: 24px;
   font-weight: $btn-font-weight;
   line-height: $btn-line-height;
@@ -20,12 +20,6 @@
   );
 
   cursor: pointer;
-  &.disabled,
-  &[disabled] {
-    cursor: not-allowed;
-    background: #253330;
-    color: $words-disable;
-  }
 
   &.btn-work-default {
     color: $words-high-light;
@@ -33,6 +27,45 @@
       $btn-background-normal-top,
       $btn-background-normal-bottom
     );
+  }
+  .anticon {
+    margin-right: 4px;
+  }
+
+  &.disabled,
+  &[disabled] {
+    cursor: not-allowed;
+    background: #253330;
+    color: $words-disable;
+  }
+
+  &.btn-icon-only {
+    .anticon {
+      margin-right: 0px;
+    }
+    @include button-style(
+      transparent,
+      $words-normal,
+      $btn-background-hover,
+      $words-normal,
+      $btn-background-active
+    );
+
+    &.btn-work-default {
+      color: $words-high-light;
+      background: transparent;
+    }
+    &.btn-work-high-light {
+      color: $words-high-light;
+      background: transparent;
+    }
+
+    &.disabled,
+    &[disabled] {
+      cursor: not-allowed;
+      background: transparent;
+      color: $words-disable;
+    }
   }
 }
 
@@ -73,6 +106,7 @@
   display: inline-flex;
   padding-left: $btn-padding-lead-left;
   padding-right: $btn-padding-lead-right;
+  align-items: center;
   .lead-child-box {
     flex-grow: 1;
     flex-shrink: 1;
@@ -100,6 +134,41 @@
       $words-normal,
       $btn-background-active
     );
+  }
+}
+
+// gray
+.btn-gray {
+  @include button-style(
+    $btn-background-gray,
+    $words-normal,
+    $btn-background-gray-hover,
+    $words-normal,
+    $btn-background-gray-active
+  );
+  &.btn-work-default {
+    @include button-style(
+      $btn-background-gray,
+      $words-normal,
+      $btn-background-gray-hover,
+      $words-normal,
+      $btn-background-gray-active
+    );
+  }
+  &.btn-work-high-light {
+    @include button-style(
+      $btn-background-gray,
+      $words-normal,
+      $btn-background-gray-hover,
+      $words-normal,
+      $btn-background-gray-active
+    );
+  }
+  &.disabled,
+  &[disabled] {
+    cursor: not-allowed;
+    background: #253330;
+    color: $words-disable;
   }
 }
 
