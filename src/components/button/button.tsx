@@ -52,7 +52,7 @@ export const FRCButton: FC<FRCButtonProps> = (props) => {
       <span className="lead-child-box">
         {children}
         {type === 'lead' && children && (
-          <CaretRightOutlined style={{marginLeft: 8}} />
+          <CaretRightOutlined style={{marginLeft: 8, fontSize: 10}} />
         )}
       </span>
     </Button>

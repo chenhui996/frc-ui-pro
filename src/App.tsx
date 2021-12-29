@@ -124,12 +124,20 @@ function App() {
       >
         Lead Button
       </FRCButton>
+      <FRCButton
+        type="lead"
+        onClick={() => console.log('lead')}
+        loading
+        style={{marginRight: 16, width: 300}}
+      >
+        Lead Button
+      </FRCButton>
 
       <Divider style={{backgroundColor: '#1e1e1e', height: 1, marginTop: 16}} />
 
       <h3>button - icon</h3>
       <FRCButton
-        onClick={() => console.log('lead')}
+        onClick={() => console.log('icon')}
         style={{marginRight: 16}}
         icon={<QuestionCircleOutlined />}
       >
@@ -137,7 +145,7 @@ function App() {
       </FRCButton>
       <FRCButton
         type="primary"
-        onClick={() => console.log('lead')}
+        onClick={() => console.log('icon')}
         style={{marginRight: 16}}
         icon={<QuestionCircleOutlined />}
       >
@@ -145,14 +153,14 @@ function App() {
       </FRCButton>
       <FRCButton
         type="lead"
-        onClick={() => console.log('lead')}
+        onClick={() => console.log('icon')}
         style={{marginRight: 16}}
         icon={<ProfileOutlined />}
       >
         Lead Button
       </FRCButton>
       <FRCButton
-        onClick={() => console.log('lead')}
+        onClick={() => console.log('icon')}
         style={{marginRight: 16}}
         icon={<QuestionCircleOutlined />}
         disabled
@@ -160,7 +168,7 @@ function App() {
         Primary Button
       </FRCButton>
       <FRCButton
-        onClick={() => console.log('lead')}
+        onClick={() => console.log('icon')}
         style={{marginRight: 16}}
         icon={<QuestionCircleOutlined />}
         loading
@@ -170,7 +178,7 @@ function App() {
       <FRCButton
         type="primary"
         work
-        onClick={() => console.log('lead')}
+        onClick={() => console.log('icon')}
         style={{marginRight: 16}}
         icon={<QuestionCircleOutlined />}
       >
@@ -180,7 +188,7 @@ function App() {
         type="primary"
         work
         workType="high-light"
-        onClick={() => console.log('lead')}
+        onClick={() => console.log('icon')}
         style={{marginRight: 16}}
         icon={<QuestionCircleOutlined />}
       >
@@ -192,12 +200,12 @@ function App() {
       <h3>button - icon-only</h3>
       <FRCButton
         type="lead"
-        onClick={() => console.log('lead')}
+        onClick={() => console.log('icon-only')}
         style={{marginRight: 16}}
         icon={<QuestionCircleOutlined />}
       />
       <FRCButton
-        onClick={() => console.log('lead')}
+        onClick={() => console.log('icon-only')}
         style={{marginRight: 16}}
         icon={<QuestionCircleOutlined />}
         disabled
@@ -206,7 +214,7 @@ function App() {
         work
         workType="high-light"
         type="primary"
-        onClick={() => console.log('lead')}
+        onClick={() => console.log('icon-only')}
         style={{marginRight: 16}}
         icon={<QuestionCircleOutlined />}
       />
@@ -216,14 +224,14 @@ function App() {
       <h3>button - gray</h3>
       <FRCButton
         type="gray"
-        onClick={() => console.log('lead')}
+        onClick={() => console.log('gray')}
         style={{marginRight: 16}}
       >
         Targrt Button
       </FRCButton>
       <FRCButton
         type="gray"
-        onClick={() => console.log('lead')}
+        onClick={() => console.log('gray')}
         style={{marginRight: 16}}
         disabled
       >
@@ -232,19 +240,24 @@ function App() {
 
       <Divider style={{backgroundColor: '#1e1e1e', height: 1, marginTop: 16}} />
 
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h3>button - link</h3>
+      <FRCButton
+        type="link"
+        onClick={() => console.log('link')}
+        style={{marginRight: 16}}
+      >
+        Targrt Button
+      </FRCButton>
+      <FRCButton
+        type="link"
+        onClick={() => console.log('link')}
+        style={{marginRight: 16}}
+        disabled
+      >
+        Targrt Button
+      </FRCButton>
+
+      <Divider style={{backgroundColor: '#1e1e1e', height: 1, marginTop: 16}} />
     </div>
   )
 }
