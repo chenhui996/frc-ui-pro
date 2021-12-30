@@ -1,4 +1,4 @@
-.btn.ant-btn {
+.frc-btn.ant-btn {
   display: inline-block;
   vertical-align: top;
   height: 24px;
@@ -31,7 +31,7 @@
     $words-disable
   );
 
-  &.btn-work-default {
+  &.frc-btn-work-default {
     color: $words-high-light;
     background: linear-gradient(
       $btn-background-normal-top,
@@ -39,7 +39,7 @@
     );
   }
 
-  &.btn-icon-only {
+  &.frc-btn-icon-only {
     padding-left: 6px;
     padding-right: 0;
     @include button-style(
@@ -53,11 +53,11 @@
       $words-disable
     );
 
-    &.btn-work-default {
+    &.frc-btn-work-default {
       color: $words-high-light;
       background: transparent;
     }
-    &.btn-work-high-light {
+    &.frc-btn-work-high-light {
       color: $words-high-light;
       background: transparent;
     }
@@ -71,12 +71,12 @@
 }
 
 // loading
-.btn.ant-btn.ant-btn-loading::before {
+.frc-btn.ant-btn.ant-btn-loading::before {
   display: none;
 }
 
 // primary
-.btn.btn-primary {
+.frc-btn.frc-btn-primary {
   text-shadow: none;
   box-shadow: none;
   @include button-style(
@@ -90,19 +90,19 @@
     $words-disable
   );
 
-  &.btn-work-default {
+  &.frc-btn-work-default {
     color: $words-high-light;
     background: $btn-background-primary;
   }
 
-  &.btn-work-high-light {
+  &.frc-btn-work-high-light {
     color: $words-black;
     background: linear-gradient($high-light-area-top, $high-light-area-bottom);
   }
 }
 
 // lead
-.btn.btn-lead {
+.frc-btn.frc-btn-lead {
   display: inline-flex;
   padding-left: $btn-padding-lead-left;
   padding-right: 6px;
@@ -116,10 +116,10 @@
     flex-direction: row;
     align-items: center;
   }
-  // &.btn-icon-only {
+  // &.frc-btn-icon-only {
   //   padding-left: 6px;
   // }
-  &.btn-work-default {
+  &.frc-btn-work-default {
     @include button-style(
       $btn-background-primary,
       $words-normal,
@@ -132,7 +132,7 @@
     );
   }
 
-  &.btn-work-high-light {
+  &.frc-btn-work-high-light {
     @include button-style(
       $btn-background-primary,
       $words-normal,
@@ -147,7 +147,7 @@
 }
 
 // gray
-.btn.btn-gray {
+.frc-btn.frc-btn-gray {
   @include button-style(
     $btn-background-gray,
     $words-normal,
@@ -158,7 +158,7 @@
     $btn-background-primary,
     $words-disable
   );
-  &.btn-work-default {
+  &.frc-btn-work-default {
     @include button-style(
       $btn-background-gray,
       $words-normal,
@@ -170,7 +170,7 @@
       $words-disable
     );
   }
-  &.btn-work-high-light {
+  &.frc-btn-work-high-light {
     @include button-style(
       $btn-background-gray,
       $words-normal,
@@ -185,7 +185,7 @@
 }
 
 // link
-.btn.btn-link {
+.frc-btn.frc-btn-link {
   @include button-style(
     $btn-background-link,
     $link-color,

@@ -20,10 +20,10 @@ export const FRCInput: FC<FRCInputProps> = (props) => {
     ...restProps
   } = props
   // // btn, btn-lg, btn-primary
-  const classes = classNames('input', className, {
-    [`input-no-border`]: !bordered,
-    [`input-enter`]: keyDownEnter,
-    [`input-allowClear`]: allowClear,
+  const classes = classNames('frc-input', className, {
+    [`frc-input-no-border`]: !bordered,
+    [`frc-input-enter`]: keyDownEnter,
+    [`frc-input-allowClear`]: allowClear,
   })
 
   let options = {

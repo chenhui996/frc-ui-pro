@@ -3,7 +3,7 @@ import {Button} from 'antd'
 import './index.css'
 
 const AntdPgae = () => {
-  return <Button>antd btn</Button>
+  return <Button type="primary">antd btn</Button>
 }
 
 export default AntdPgae

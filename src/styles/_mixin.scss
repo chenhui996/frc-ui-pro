@@ -12,7 +12,7 @@
   $active-background,
   $active-color,
   $disable-background,
-  $disable-color,
+  $disable-color
 ) {
   color: $color;
   background: $background;
@@ -36,55 +36,55 @@
   }
 }
 
-@mixin alert-style($background, $border, $color) {
-  color: $color;
-  background: $background;
-  border-color: $border;
-}
+// @mixin alert-style($background, $border, $color) {
+//   color: $color;
+//   background: $background;
+//   border-color: $border;
+// }
 
-@mixin zoom-animation(
-  $direction: 'top',
-  $scaleStart: scaleY(0),
-  $scaleEnd: scaleY(1),
-  $origin: center top
-) {
-  .zoom-in-#{$direction}-enter {
-    opacity: 0;
-    transform: $scaleStart;
-  }
-  .zoom-in-#{$direction}-enter-active {
-    opacity: 1;
-    transform: $scaleEnd;
-    transition: transform 300ms cubic-bezier(0.23, 1, 0.32, 1) 100ms,
-      opacity 300ms cubic-bezier(0.23, 1, 0.32, 1) 100ms;
-    transform-origin: $origin;
-  }
-  .zoom-in-#{$direction}-exit {
-    opacity: 1;
-  }
-  .zoom-in-#{$direction}-exit-active {
-    opacity: 0;
-    transform: $scaleStart;
-    transition: transform 300ms cubic-bezier(0.23, 1, 0.32, 1) 100ms,
-      opacity 300ms cubic-bezier(0.23, 1, 0.32, 1) 100ms;
-    transform-origin: $origin;
-  }
-}
+// @mixin zoom-animation(
+//   $direction: 'top',
+//   $scaleStart: scaleY(0),
+//   $scaleEnd: scaleY(1),
+//   $origin: center top
+// ) {
+//   .zoom-in-#{$direction}-enter {
+//     opacity: 0;
+//     transform: $scaleStart;
+//   }
+//   .zoom-in-#{$direction}-enter-active {
+//     opacity: 1;
+//     transform: $scaleEnd;
+//     transition: transform 300ms cubic-bezier(0.23, 1, 0.32, 1) 100ms,
+//       opacity 300ms cubic-bezier(0.23, 1, 0.32, 1) 100ms;
+//     transform-origin: $origin;
+//   }
+//   .zoom-in-#{$direction}-exit {
+//     opacity: 1;
+//   }
+//   .zoom-in-#{$direction}-exit-active {
+//     opacity: 0;
+//     transform: $scaleStart;
+//     transition: transform 300ms cubic-bezier(0.23, 1, 0.32, 1) 100ms,
+//       opacity 300ms cubic-bezier(0.23, 1, 0.32, 1) 100ms;
+//     transform-origin: $origin;
+//   }
+// }
 
-@mixin border-right-radius($raduis) {
-  border-top-right-radius: $raduis;
-  border-bottom-right-radius: $raduis;
-}
+// @mixin border-right-radius($raduis) {
+//   border-top-right-radius: $raduis;
+//   border-bottom-right-radius: $raduis;
+// }
 
-@mixin border-left-radius($raduis) {
-  border-top-left-radius: $raduis;
-  border-bottom-left-radius: $raduis;
-}
+// @mixin border-left-radius($raduis) {
+//   border-top-left-radius: $raduis;
+//   border-bottom-left-radius: $raduis;
+// }
 
-@mixin border-top-radius($raduis) {
-  border-top-left-radius: $raduis;
-  border-top-right-radius: $raduis;
-}
+// @mixin border-top-radius($raduis) {
+//   border-top-left-radius: $raduis;
+//   border-top-right-radius: $raduis;
+// }
 
 // ----------------------------------------------------------------
 
@@ -95,21 +95,37 @@
   border-radius: $border-raduis;
 }
 
-@mixin inpput-style(
+@mixin input-style(
+  // normal
   $background,
   $color,
   $border,
+  // hover
   $hover-background,
   $hover-color,
+  $hover-border,
+  // focus
+  $focus-background,
   $focus-color,
-  $focus-border
+  $focus-border,
+  // disabled
+  $disabled-background,
+  $disabled-color,
+  $disabled-border
 ) {
+  &::-webkit-input-placeholder {
+    color: $color;
+  }
+  ::-webkit-input-placeholder {
+    color: $color;
+  }
   background: $background;
   color: $color;
   border: $border;
   &:hover {
     color: $hover-color;
     background: $hover-background;
+    border: $hover-border !important;
   }
   &.ant-input-affix-wrapper-focused,
   &:focus {
@@ -117,8 +133,17 @@
     .ant-input-suffix {
       color: $words-normal !important;
     }
-    border: $focus-border;
+    border: $focus-border !important;
     color: $focus-color;
     outline: 0;
+  }
+  &.disabled,
+  &[disabled] {
+    color: $disabled-color;
+    background: $disabled-background;
+    border: $disabled-border !important;
+    &::-webkit-input-placeholder {
+      color: $disabled-color;
+    }
   }
 }

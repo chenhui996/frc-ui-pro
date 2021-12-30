@@ -25,7 +25,7 @@ export const FRCSearch: FC<SearchProps> = (props) => {
     ...restProps
   } = props
   // // btn, btn-lg, btn-primary
-  const classes = classNames('input', className, {
+  const classes = classNames('frc-input', className, {
     [`input-no-border`]: !bordered,
     [`input-enter`]: keyDownEnter,
     [`input-allowClear`]: allowClear,

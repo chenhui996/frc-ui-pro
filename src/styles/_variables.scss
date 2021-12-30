@@ -96,7 +96,7 @@ $font-size-root:              null !default;
 // ----------------------------------------------------------------
 
 // 字体
-$font-family-sans-serif:      Medium, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-family-sans-serif:      Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
 $font-family-base:            $font-family-sans-serif !default;
 
 // ----------------------------------------------------------------
@@ -246,6 +246,10 @@ $input-background-hover:                $btn-hover !default;
 
 $input-color-focus:                     $words-high-light !default;
 $input-border-focus:                    1px solid $words-high-light !default;
+
+$input-background-disabled:             $input-background !default;
+$input-color-disabled:                  $words-disable !default;
+$input-border-disabled:                 $input-border !default;
 
 // ----------------------------------------------------------------
 

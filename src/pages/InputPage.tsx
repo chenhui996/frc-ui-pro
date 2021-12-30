@@ -10,7 +10,7 @@ const ButtonPage = () => {
       <Divider style={{backgroundColor: '#1e1e1e', height: 1, marginTop: 16}} />
 
       <h3>antd input</h3>
-      <Input allowClear />
+      <Input allowClear  style={{marginRight: 16, width: 240}} />
 
       <Divider style={{backgroundColor: '#1e1e1e', height: 1, marginTop: 16}} />
 
@@ -38,7 +38,7 @@ const ButtonPage = () => {
 
       <Divider style={{backgroundColor: '#1e1e1e', height: 1, marginTop: 16}} />
 
-      <h3>search input</h3>
+      {/* <h3>search input</h3>
 
       <FRCInput.Search
         placeholder="Enter"
@@ -47,7 +47,7 @@ const ButtonPage = () => {
         // loading
       />
 
-      <Divider style={{backgroundColor: '#1e1e1e', height: 1, marginTop: 16}} />
+      <Divider style={{backgroundColor: '#1e1e1e', height: 1, marginTop: 16}} /> */}
     </>
   )
 }

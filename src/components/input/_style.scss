@@ -1,7 +1,9 @@
-.input {
+.frc-input.ant-input,
+.frc-input.ant-input-affix-wrapper {
+  width: 120px;
   box-sizing: border-box;
   position: relative;
-  display: inline-block;
+  // display: inline-block;
   line-height: $input-line-height;
   font-weight: $input-font-weight;
   font-family: $input-font-family;
@@ -11,17 +13,27 @@
     $input-font-size,
     $input-border-radius
   );
-  @include inpput-style(
+  @include input-style(
+    // normal
     $input-background,
     $input-color,
     $input-border,
+    // hover
     $input-background-hover,
     $input-color,
+    $input-border,
+    // focus
+    $input-background-hover,
     $input-color-focus,
-    $input-border-focus
+    $input-border-focus,
+    // disabled
+    $input-background-disabled,
+    $input-color-disabled,
+    $input-border-disabled,
   );
   // children: 复数
   .ant-input {
+    font-size: $input-font-size;
     font-weight: $input-font-weight;
     font-family: $input-font-family;
     color: $input-color;
@@ -33,31 +45,49 @@
       outline: 0;
     }
   }
-  &.disabled,
-  &[disabled] {
-    cursor: not-allowed;
-    font-weight: $input-font-weight;
-    @include inpput-style(
-      $input-background,
-      $words-disable,
-      $input-border,
-      $input-background,
-      $words-disable,
-      $words-disable,
-      $input-border
-    );
-  }
+  // &.disabled,
+  // &[disabled] {
+  //   cursor: not-allowed;
+  //   font-weight: $input-font-weight;
+  //   @include inpput-style(
+  //     // normal
+  //     $input-background,
+  //     $words-disable,
+  //     $input-border,
+  //     // hover
+  //     $input-background,
+  //     $words-disable,
+  //     $input-border,
+  //     // focus
+  //     $words-disable,
+  //     $input-border,
+  //     $input-border
+  //   );
+  // }
 }
 
 // no border
-.input-no-border {
-  border: none !important;
+.frc-input.frc-input-no-border {
+  // border: none !important;
   line-height: $line-height-base;
-}
-
-// allowClear
-.ant-input-clear-icon-hidden {
-  display: none;
+  @include input-style(
+    // normal
+    $input-background,
+    $input-color,
+    none,
+    // hover
+    $input-background-hover,
+    $input-color,
+    none,
+    // focus
+    $input-background-hover,
+    $input-border-focus,
+    none,
+    // disabled
+    $input-background-disabled,
+    $input-color-disabled,
+    none,
+  );
 }
 
 // 前 icon
@@ -71,7 +101,7 @@
 }
 
 // normal working
-.input-enter {
+.frc-input-enter {
   color: $words-normal !important;
   &:focus {
     color: $input-color-focus !important;
@@ -79,12 +109,12 @@
 }
 
 // search working
-.input-allowClear.input-enter {
+.frc-input-allowClear.frc-input-enter {
   .ant-input {
     color: $input-color-focus !important;
   }
 }
 
-.input-search-focus {
+.frc-input-search-focus {
   border: $input-border-focus;
 }
