@@ -113,22 +113,37 @@
   $disabled-color,
   $disabled-border
 ) {
+  background: $background;
+  color: $color;
+  border: $border;
+
+  .anticon.ant-input-clear-icon-has-suffix,
+  &.anticon.ant-input-clear-icon-has-suffix,
+  .anticon.ant-input-clear-icon {
+    color: $color;
+    font-size: 10px;
+  }
   &::-webkit-input-placeholder {
     color: $color;
   }
   ::-webkit-input-placeholder {
     color: $color;
   }
-  background: $background;
-  color: $color;
-  border: $border;
   &:hover {
+    .anticon.ant-input-clear-icon-has-suffix,
+    &.anticon.ant-input-clear-icon-has-suffix,
+    .anticon.ant-input-clear-icon {
+      color: $hover-color;
+    }
     color: $hover-color;
     background: $hover-background;
     border: $hover-border !important;
   }
   &.ant-input-affix-wrapper-focused,
   &:focus {
+    .anticon.ant-input-clear-icon-has-suffix,
+    &.anticon.ant-input-clear-icon-has-suffix,
+    .anticon.ant-input-clear-icon,
     .ant-input-prefix,
     .ant-input-suffix {
       color: $words-normal !important;
@@ -137,12 +152,18 @@
     color: $focus-color;
     outline: 0;
   }
+  &.ant-input-affix-wrapper-disabled,
   &.disabled,
   &[disabled] {
     color: $disabled-color;
     background: $disabled-background;
     border: $disabled-border !important;
+    // follow
     &::-webkit-input-placeholder {
+      color: $disabled-color;
+    }
+    // deep
+    ::-webkit-input-placeholder {
       color: $disabled-color;
     }
   }

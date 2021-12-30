@@ -230,26 +230,44 @@ $btn-background-link-active:  transparent  !default;
 
 //input
 
-$input-padding-y:                       0px !default;
-$input-padding-x:                       6px !default;
-$input-font-family:                     $font-family-base !default;
-$input-font-size:                       $font-size-base !default;
-$input-font-weight:                     500 !default;
-$input-line-height:                     22px !default;
-$input-border-radius:                   $border-radius !default;
+$input-padding-y:                          0px !default;
+$input-padding-x:                          6px !default;
+$input-font-family:                        $font-family-base !default;
+$input-font-size:                          $font-size-base !default;
+$input-font-weight:                        500 !default;
+$input-line-height:                        22px !default;
+$input-border-radius:                      $border-radius !default;
 
-$input-background:                      #0C0F0E !default;
-$input-color:                           $words-supporting !default;
-$input-border:                          1px solid $basic-btn !default;
+$input-background:                         #0C0F0E !default;
+$input-color:                              $words-supporting !default;
+$input-border:                             1px solid $basic-btn !default;
 
-$input-background-hover:                $btn-hover !default;
+$input-background-hover:                   $btn-hover !default;
 
-$input-color-focus:                     $words-high-light !default;
-$input-border-focus:                    1px solid $words-high-light !default;
+$input-color-focus:                        $words-high-light !default;
+$input-border-focus:                       1px solid $words-high-light !default;
 
-$input-background-disabled:             $input-background !default;
-$input-color-disabled:                  $words-disable !default;
-$input-border-disabled:                 $input-border !default;
+$input-background-disabled:                $input-background !default;
+$input-color-disabled:                     $words-disable !default;
+$input-border-disabled:                    $input-border !default;
+
+// icon-only
+// normal
+$input-background-icon-only:               transparent !default;
+$input-color-icon-only:                    $words-normal !default;
+$input-border-icon-only:                   1px solid transparent !default;
+// hover
+$input-background-icon-only-hover:         $input-background-hover !default;
+$input-color-icon-only-hover:              $words-normal !default;
+$input-border-icon-only-hover:             1px solid $input-background-hover !default;
+// focus
+$input-background-icon-only-focus:         $input-background !default;
+$input-color-icon-only-focus:              $input-color-focus !default;
+$input-border-icon-only-focus:             1px solid $input-color-focus !default;
+// disabled
+$input-background-icon-only-disabled:      $input-background-icon-only !default;
+$input-color-icon-only-disabled:           $input-color-disabled !default;
+$input-border-icon-only-disabled:          1px solid transparent !default;
 
 // ----------------------------------------------------------------
 

@@ -29,7 +29,7 @@
     // disabled
     $input-background-disabled,
     $input-color-disabled,
-    $input-border-disabled,
+    $input-border-disabled
   );
   // children: 复数
   .ant-input {
@@ -45,25 +45,6 @@
       outline: 0;
     }
   }
-  // &.disabled,
-  // &[disabled] {
-  //   cursor: not-allowed;
-  //   font-weight: $input-font-weight;
-  //   @include inpput-style(
-  //     // normal
-  //     $input-background,
-  //     $words-disable,
-  //     $input-border,
-  //     // hover
-  //     $input-background,
-  //     $words-disable,
-  //     $input-border,
-  //     // focus
-  //     $words-disable,
-  //     $input-border,
-  //     $input-border
-  //   );
-  // }
 }
 
 // no border
@@ -86,11 +67,11 @@
     // disabled
     $input-background-disabled,
     $input-color-disabled,
-    none,
+    none
   );
 }
 
-// 前 icon
+// 后 icon
 .ant-input-suffix {
   position: absolute;
   top: 50%;
@@ -103,13 +84,16 @@
 // normal working
 .frc-input-enter {
   color: $words-normal !important;
+  .ant-input {
+    color: $words-normal !important;
+  }
   &:focus {
     color: $input-color-focus !important;
   }
 }
 
 // search working
-.frc-input-allowClear.frc-input-enter {
+.frc-input-prefix.frc-input-enter {
   .ant-input {
     color: $input-color-focus !important;
   }
@@ -117,4 +101,26 @@
 
 .frc-input-search-focus {
   border: $input-border-focus;
+}
+
+// icon-only
+.frc-input.frc-input-icon-only {
+  @include input-style(
+    // normal
+    $input-background-icon-only,
+    $input-color-icon-only,
+    $input-border-icon-only,
+    // hover
+    $input-background-icon-only-hover,
+    $input-color-icon-only-hover,
+    $input-border-icon-only-hover,
+    // focus
+    $input-background-icon-only-focus,
+    $input-color-icon-only-focus,
+    $input-border-icon-only-focus,
+    // disabled
+    $input-background-icon-only-disabled,
+    $input-color-icon-only-disabled,
+    $input-border-icon-only-disabled
+  );
 }
