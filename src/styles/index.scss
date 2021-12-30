@@ -1,11 +1,14 @@
 // config
-@import "variables";
+@import 'variables';
 
 // layout
-@import "reboot";
+@import 'reboot';
 
 // mixin
-@import "mixin";
+@import 'mixin';
 
 // button
-@import "../components/Button/style";
+@import '../components/Button/style';
+
+// input
+@import '../components/Input/style';

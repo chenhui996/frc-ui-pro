@@ -9,7 +9,7 @@
   $color,
   $hover-background,
   $hover-color,
-  $active-background,
+  $active-background
 ) {
   color: $color;
   background: $background;
@@ -76,4 +76,41 @@
 @mixin border-top-radius($raduis) {
   border-top-left-radius: $raduis;
   border-top-right-radius: $raduis;
+}
+
+// ----------------------------------------------------------------
+
+// input
+@mixin input-size($padding-y, $padding-x, $font-size, $border-raduis) {
+  padding: $padding-y $padding-x;
+  font-size: $font-size;
+  border-radius: $border-raduis;
+}
+
+@mixin inpput-style(
+  $background,
+  $color,
+  $border,
+  $hover-background,
+  $hover-color,
+  $focus-color,
+  $focus-border
+) {
+  background: $background;
+  color: $color;
+  border: $border;
+  &:hover {
+    color: $hover-color;
+    background: $hover-background;
+  }
+  &.ant-input-affix-wrapper-focused,
+  &:focus {
+    .ant-input-prefix,
+    .ant-input-suffix {
+      color: $words-normal !important;
+    }
+    border: $focus-border;
+    color: $focus-color;
+    outline: 0;
+  }
 }

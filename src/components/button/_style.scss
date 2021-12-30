@@ -4,6 +4,7 @@
   font-weight: $btn-font-weight;
   line-height: $btn-line-height;
   border: none;
+  box-sizing: border-box;
   @include button-size(
     $btn-padding-y,
     $btn-padding-x,

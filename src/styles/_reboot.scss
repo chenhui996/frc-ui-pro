@@ -1,26 +1,39 @@
 body {
-  margin: 0; // 1
-  font-family: $font-family-base;
-  font-size: $font-size-base;
-  font-weight: $font-weight-base;
-  line-height: $line-height-base;
-  color: $body-color;
-  text-align: $body-text-align;
-  background-color: $body-bg; // 2
-  -webkit-text-size-adjust: 100%; // 3
-  -webkit-tap-highlight-color: rgba($new-data, 0); // 4
-  padding: 20px;
+  margin: 0 !important; // 1
+  font-family: $font-family-base !important;
+  font-size: $font-size-base !important;
+  font-weight: $font-weight-base !important;
+  line-height: $line-height-base !important;
+  color: $body-color !important;
+  text-align: $body-text-align !important;
+  background-color: $body-bg !important; // 2
+  -webkit-text-size-adjust: 100% !important; // 3
+  -webkit-tap-highlight-color: rgba($new-data, 0) !important; // 4
+  padding: 20px !important;
 }
 
 // ----------------------------------------------------------------
 
 // Links
 a {
-  color: $link-color;
-  text-decoration: $link-decoration;
+  color: $link-color !important;
+  text-decoration: $link-decoration !important;
 
   &:hover {
-    color: $link-hover-color;
-    text-decoration: $link-hover-decoration;
+    color: $link-hover-color !important;
+    text-decoration: $link-hover-decoration !important;
   }
 }
+
+// ----------------------------------------------------------------
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $body-color !important;
+}
+
+// ----------------------------------------------------------------

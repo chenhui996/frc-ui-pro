@@ -12,11 +12,11 @@ interface BaseButtonProps {
   work?: boolean
   /** 激活 status type */
   workType?: ButtonWorkType
-  loading?: boolean
+  /** button type */
   type?: ButtonType
 }
 
-type FRCButtonProps = Omit<ButtonProps, 'type'> & BaseButtonProps
+type FRCButtonProps = Omit<ButtonProps, 'type' | 'danger'> & BaseButtonProps
 
 export const FRCButton: FC<FRCButtonProps> = (props) => {
   const {
@@ -25,7 +25,6 @@ export const FRCButton: FC<FRCButtonProps> = (props) => {
     type,
     children,
     href,
-    danger,
     work,
     workType = 'default',
     loading,
@@ -34,7 +33,6 @@ export const FRCButton: FC<FRCButtonProps> = (props) => {
   // btn, btn-lg, btn-primary
   const classes = classNames('btn', className, {
     [`btn-${type}`]: type,
-    [`btn-danger`]: danger,
     [`btn-${size}`]: size,
     [`btn-work-${workType}`]: work,
     [`btn-loading`]: loading,
@@ -43,12 +41,7 @@ export const FRCButton: FC<FRCButtonProps> = (props) => {
 
   // main
   return (
-    <Button
-      className={classes}
-      loading={loading}
-      danger={danger}
-      {...restProps}
-    >
+    <Button className={classes} loading={loading} {...restProps}>
       <span className="lead-child-box">
         {children}
         {type === 'lead' && children && (
