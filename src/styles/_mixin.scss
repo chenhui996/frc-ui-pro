@@ -9,7 +9,10 @@
   $color,
   $hover-background,
   $hover-color,
-  $active-background
+  $active-background,
+  $active-color,
+  $disable-background,
+  $disable-color,
 ) {
   color: $color;
   background: $background;
@@ -19,12 +22,17 @@
   }
   &:active,
   &.active {
-    background: $active-background;
+    color: $active-color !important;
+    background: $active-background !important;
+  }
+  &:focus {
+    color: $color;
+    background: $background;
   }
   &:disabled,
   &.disabled {
-    color: $color;
-    background: $background;
+    color: $disable-color !important;
+    background: $disable-background !important;
   }
 }
 

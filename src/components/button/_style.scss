@@ -1,10 +1,18 @@
-.btn {
-  // min-width: 120px;
-  min-height: 24px;
+.btn.ant-btn {
+  display: inline-block;
+  vertical-align: top;
+  height: 24px;
   font-weight: $btn-font-weight;
   line-height: $btn-line-height;
   border: none;
   box-sizing: border-box;
+  transition: none;
+  cursor: pointer;
+
+  .anticon {
+    line-height: 0;
+  }
+
   @include button-size(
     $btn-padding-y,
     $btn-padding-x,
@@ -17,10 +25,11 @@
     $words-normal,
     $btn-background-hover,
     $words-normal,
-    $btn-background-active
+    $btn-background-active,
+    $words-normal,
+    $btn-background-primary,
+    $words-disable
   );
-
-  cursor: pointer;
 
   &.btn-work-default {
     color: $words-high-light;
@@ -29,27 +38,19 @@
       $btn-background-normal-bottom
     );
   }
-  .anticon {
-    margin-right: 4px;
-  }
-
-  &.disabled,
-  &[disabled] {
-    cursor: not-allowed;
-    background: #253330;
-    color: $words-disable;
-  }
 
   &.btn-icon-only {
-    .anticon {
-      margin-right: 0px;
-    }
+    padding-left: 6px;
+    padding-right: 0;
     @include button-style(
       transparent,
       $words-normal,
       $btn-background-hover,
       $words-normal,
-      $btn-background-active
+      $btn-background-active,
+      $words-normal,
+      transparent,
+      $words-disable
     );
 
     &.btn-work-default {
@@ -60,36 +61,34 @@
       color: $words-high-light;
       background: transparent;
     }
-
-    &.disabled,
-    &[disabled] {
-      cursor: not-allowed;
-      background: transparent;
-      color: $words-disable;
-    }
   }
 }
 
+// animation
+[ant-click-animating-without-extra-node='true']::after,
+.ant-click-animating-node {
+  box-shadow: none !important;
+}
+
 // loading
-.btn-loading .ant-btn-loading-icon {
-  margin-right: 4px;
+.btn.ant-btn.ant-btn-loading::before {
+  display: none;
 }
 
 // primary
-.btn-primary {
+.btn.btn-primary {
+  text-shadow: none;
+  box-shadow: none;
   @include button-style(
     $btn-background-primary,
     $words-normal,
     $btn-background-hover,
     $words-normal,
-    $btn-background-active
+    $btn-background-active,
+    $words-normal,
+    $btn-background-primary,
+    $words-disable
   );
-  &.disabled,
-  &[disabled] {
-    cursor: not-allowed;
-    background: #253330;
-    color: $words-disable;
-  }
 
   &.btn-work-default {
     color: $words-high-light;
@@ -103,10 +102,10 @@
 }
 
 // lead
-.btn-lead {
+.btn.btn-lead {
   display: inline-flex;
   padding-left: $btn-padding-lead-left;
-  padding-right: $btn-padding-lead-right;
+  padding-right: 6px;
   align-items: center;
   .lead-child-box {
     flex-grow: 1;
@@ -117,16 +116,19 @@
     flex-direction: row;
     align-items: center;
   }
-  &.btn-icon-only {
-    padding-left: 6px;
-  }
+  // &.btn-icon-only {
+  //   padding-left: 6px;
+  // }
   &.btn-work-default {
     @include button-style(
       $btn-background-primary,
       $words-normal,
       $btn-background-hover,
       $words-normal,
-      $btn-background-active
+      $btn-background-active,
+      $words-normal,
+      $btn-background-primary,
+      $words-disable
     );
   }
 
@@ -136,19 +138,25 @@
       $words-normal,
       $btn-background-hover,
       $words-normal,
-      $btn-background-active
+      $btn-background-active,
+      $words-normal,
+      $btn-background-primary,
+      $words-disable
     );
   }
 }
 
 // gray
-.btn-gray {
+.btn.btn-gray {
   @include button-style(
     $btn-background-gray,
     $words-normal,
     $btn-background-gray-hover,
     $words-normal,
-    $btn-background-gray-active
+    $btn-background-gray-active,
+    $words-normal,
+    $btn-background-primary,
+    $words-disable
   );
   &.btn-work-default {
     @include button-style(
@@ -156,7 +164,10 @@
       $words-normal,
       $btn-background-gray-hover,
       $words-normal,
-      $btn-background-gray-active
+      $btn-background-gray-active,
+      $words-normal,
+      $btn-background-primary,
+      $words-disable
     );
   }
   &.btn-work-high-light {
@@ -165,30 +176,28 @@
       $words-normal,
       $btn-background-gray-hover,
       $words-normal,
-      $btn-background-gray-active
+      $btn-background-gray-active,
+      $words-normal,
+      $btn-background-primary,
+      $words-disable
     );
-  }
-  &.disabled,
-  &[disabled] {
-    cursor: not-allowed;
-    background: #253330;
-    color: $words-disable;
   }
 }
 
 // link
-.btn-link {
+.btn.btn-link {
   @include button-style(
     $btn-background-link,
     $link-color,
     $btn-background-link-hover,
     $link-hover-color,
-    $btn-background-link-active
+    $btn-background-link-active,
+    $link-hover-color,
+    transparent,
+    $link-disable-color
   );
-  text-decoration: $link-decoration;
-  padding: 0;
-  &:disabled,
-  &.disabled {
-    color: $link-disable-color;
+  span {
+    text-decoration: $link-decoration;
   }
+  padding: 0;
 }
