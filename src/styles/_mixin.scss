@@ -155,6 +155,10 @@
   &.ant-input-affix-wrapper-disabled,
   &.disabled,
   &[disabled] {
+    .ant-input {
+      cursor: not-allowed;
+    }
+    cursor: not-allowed;
     color: $disabled-color;
     background: $disabled-background;
     border: $disabled-border !important;

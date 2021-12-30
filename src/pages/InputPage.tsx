@@ -70,6 +70,15 @@ const ButtonPage = () => {
         allowClear
       />
 
+      <FRCInput
+        type="icon-only"
+        // prefix={<MenuFoldOutlined />}
+        placeholder="Enter"
+        style={{marginRight: 16}}
+        allowClear
+        disabled
+      />
+
       <Divider style={{backgroundColor: '#1e1e1e', height: 1, marginTop: 16}} />
 
       {/* <h3>search input</h3>

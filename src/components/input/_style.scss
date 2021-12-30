@@ -135,6 +135,10 @@
       display: inline-block;
     }
   }
+  &.disabled,
+  &[disabled] {
+    cursor: not-allowed !important;
+  }
 }
 
 // clear-icon-active
