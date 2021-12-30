@@ -2,7 +2,7 @@ import React from 'react'
 import {Input, Divider} from 'antd'
 import FRCInput from '../components/input/index'
 // import {QuestionCircleOutlined, ProfileOutlined} from '@ant-design/icons'
-import {SearchOutlined} from '@ant-design/icons'
+import {SearchOutlined, MenuFoldOutlined} from '@ant-design/icons'
 
 const ButtonPage = () => {
   return (
@@ -38,7 +38,7 @@ const ButtonPage = () => {
 
       <FRCInput
         prefix={<SearchOutlined />}
-        suffix={<SearchOutlined />}
+        suffix={<MenuFoldOutlined />}
         placeholder="Enter"
         style={{marginRight: 16}}
         allowClear
@@ -64,11 +64,10 @@ const ButtonPage = () => {
 
       <FRCInput
         type="icon-only"
-        prefix={<SearchOutlined />}
+        // prefix={<MenuFoldOutlined />}
         placeholder="Enter"
         style={{marginRight: 16}}
         allowClear
-        disabled
       />
 
       <Divider style={{backgroundColor: '#1e1e1e', height: 1, marginTop: 16}} />

@@ -3,6 +3,7 @@
   width: 120px;
   box-sizing: border-box;
   position: relative;
+  cursor: pointer;
   // display: inline-block;
   line-height: $input-line-height;
   font-weight: $input-font-weight;
@@ -40,6 +41,7 @@
     background-color: transparent;
     border: none;
     outline: none;
+    cursor: pointer;
     &:focus {
       color: $input-color-focus;
       outline: 0;
@@ -123,4 +125,22 @@
     $input-color-icon-only-disabled,
     $input-border-icon-only-disabled
   );
+  max-width: 26px;
+  .ant-input-clear-icon {
+    display: none;
+  }
+  &.ant-input-affix-wrapper-focused {
+    max-width: 120px;
+    .ant-input-clear-icon {
+      display: inline-block;
+    }
+  }
+}
+
+// clear-icon-active
+.frc-input-active-clear.frc-input-enter {
+  color: $input-color !important;
+  &.frc-input-icon-only {
+    color: $input-color-icon-only !important;
+  }
 }
