@@ -2,7 +2,8 @@ import React from 'react'
 import {Input, Divider} from 'antd'
 import FRCInput from '../components/input/index'
 // import {QuestionCircleOutlined, ProfileOutlined} from '@ant-design/icons'
-import {SearchOutlined, MenuFoldOutlined} from '@ant-design/icons'
+import {MenuFoldOutlined} from '@ant-design/icons'
+import {FiSearch} from 'react-icons/fi'
 
 const ButtonPage = () => {
   return (
@@ -11,6 +12,11 @@ const ButtonPage = () => {
 
       <h3>antd input</h3>
       <Input allowClear style={{marginRight: 16, width: 240}} />
+      <Input.Search
+        allowClear
+        style={{marginRight: 16, width: 240}}
+        enterButton={<FiSearch />}
+      />
 
       <Divider style={{backgroundColor: '#1e1e1e', height: 1, marginTop: 16}} />
 
@@ -20,7 +26,7 @@ const ButtonPage = () => {
       <FRCInput placeholder="Disable" disabled style={{marginRight: 16}} />
 
       <FRCInput
-        prefix={<SearchOutlined />}
+        prefix={<FiSearch />}
         placeholder="Enter"
         style={{marginRight: 16}}
         allowClear
@@ -28,7 +34,7 @@ const ButtonPage = () => {
       />
 
       <FRCInput
-        prefix={<SearchOutlined />}
+        prefix={<FiSearch />}
         placeholder="Enter"
         style={{marginRight: 16}}
         allowClear
@@ -37,7 +43,7 @@ const ButtonPage = () => {
       />
 
       <FRCInput
-        prefix={<SearchOutlined />}
+        prefix={<FiSearch />}
         suffix={<MenuFoldOutlined />}
         placeholder="Enter"
         style={{marginRight: 16}}
@@ -51,7 +57,7 @@ const ButtonPage = () => {
       />
 
       <FRCInput
-        prefix={<SearchOutlined />}
+        prefix={<FiSearch />}
         placeholder="Enter"
         style={{marginRight: 16}}
         allowClear
@@ -81,16 +87,84 @@ const ButtonPage = () => {
 
       <Divider style={{backgroundColor: '#1e1e1e', height: 1, marginTop: 16}} />
 
-      {/* <h3>search input</h3>
+      <h3>search input</h3>
 
       <FRCInput.Search
         placeholder="Enter"
         style={{marginRight: 16}}
         allowClear
         // loading
+        onSearch={() => {
+          console.log('search')
+        }}
       />
 
-      <Divider style={{backgroundColor: '#1e1e1e', height: 1, marginTop: 16}} /> */}
+      <FRCInput.Search
+        placeholder="Enter"
+        style={{marginRight: 16}}
+        allowClear
+        onSearch={() => {
+          console.log('search')
+        }}
+        disabled
+      />
+
+      <FRCInput.Search
+        placeholder="Enter"
+        style={{marginRight: 16}}
+        allowClear
+        loading
+        onSearch={() => {
+          console.log('search')
+        }}
+        disabled
+      />
+
+      <FRCInput.Search
+        placeholder="Enter"
+        style={{marginRight: 16}}
+        allowClear
+        loading
+        onSearch={() => {
+          console.log('search')
+        }}
+      />
+
+      <FRCInput.Search
+        placeholder="Enter"
+        style={{marginRight: 16}}
+        allowClear
+        // loading
+        onSearch={() => {
+          console.log('search')
+        }}
+        enterButton="Search"
+      />
+
+      <FRCInput.Search
+        placeholder="Enter"
+        style={{marginRight: 16, width: 240}}
+        allowClear
+        loading
+        onSearch={() => {
+          console.log('search')
+        }}
+        enterButton="Search"
+      />
+
+      <FRCInput.Search
+        placeholder="Enter"
+        style={{marginRight: 16, width: 240}}
+        allowClear
+        // loading
+        onSearch={() => {
+          console.log('search')
+        }}
+        enterButton="Search"
+        disabled
+      />
+
+      <Divider style={{backgroundColor: '#1e1e1e', height: 1, marginTop: 16}} />
     </>
   )
 }

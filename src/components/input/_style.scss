@@ -1,5 +1,6 @@
 .frc-input.ant-input,
-.frc-input.ant-input-affix-wrapper {
+.frc-input.ant-input-affix-wrapper,
+.frc-input.ant-input-search {
   width: 120px;
   box-sizing: border-box;
   position: relative;
@@ -75,6 +76,7 @@
 
 // 后 icon
 .ant-input-suffix {
+  z-index: 10000;
   position: absolute;
   top: 50%;
   display: flex;
@@ -95,9 +97,13 @@
 }
 
 // search working
-.frc-input-prefix.frc-input-enter {
+.frc-input-prefix.frc-input-enter,
+.ant-input-search.frc-input-enter {
   .ant-input {
     color: $input-color-focus !important;
+  }
+  .ant-input-search-button {
+    color: #ffebc8 !important;
   }
 }
 
@@ -142,9 +148,108 @@
 }
 
 // clear-icon-active
-.frc-input-active-clear.frc-input-enter {
+.frc-input-active-stop.frc-input-enter {
   color: $input-color !important;
   &.frc-input-icon-only {
     color: $input-color-icon-only !important;
+  }
+  .ant-input-search-button {
+    color: $words-disable !important;
+  }
+}
+
+// search input
+.frc-input.ant-input-search {
+  padding-left: 0;
+  padding-right: 0;
+  @include input-style(
+    // normal
+    $input-search-background,
+    $input-search-color,
+    $input-search-border,
+    // hover
+    $input-search-background-hover,
+    $input-search-color-hover,
+    $input-search-border-hover,
+    // focus
+    $input-search-background-focus,
+    $input-search-color-focus,
+    $input-search-border-focus,
+    // disabled
+    $input-search-background-disabled,
+    $input-search-color-disabled,
+    $input-search-border-disabled
+  );
+
+  // inner input -> style clear
+  .ant-input-affix-wrapper {
+    padding: 0 6px;
+    line-height: $input-line-height;
+    font-weight: $input-font-weight;
+    font-family: $input-font-family;
+    @include input-style(
+      // normal
+      transparent,
+      $input-color,
+      none,
+      // hover
+      transparent,
+      $input-color,
+      none,
+      // focus
+      transparent,
+      $input-color-focus,
+      none,
+      // disabled
+      $input-background-disabled,
+      $input-color-disabled,
+      none
+    );
+  }
+  .ant-input-affix-wrapper-focused {
+    box-shadow: none;
+  }
+  // search btn box
+  .ant-input-group-addon {
+    background-color: transparent;
+    left: 0 !important;
+    // search btn
+    .ant-input-search-button {
+      border-radius: 0 !important;
+      height: 22px;
+      // width: 24px;
+      background: $basic-btn;
+      border: 1px solid transparent !important;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0 5px;
+      font-size: 12px;
+      line-height: 0;
+      color: $words-disable;
+    }
+  }
+
+  .ant-input-affix-wrapper-disabled + .ant-input-group-addon{
+    .ant-input-search-button{
+      color: $input-search-color-disabled;
+      background: $input-search-background-disabled;
+    }
+  }
+}
+
+// loading
+.frc-input-search-loading {
+  .ant-btn-loading.ant-input-search-button::before,
+  .ant-btn-loading.ant-input-search-button {
+    background: $input-search-background-hover;
+    color: $tittle-word !important;
+    cursor: pointer;
+  }
+  .ant-input-affix-wrapper-disabled + .ant-input-group-addon {
+    .ant-input-search-button {
+      cursor: not-allowed !important;
+      background: $input-search-background-disabled !important;
+    }
   }
 }

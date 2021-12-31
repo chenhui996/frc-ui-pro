@@ -271,3 +271,23 @@ $input-border-icon-only-disabled:          1px solid transparent !default;
 
 // ----------------------------------------------------------------
 
+// search - input
+// normal
+$input-search-background:               $element-background !default;
+$input-search-color:                    $words-supporting !default;
+$input-search-border:                   1px solid $basic-btn !default;
+// hover
+$input-search-background-hover:         #0A2420 !default;
+$input-search-color-hover:              $words-supporting !default;
+$input-search-border-hover:             1px solid $basic-btn !default;
+// focus
+$input-search-background-focus:         $element-background !default;
+$input-search-color-focus:              $words-high-light !default;
+$input-search-border-focus:             1px solid $words-high-light !default;
+// disabled
+$input-search-background-disabled:      $basic-btn !default;
+$input-search-color-disabled:           $words-disable !default;
+$input-search-border-disabled:          1px solid $basic-btn !default;
+
+// ----------------------------------------------------------------
+

@@ -1,60 +1,84 @@
 import React, {FC, useState} from 'react'
 import classNames from 'classnames'
 import Input, {SearchProps} from 'antd/es/input'
-import {SearchOutlined} from '@ant-design/icons'
+import {FiSearch} from 'react-icons/fi'
 
 const {Search} = Input
 
-// interface BaseInputProps {
-//   loading?: boolean
-// }
+type InputType = 'default' | 'icon-only'
+interface BaseInputProps {
+  type?: InputType
+}
 
-// export type FRCInputProps = InputProps & BaseInputProps
+export type FRCSearchProps = SearchProps & BaseInputProps
 
-export const FRCSearch: FC<SearchProps> = (props) => {
+export const FRCSearch: FC<FRCSearchProps> = (props) => {
   const [keyDownEnter, setKeyDownEnter] = useState(false)
-  const [searchFocus, setSearchFocus] = useState(false)
+  const [inputValue, setInputValue] = useState(null)
+  // const [inputIsBlur, setInputIsBlur] = useState(false)
+  const [inputIsFocus, setInputIsFocus] = useState(false)
 
   const {
     className,
-    bordered = true,
-    allowClear,
-    onKeyDown,
+    bordered,
+    prefix,
+    loading,
+    type,
+    value,
     onFocus,
+    onChange,
     onBlur,
+    onKeyDown,
     ...restProps
   } = props
-  // // btn, btn-lg, btn-primary
+
   const classes = classNames('frc-input', className, {
-    [`input-no-border`]: !bordered,
-    [`input-enter`]: keyDownEnter,
-    [`input-allowClear`]: allowClear,
-    [`input-search-focus`]: searchFocus,
+    [`frc-input-no-border`]: !bordered,
+    [`frc-input-enter`]: keyDownEnter,
+    [`frc-input-prefix`]: prefix,
+    [`frc-input-${type}`]: type,
+    [`frc-input-active-stop`]: !inputValue && !inputIsFocus,
+    [`frc-input-active-start`]: inputIsFocus,
+    [`frc-input-search-loading`]: loading,
   })
 
   let options = {
     className: classes,
     ...restProps,
     bordered,
-    allowClear,
+    prefix: !prefix && type === 'icon-only' ? <FiSearch /> : prefix,
+    loading,
+    type,
+    value,
     onKeyDown: (e: any) => {
       onKeyDown && onKeyDown(e)
       if (e.code === 'Enter') {
         setKeyDownEnter(true)
       }
     },
+    onChange: (e: any) => {
+      onChange && onChange(e)
+      setInputValue(e.target.value)
+    },
     onFocus: (e: any) => {
       onFocus && onFocus(e)
-      setSearchFocus(true)
+      console.log('onFocus')
+      setInputIsFocus(true)
     },
     onBlur: (e: any) => {
       onBlur && onBlur(e)
-      setSearchFocus(false)
+      setInputIsFocus(false)
     },
   }
 
   // main
   return <Search {...options} />
+}
+
+// normal
+FRCSearch.defaultProps = {
+  bordered: true,
+  enterButton: <FiSearch />,
 }
 
 export default FRCSearch

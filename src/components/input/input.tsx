@@ -1,7 +1,7 @@
 import React, {FC, useState} from 'react'
 import classNames from 'classnames'
 import Input, {InputProps} from 'antd/es/input'
-import {SearchOutlined} from '@ant-design/icons'
+import { FiSearch } from "react-icons/fi";
 
 type InputType = 'default' | 'icon-only'
 interface BaseInputProps {
@@ -14,7 +14,8 @@ export type FRCInputProps = InputProps & BaseInputProps
 export const FRCInput: FC<FRCInputProps> = (props) => {
   const [keyDownEnter, setKeyDownEnter] = useState(false)
   const [inputValue, setInputValue] = useState(null)
-  const [inputIsBlur, setInputIsBlur] = useState(false)
+  // const [inputIsBlur, setInputIsBlur] = useState(false)
+  const [inputIsFocus, setInputIsFocus] = useState(false)
 
   const {
     className,
@@ -34,14 +35,14 @@ export const FRCInput: FC<FRCInputProps> = (props) => {
     [`frc-input-enter`]: keyDownEnter,
     [`frc-input-prefix`]: prefix,
     [`frc-input-${type}`]: type,
-    [`frc-input-active-clear`]: !inputValue && inputIsBlur,
+    [`frc-input-active-stop`]: !inputValue && !inputIsFocus,
   })
 
   let options = {
     className: classes,
     ...restProps,
     bordered,
-    prefix: !prefix && type === 'icon-only' ? <SearchOutlined /> : prefix,
+    prefix: !prefix && type === 'icon-only' ? <FiSearch /> : prefix,
     loading,
     type,
     value,
@@ -57,7 +58,7 @@ export const FRCInput: FC<FRCInputProps> = (props) => {
     },
     onBlur: (e: any) => {
       onBlur && onBlur(e)
-      setInputIsBlur(true)
+      setInputIsFocus(false)
     },
   }
 
