@@ -50,67 +50,6 @@
   }
 }
 
-// no border
-.frc-input.frc-input-no-border {
-  // border: none !important;
-  line-height: $line-height-base;
-  @include input-style(
-    // normal
-    $input-background,
-    $input-color,
-    none,
-    // hover
-    $input-background-hover,
-    $input-color,
-    none,
-    // focus
-    $input-background-hover,
-    $input-border-focus,
-    none,
-    // disabled
-    $input-background-disabled,
-    $input-color-disabled,
-    none
-  );
-}
-
-// 后 icon
-.ant-input-suffix {
-  z-index: 10000;
-  position: absolute;
-  top: 50%;
-  display: flex;
-  align-items: center;
-  transform: translateY(-50%);
-  right: 6px;
-}
-
-// normal working
-.frc-input-enter {
-  color: $words-normal !important;
-  .ant-input {
-    color: $words-normal !important;
-  }
-  &:focus {
-    color: $input-color-focus !important;
-  }
-}
-
-// search working
-.frc-input-prefix.frc-input-enter,
-.ant-input-search.frc-input-enter {
-  .ant-input {
-    color: $input-color-focus !important;
-  }
-  .ant-input-search-button {
-    color: #ffebc8 !important;
-  }
-}
-
-.frc-input-search-focus {
-  border: $input-border-focus;
-}
-
 // icon-only
 .frc-input.frc-input-icon-only {
   @include input-style(
@@ -144,17 +83,6 @@
   &.disabled,
   &[disabled] {
     cursor: not-allowed !important;
-  }
-}
-
-// clear-icon-active
-.frc-input-active-stop.frc-input-enter {
-  color: $input-color !important;
-  &.frc-input-icon-only {
-    color: $input-color-icon-only !important;
-  }
-  .ant-input-search-button {
-    color: $words-disable !important;
   }
 }
 
@@ -230,13 +158,15 @@
     }
   }
 
-  .ant-input-affix-wrapper-disabled + .ant-input-group-addon{
-    .ant-input-search-button{
+  .ant-input-affix-wrapper-disabled + .ant-input-group-addon {
+    .ant-input-search-button {
       color: $input-search-color-disabled;
       background: $input-search-background-disabled;
     }
   }
 }
+
+// ----------------------------------------------------------------
 
 // loading
 .frc-input-search-loading {
@@ -252,4 +182,65 @@
       background: $input-search-background-disabled !important;
     }
   }
+}
+
+// no border
+.frc-input.frc-input-no-border {
+  // border: none !important;
+  line-height: $line-height-base;
+  @include input-style(
+    // normal
+    $input-background,
+    $input-color,
+    none,
+    // hover
+    $input-background-hover,
+    $input-color,
+    none,
+    // focus
+    $input-background-hover,
+    $input-border-focus,
+    none,
+    // disabled
+    $input-background-disabled,
+    $input-color-disabled,
+    none
+  );
+}
+
+// 后 icon
+.ant-input-suffix {
+  z-index: 10000;
+  position: absolute;
+  top: 50%;
+  display: flex;
+  align-items: center;
+  transform: translateY(-50%);
+  right: 6px;
+}
+
+// normal working
+.frc-input-enter {
+  color: $words-normal !important;
+  .ant-input {
+    color: $words-normal !important;
+  }
+  &:focus {
+    color: $input-color-focus !important;
+  }
+}
+
+// search working
+.frc-input-prefix.frc-input-enter,
+.ant-input-search.frc-input-enter {
+  .ant-input {
+    color: $input-color-focus !important;
+  }
+  .ant-input-search-button {
+    color: #ffebc8 !important;
+  }
+}
+
+.frc-input-search-focus {
+  border: $input-border-focus;
 }

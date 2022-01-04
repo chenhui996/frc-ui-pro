@@ -14,9 +14,6 @@ export type FRCSearchProps = SearchProps & BaseInputProps
 
 export const FRCSearch: FC<FRCSearchProps> = (props) => {
   const [keyDownEnter, setKeyDownEnter] = useState(false)
-  const [inputValue, setInputValue] = useState(null)
-  // const [inputIsBlur, setInputIsBlur] = useState(false)
-  const [inputIsFocus, setInputIsFocus] = useState(false)
 
   const {
     className,
@@ -25,9 +22,7 @@ export const FRCSearch: FC<FRCSearchProps> = (props) => {
     loading,
     type,
     value,
-    onFocus,
     onChange,
-    onBlur,
     onKeyDown,
     ...restProps
   } = props
@@ -37,8 +32,6 @@ export const FRCSearch: FC<FRCSearchProps> = (props) => {
     [`frc-input-enter`]: keyDownEnter,
     [`frc-input-prefix`]: prefix,
     [`frc-input-${type}`]: type,
-    [`frc-input-active-stop`]: !inputValue && !inputIsFocus,
-    [`frc-input-active-start`]: inputIsFocus,
     [`frc-input-search-loading`]: loading,
   })
 
@@ -58,16 +51,9 @@ export const FRCSearch: FC<FRCSearchProps> = (props) => {
     },
     onChange: (e: any) => {
       onChange && onChange(e)
-      setInputValue(e.target.value)
-    },
-    onFocus: (e: any) => {
-      onFocus && onFocus(e)
-      console.log('onFocus')
-      setInputIsFocus(true)
-    },
-    onBlur: (e: any) => {
-      onBlur && onBlur(e)
-      setInputIsFocus(false)
+      if (!e.target.value && e.target.value !== 0) {
+        setKeyDownEnter(false)
+      }
     },
   }
 

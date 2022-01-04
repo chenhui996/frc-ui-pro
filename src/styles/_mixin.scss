@@ -145,3 +145,55 @@
     }
   }
 }
+
+// ----------------------------------------------------------------
+
+// input-number
+@mixin input-number-style(
+  // normal
+  $background,
+  $color,
+  $border,
+  // hover
+  $hover-background,
+  $hover-color,
+  $hover-border,
+  // focus
+  $focus-background,
+  $focus-color,
+  $focus-border,
+  // diabled
+  $disabled-background,
+  $disabled-color,
+  $disabled-border
+) {
+  background: $background;
+  color: $color;
+  border: $border;
+  &:hover {
+    background: $hover-background;
+    color: $hover-color;
+    border: $hover-border;
+  }
+  &:focus,
+  &.ant-input-number-focused,
+  &.ant-input-number-affix-wrapper-focused {
+    background: $focus-background;
+    color: $focus-color !important;
+    border: $focus-border;
+    outline: 0;
+    box-shadow: none;
+  }
+  &:disabled,
+  &.frc-input-number-disabled {
+    background: $disabled-background;
+    color: $disabled-color;
+    border: $disabled-border;
+    .ant-input-number-prefix,
+    .ant-input-number-group-addon {
+      color: $disabled-color !important;
+      border: none;
+      cursor: not-allowed !important;
+    }
+  }
+}

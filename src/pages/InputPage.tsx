@@ -1,6 +1,6 @@
 import React from 'react'
 import {Input, Divider} from 'antd'
-import FRCInput from '../components/input/index'
+import FRCInput from '../components/Input/index'
 // import {QuestionCircleOutlined, ProfileOutlined} from '@ant-design/icons'
 import {MenuFoldOutlined} from '@ant-design/icons'
 import {FiSearch} from 'react-icons/fi'

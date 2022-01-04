@@ -1,7 +1,7 @@
 import React, {FC, useState} from 'react'
 import classNames from 'classnames'
 import Input, {InputProps} from 'antd/es/input'
-import { FiSearch } from "react-icons/fi";
+import {FiSearch} from 'react-icons/fi'
 
 type InputType = 'default' | 'icon-only'
 interface BaseInputProps {
@@ -13,9 +13,6 @@ export type FRCInputProps = InputProps & BaseInputProps
 
 export const FRCInput: FC<FRCInputProps> = (props) => {
   const [keyDownEnter, setKeyDownEnter] = useState(false)
-  const [inputValue, setInputValue] = useState(null)
-  // const [inputIsBlur, setInputIsBlur] = useState(false)
-  const [inputIsFocus, setInputIsFocus] = useState(false)
 
   const {
     className,
@@ -25,7 +22,6 @@ export const FRCInput: FC<FRCInputProps> = (props) => {
     type,
     value,
     onChange,
-    onBlur,
     onKeyDown,
     ...restProps
   } = props
@@ -35,7 +31,6 @@ export const FRCInput: FC<FRCInputProps> = (props) => {
     [`frc-input-enter`]: keyDownEnter,
     [`frc-input-prefix`]: prefix,
     [`frc-input-${type}`]: type,
-    [`frc-input-active-stop`]: !inputValue && !inputIsFocus,
   })
 
   let options = {
@@ -54,11 +49,9 @@ export const FRCInput: FC<FRCInputProps> = (props) => {
     },
     onChange: (e: any) => {
       onChange && onChange(e)
-      setInputValue(e.target.value)
-    },
-    onBlur: (e: any) => {
-      onBlur && onBlur(e)
-      setInputIsFocus(false)
+      if (!e.target.value && e.target.value !== 0) {
+        setKeyDownEnter(false)
+      }
     },
   }
 

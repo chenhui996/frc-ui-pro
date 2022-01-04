@@ -1,6 +1,6 @@
 import React from 'react'
 import {Button, Divider} from 'antd'
-import FRCButton from '../components/button/index'
+import FRCButton from '../components/Button/index'
 import {QuestionCircleOutlined, ProfileOutlined} from '@ant-design/icons'
 
 const ButtonPage = () => {
