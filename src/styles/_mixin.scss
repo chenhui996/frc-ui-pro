@@ -148,7 +148,7 @@
 
 // ----------------------------------------------------------------
 
-// input-number
+// input-number | select
 @mixin input-number-style(
   // normal
   $background,
@@ -177,7 +177,8 @@
   }
   &:focus,
   &.ant-input-number-focused,
-  &.ant-input-number-affix-wrapper-focused {
+  &.ant-input-number-affix-wrapper-focused,
+  &.ant-select-focused {
     background: $focus-background;
     color: $focus-color !important;
     border: $focus-border;
@@ -185,13 +186,18 @@
     box-shadow: none;
   }
   &:disabled,
-  &.frc-input-number-disabled {
-    background: $disabled-background;
-    color: $disabled-color;
-    border: $disabled-border;
+  &.frc-input-number-disabled,
+  &.ant-select-disabled {
+    background: $disabled-background !important;
+    color: $disabled-color !important;
+    border: $disabled-border !important;
     .ant-input-number-prefix,
-    .ant-input-number-group-addon {
+    .ant-input-number-group-addon,
+    .ant-select-selector,
+    .ant-select-selection-placeholder,
+    .ant-select-arrow {
       color: $disabled-color !important;
+      background: $disabled-background !important;
       border: none;
       cursor: not-allowed !important;
     }

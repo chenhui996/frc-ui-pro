@@ -53,7 +53,7 @@ export const FRCButton: FC<FRCButtonProps> = (props) => {
 }
 
 // normal
-Button.defaultProps = {
+FRCButton.defaultProps = {
   disabled: false,
   // type: 'primary',
 }

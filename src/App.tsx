@@ -1,8 +1,9 @@
 import React from 'react'
+// import AntdPgae from './pages/antd/AntdPage'
 // import ButtonPage from './pages/ButtonPage'
 // import InputPage from './pages/InputPage'
-import InputNumber from './pages/InputNumberPage'
-// import AntdPgae from './pages/antd/AntdPage'
+// import InputNumber from './pages/InputNumberPage'
+import SelectPage from './pages/SelectPage'
 
 function App() {
   return (
@@ -10,7 +11,8 @@ function App() {
       {/* <AntdPgae /> */}
       {/* <ButtonPage /> */}
       {/* <InputPage /> */}
-      <InputNumber />
+      {/* <InputNumber /> */}
+      <SelectPage />
     </div>
   )
 }

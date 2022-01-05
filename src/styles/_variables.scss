@@ -68,6 +68,7 @@ $font-weight-base:            500 !default;
 $line-height-base:            24px !default;
 $line-height-lg:              32px !default;
 $line-height-sm:              16px !default;
+$line-height-border:          22px !default;
 
 // ----------------------------------------------------------------
 
@@ -93,11 +94,7 @@ $body-text-align:           null !default;
 // 边框 和 border radius
 
 $border-width:                1px !default;
-$border-color:                $gray-300 !default;
-
 $border-radius:               2px !default;
-$border-radius-lg:            .3rem !default;
-$border-radius-sm:            .2rem !default;
 
 // ----------------------------------------------------------------
 
@@ -176,9 +173,7 @@ $btn-background-link-hover:   transparent !default;
 $btn-background-link-active:  transparent  !default;
 
 // ----------------------------------------------------------------
-
 // ----------------------------------------------------------------
-
 // ----------------------------------------------------------------
 
 //input
@@ -188,7 +183,7 @@ $input-padding-x:                          6px !default;
 $input-font-family:                        $font-family-base !default;
 $input-font-size:                          $font-size-base !default;
 $input-font-weight:                        500 !default;
-$input-line-height:                        22px !default;
+$input-line-height:                        $line-height-border !default;
 $input-border-radius:                      $border-radius !default;
 
 $input-background:                         #0C0F0E !default;
@@ -264,3 +259,35 @@ $input-number-background-disabled:         $element-background !default;
 $input-number-color-disabled:              $input-search-color-disabled !default;
 $input-number-border-disabled:             $input-search-border-disabled !default;
 
+// ----------------------------------------------------------------
+// ----------------------------------------------------------------
+// ----------------------------------------------------------------
+
+// select
+
+// basic
+$select-line-height:                        $line-height-border !default;
+$select-font-size:                          $font-size-base !default;
+$select-radius:                             $border-radius !default;
+$select-padding:                            0 4px !default;
+$select-font-weight:                        $font-weight-base !default;
+
+// normal
+$select-background:                         $element-background !default;
+$select-color:                              $words-normal !default;
+$select-border:                             1px solid $basic-btn !default;
+
+// hover
+$select-background-hover:                   $btn-hover !default;
+$select-color-hover:                        $words-normal !default;
+$select-border-hover:                       1px solid $basic-btn !default;
+
+// focus
+$select-background-focus:                   $element-background !default;
+$select-color-focus:                        $words-normal !default;
+$select-border-focus:                       1px solid $words-high-light !default;
+
+// disabled
+$select-background-disabled:                $element-background !default;
+$select-color-disabled:                     $words-disable !default;
+$select-border-disabled:                    1px solid $basic-btn !default;

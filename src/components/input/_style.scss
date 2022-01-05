@@ -144,8 +144,7 @@
     // search btn
     .ant-input-search-button {
       border-radius: 0 !important;
-      height: 22px;
-      // width: 24px;
+      height: $line-height-border;
       background: $basic-btn;
       border: 1px solid transparent !important;
       display: flex;
