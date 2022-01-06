@@ -1,15 +1,35 @@
-import React, {FC, useState} from 'react'
+import React, {FC, useState, useEffect, useRef} from 'react'
 import classNames from 'classnames'
 import Select, {SelectProps} from 'antd/es/select'
-import {FiSearch} from 'react-icons/fi'
+import {FiSearch, FiX} from 'react-icons/fi'
+import ReactDOM from 'react-dom'
 
 export interface FRCSelectProps extends SelectProps {
   prefixIcon?: React.ReactNode
   extendSuffixIcon?: React.ReactNode
 }
 
+const addPrefixNode = (nodes: any, prefixIcon: React.ReactNode) => {
+  const addNode = document.createElement('div')
+  addNode.setAttribute('class', 'frc-select-prefix-wrapper')
+
+  // dom container insert
+  const currentDom = nodes.current
+  currentDom &&
+    currentDom
+      .querySelector('.frc-select')
+      .insertBefore(addNode, currentDom.querySelector('.ant-select-selector'))
+
+  // icon insert
+  ReactDOM.render(
+    prefixIcon as any,
+    currentDom.querySelector('.frc-select-prefix-wrapper'),
+  )
+}
+
 export const FRCSelect: FC<FRCSelectProps> = (props) => {
   const [openDropdown, setOpenDropdown] = useState(false)
+  const nodes = useRef(null)
   const {
     className,
     suffixIcon,
@@ -18,19 +38,32 @@ export const FRCSelect: FC<FRCSelectProps> = (props) => {
     prefixIcon,
     extendSuffixIcon,
     disabled,
+    dropdownClassName,
     onDropdownVisibleChange,
     ...restProps
   } = props
 
-  const classes = classNames('frc-select', className, {})
+  // add prefix node
+  useEffect(() => {
+    if (prefixIcon) {
+      addPrefixNode(nodes, prefixIcon)
+    }
+  }, [prefixIcon])
 
-  const classPrefixIcon = classNames('frc-select-prefix', '', {
+  const classes = classNames('frc-select', className, {
+    [`frc-select-prefix`]: prefixIcon,
     [`frc-select-prefix-icon-disabled`]: disabled,
+  })
+
+  const classesDropdown = classNames('frc-select', dropdownClassName, {
+    [`frc-select-prefix-dropdown`]: prefixIcon,
+    [`test-test`]: openDropdown,
   })
 
   const options = {
     className: classes,
     showSearch,
+    dropdownClassName: classesDropdown,
     suffixIcon:
       showSearch && openDropdown ? (
         extendSuffixIcon ? (
@@ -49,24 +82,21 @@ export const FRCSelect: FC<FRCSelectProps> = (props) => {
     ...restProps,
   }
 
-  if (!prefixIcon && prefixIcon != 0) {
-    return <Select {...options}>{children}</Select>
-  } else {
-    return (
-      <span className={classPrefixIcon}>
-        <span className="frc-select-prefix-wrapper">{prefixIcon}</span>
-        <Select {...options}>{children}</Select>
-      </span>
-    )
-  }
+  return (
+    <div ref={nodes} className="frc-select-container">
+      <Select {...options}>{children}</Select>
+    </div>
+  )
 }
 
 // normal
 FRCSelect.defaultProps = {
   disabled: false,
-  dropdownClassName: 'frc-select',
   listHeight: 200,
   showSearch: false,
+  showArrow: true,
+  clearIcon: <FiX />,
+  prefixIcon: null,
 }
 
 export default FRCSelect

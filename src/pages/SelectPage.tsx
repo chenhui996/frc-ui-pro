@@ -40,6 +40,8 @@ const SelectPage = () => {
         placeholder="default select"
         style={{marginRight: 16, width: 240}}
         extendSuffixIcon={<FiAlertCircle />}
+        prefixIcon={<FiSearch />}
+        dropdownClassName="asdasdsadasdas"
       >
         <Select.Option value="jack">Jack</Select.Option>
         <Select.Option value="lucy">Lucy</Select.Option>
@@ -117,7 +119,9 @@ const SelectPage = () => {
         prefixIcon={<FiAlertCircle />}
         extendSuffixIcon={<FiAlertCircle />}
       >
-        <Select.Option value="jack">Jack12312312312312312312312312</Select.Option>
+        <Select.Option value="jack">
+          Jack12312312312312312312312312
+        </Select.Option>
         <Select.Option value="lucy">Lucy</Select.Option>
         <Select.Option value="jack1">Jack1</Select.Option>
         <Select.Option value="lucy2">Lucy2</Select.Option>
@@ -151,6 +155,58 @@ const SelectPage = () => {
       >
         <Select.Option value="jack">Jack</Select.Option>
         <Select.Option value="lucy">Lucy</Select.Option>
+      </FRCSelect>
+
+      <Divider style={{backgroundColor: '#1e1e1e', height: 1, marginTop: 16}} />
+
+      <h3>search select - multiple</h3>
+
+      <FRCSelect
+        mode="multiple"
+        placeholder="Search to Select"
+        style={{marginRight: 16, width: 240}}
+        allowClear
+        showSearch
+      >
+        <Select.Option value="jack">
+          Jack12312312312312312312312312
+        </Select.Option>
+        <Select.Option value="lucy">Lucy123</Select.Option>
+        <Select.Option value="jack1">Jack13241241234131</Select.Option>
+        <Select.Option value="lucy2">
+          Jack12312312312312312312312312
+        </Select.Option>
+        <Select.Option value="jack3">Jack3dasdas</Select.Option>
+        <Select.Option value="lucy4">Lucy4xzc</Select.Option>
+        <Select.Option value="jack5">Jack5</Select.Option>
+        <Select.Option value="lucy6">Lucy6zxqeq</Select.Option>
+        <Select.Option value="jack7">Jack7</Select.Option>
+        <Select.Option value="lucy8">Lucy82312</Select.Option>
+      </FRCSelect>
+
+      <FRCSelect
+        mode="multiple"
+        placeholder="Search to Select"
+        style={{marginRight: 16, width: 240}}
+        showArrow
+        allowClear
+        prefixIcon={<FiSearch />}
+        showSearch
+      >
+        <Select.Option value="jack">
+          Jack12312312312312312312312312
+        </Select.Option>
+        <Select.Option value="lucy">Lucy123</Select.Option>
+        <Select.Option value="jack1">Jack13241241234131</Select.Option>
+        <Select.Option value="lucy2">
+          Jack12312312312312312312312312
+        </Select.Option>
+        <Select.Option value="jack3">Jack3dasdas</Select.Option>
+        <Select.Option value="lucy4">Lucy4xzc</Select.Option>
+        <Select.Option value="jack5">Jack5</Select.Option>
+        <Select.Option value="lucy6">Lucy6zxqeq</Select.Option>
+        <Select.Option value="jack7">Jack7</Select.Option>
+        <Select.Option value="lucy8">Lucy82312</Select.Option>
       </FRCSelect>
 
       <Divider style={{backgroundColor: '#1e1e1e', height: 1, marginTop: 16}} />

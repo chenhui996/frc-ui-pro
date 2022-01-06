@@ -1,3 +1,8 @@
+.frc-select-container {
+  display: inline-block;
+  vertical-align: top;
+}
+
 .frc-select.ant-select {
   @include input-number-style(
     // normal
@@ -5,7 +10,7 @@
     $select-color,
     $select-border,
     // hover
-    $select-background-hover,
+    $select-background,
     $select-color-hover,
     $select-border-hover,
     // focus
@@ -37,6 +42,7 @@
     line-height: $line-height-border;
     height: auto;
     background-color: transparent;
+    box-shadow: none !important;
   }
   .ant-select-arrow {
     color: $select-color;
@@ -44,8 +50,19 @@
   }
   .ant-select-clear {
     color: $words-normal;
-    right: 22px;
-    background: transparent;
+    right: 3px;
+    top: auto;
+    bottom: 3px;
+    background: $basic-btn;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2px;
+    width: 16px;
+    height: 16px;
+    &:hover {
+      background: $btn-hover;
+    }
   }
   .ant-select-selection-item {
     font-weight: $select-font-weight;
@@ -58,12 +75,6 @@
       .ant-select-arrow {
         transform: rotate(0deg);
       }
-    }
-  }
-  // search select
-  &.ant-select-single {
-    .ant-select-selection-search {
-      left: 4px;
     }
   }
 }
@@ -100,31 +111,39 @@
 }
 
 // prefix select
-.frc-select-prefix {
+.frc-select.frc-select-prefix {
   position: relative;
   line-height: $line-height-base;
-  display: inline-block;
+  // icon
   .frc-select-prefix-wrapper {
-    position: absolute;
-    width: 22px;
-    height: 22px;
     z-index: 10;
     display: flex;
+    height: 22px;
+    width: 20px;
     justify-content: center;
     align-items: center;
-    left: 1px;
-    top: 0.5px;
+    cursor: default;
     color: $words-normal;
+    position: absolute;
+    left: 1px;
+    top: 0px;
   }
-  .ant-select-single .ant-select-selector {
-    .ant-select-selection-search {
-      left: 20px;
+  // single
+  &.ant-select-single {
+    .ant-select-selector {
+      padding-left: 22px;
+      .ant-select-selection-search {
+        left: 20px;
+      }
     }
-    .ant-select-selection-placeholder {
-      padding-left: 16px;
-    }
-    .ant-select-selection-item {
-      padding-left: 16px;
+  }
+  // multiple
+  &.ant-select-multiple {
+    .ant-select-selector {
+      padding-left: 22px;
+      .ant-select-selection-placeholder {
+        padding-left: 22px;
+      }
     }
   }
   &.frc-select-prefix-icon-disabled {
@@ -132,5 +151,50 @@
       color: $words-disable;
       cursor: not-allowed;
     }
+  }
+}
+
+// multiple select
+.frc-select.ant-select.ant-select-multiple {
+  &:hover {
+    background-color: $select-background;
+  }
+  .ant-select-selection-search,
+  .ant-select-selector::after {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-inline-start: 0;
+  }
+  .ant-select-selection-search-mirror,
+  .ant-select-selection-search-input {
+    height: auto;
+    line-height: 1em;
+  }
+  .ant-select-selector {
+    .ant-select-selection-item {
+      padding-inline-end: 0;
+      line-height: 16px;
+      background-color: $part-plate;
+      .ant-select-selection-item-remove {
+        color: $words-normal;
+        width: 20px;
+        .anticon-close {
+          vertical-align: 0;
+          font-size: 8px;
+        }
+        &:hover {
+          background-color: $select-background-hover;
+        }
+      }
+    }
+  }
+  .ant-select-arrow {
+    right: 6px;
+    top: auto;
+    bottom: 6px;
+  }
+  .ant-select-selection-placeholder {
+    left: 0;
+    padding-left: 4px;
   }
 }

@@ -133,6 +133,16 @@
       $input-color-disabled,
       none
     );
+    // .ant-input-suffix {
+    //   & .ant-input-clear-icon {
+    //     & svg {
+    //       display: none;
+    //     }
+    //     &::after {
+    //       content: url('../../../public/search.svg')
+    //     }
+    //   }
+    // }
   }
   .ant-input-affix-wrapper-focused {
     box-shadow: none;
@@ -155,6 +165,7 @@
       line-height: 0;
       color: $words-disable;
     }
+    
   }
 
   .ant-input-affix-wrapper-disabled + .ant-input-group-addon {
