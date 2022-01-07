@@ -31,12 +31,12 @@ export const FRCButton: FC<FRCButtonProps> = (props) => {
     ...restProps
   } = props
   // btn, btn-lg, btn-primary
-  const classes = classNames('btn', className, {
-    [`btn-${type}`]: type,
-    [`btn-${size}`]: size,
-    [`btn-work-${workType}`]: work,
-    [`btn-loading`]: loading,
-    [`btn-icon-only`]: !children,
+  const classes = classNames('frc-btn', className, {
+    [`frc-btn-${type}`]: type,
+    [`frc-btn-${size}`]: size,
+    [`frc-btn-work-${workType}`]: work,
+    [`frc-btn-loading`]: loading,
+    [`frc-btn-icon-only`]: !children,
   })
 
   // main
@@ -53,9 +53,9 @@ export const FRCButton: FC<FRCButtonProps> = (props) => {
 }
 
 // normal
-Button.defaultProps = {
+FRCButton.defaultProps = {
   disabled: false,
-  type: 'primary',
+  // type: 'primary',
 }
 
 export default FRCButton

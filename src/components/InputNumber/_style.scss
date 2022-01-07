@@ -1,0 +1,185 @@
+// normal
+.frc-input-number.ant-input-number {
+  // basic size
+  @include input-number-style(
+    // normal
+    $input-number-background,
+    $input-number-color,
+    $input-number-border,
+    // hover
+    $input-number-background-hover,
+    $input-number-color-hover,
+    $input-number-border-hover,
+    // focuse
+    $input-number-background-focus,
+    $input-number-color-focus,
+    $input-number-border-focus,
+    // disabled
+    $input-number-background-disabled,
+    $input-number-color-disabled,
+    $input-number-border-disabled
+  );
+  line-height: $input-number-line-height;
+  outline: 0;
+  box-shadow: none;
+  font-size: $font-size-base;
+  // right btn
+  .ant-input-number-handler-wrap {
+    opacity: 1;
+    background-color: transparent;
+    .ant-input-number-handler {
+      &:hover {
+        background-color: $btn-hover;
+        pointer-events: auto;
+      }
+      border-left: none;
+      .ant-input-number-handler-up-inner,
+      .ant-input-number-handler-down-inner {
+        color: $words-normal;
+        font-size: 6px;
+      }
+    }
+    .ant-input-number-handler-down {
+      border-top: none;
+    }
+    &:hover {
+      background-color: $basic-btn;
+    }
+  }
+  // input box
+  .ant-input-number-input-wrap {
+    // input
+    .ant-input-number-input {
+      height: auto;
+      padding: 0 4px;
+    }
+  }
+}
+
+// prefix icon
+.frc-input-number.ant-input-number-affix-wrapper {
+  @include input-number-style(
+    // normal
+    $input-number-background,
+    $input-number-color,
+    $input-number-border,
+    // hover
+    $input-number-background-hover,
+    $input-number-color-hover,
+    $input-number-border-hover,
+    // focuse
+    $input-number-background-focus,
+    $input-number-color-focus,
+    $input-number-border-focus,
+    // disabled
+    $input-number-background-disabled,
+    $input-number-color-disabled,
+    $input-number-border-disabled
+  );
+  .ant-input-number {
+    @include input-number-style(
+      // normal
+      none,
+      $input-number-color,
+      none,
+      // hover
+      none,
+      $input-number-color-hover,
+      none,
+      // focuse
+      none,
+      $input-number-color-focus,
+      none,
+      // disabled
+      none,
+      $input-number-color-disabled,
+      none
+    );
+  }
+  line-height: $input-number-line-height;
+  padding-inline-start: 4px;
+  .ant-input-number-prefix {
+    color: $words-normal;
+    font-size: 12px;
+  }
+}
+
+// addonBefore and addonAfter
+.frc-input-number.ant-input-number-group-wrapper {
+  @include input-number-style(
+    // normal
+    $input-number-background,
+    $input-number-color,
+    $input-number-border,
+    // hover
+    $input-number-background-hover,
+    $input-number-color-hover,
+    $input-number-border-hover,
+    // focuse
+    $input-number-background-focus,
+    $input-number-color-focus,
+    $input-number-border-focus,
+    // disabled
+    $input-number-background-disabled,
+    $input-number-color-disabled,
+    $input-number-border-disabled
+  );
+  .ant-input-number {
+    @include input-number-style(
+      // normal
+      none,
+      $input-number-color,
+      none,
+      // hover
+      none,
+      $input-number-color-hover,
+      none,
+      // focuse
+      none,
+      $input-number-color-focus,
+      none,
+      // disabled
+      none,
+      $input-number-color-disabled,
+      none
+    );
+    .ant-input-number-input {
+      padding: 0;
+    }
+  }
+  border-radius: 2px;
+  line-height: $input-number-line-height;
+  .ant-input-number-wrapper.ant-input-number-group {
+    display: inline-flex;
+    vertical-align: top;
+    .ant-input-number-group-addon {
+      min-width: 22px;
+      background-color: transparent;
+      border: none;
+      color: $words-normal;
+      padding: 0 4px;
+      font-size: 12px;
+      display: flex;
+      flex: none;
+      align-items: center;
+      line-height: $input-number-line-height;
+    }
+  }
+}
+
+// ----------------------------------------------------------------
+
+// no border
+.frc-input-number-no-border{
+  border: none !important;
+}
+
+// normal working color
+.frc-input-number.frc-input-number-enter{
+  color: $words-normal !important;
+}
+
+// normal stop working color
+.frc-input-number.frc-input-number-active-stop{
+  color: $words-supporting !important;
+}

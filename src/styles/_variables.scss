@@ -15,73 +15,26 @@ $new-data:                  #241F0C !default;
 // ----------------------------------------------------------------
 
 // words color
-$words-normal:       #FFEBC8 !default;
-$words-high-light:   #F9C152 !default;
-$words-supporting:   #8F9598 !default;
-$words-disable:      #4A4D4C !default;
-$words-title:        #136C5E !default;
-$words-black:        #000000 !default;
-
-
-// ----------------------------------------------------------------
-
-// UP
-$up-01: #181110 !default;
-$up-02: #241411 !default;
-$up-03: #301613 !default;
-$up-04: #3c1915 !default;
-$up-05: #481c17 !default;
-$up-06: #551e18 !default;
-$up-07: #60201b !default;
-$up-08: #6d241c !default;
-$up-09: #79261e !default;
-$up-10: #852920 !default;
-
-//DOWN
-$down-01: #0b1712 !default;
-$down-02: #0a1f16 !default;
-$down-03: #0a271a !default;
-$down-04: #09301f !default;
-$down-05: #083823 !default;
-$down-06: #084027 !default;
-$down-07: #07482c !default;
-$down-08: #075130 !default;
-$down-09: #065934 !default;
-$down-10: #056238 !default;
+$words-normal:              #FFEBC8 !default;
+$words-high-light:          #F9C152 !default;
+$words-supporting:          #8F9598 !default;
+$words-disable:             #4A4D4C !default;
+$words-title:               #136C5E !default;
+$words-black:               #000000 !default;
 
 // ----------------------------------------------------------------
 
-$white:    #fff !default;
-$gray-100: #f8f9fa !default;
-$gray-200: #e9ecef !default;
-$gray-300: #dee2e6 !default;
-$gray-400: #ced4da !default;
-$gray-500: #adb5bd !default;
-$gray-600: #6c757d !default;
-$gray-700: #495057 !default;
-$gray-800: #343a40 !default;
-$gray-900: #212529 !default;
-$black:    #000 !default;
-
-$blue:    #0d6efd !default;
-$indigo:  #6610f2 !default;
-$purple:  #6f42c1 !default;
-$pink:    #d63384 !default;
-$red:     #dc3545 !default;
-$orange:  #fd7e14 !default;
-$yellow:  #fadb14 !default;
-$green:   #52c41a !default;
-$teal:    #20c997 !default;
-$cyan:    #17a2b8 !default;
-
-$primary:       $blue !default;
-$secondary:     $gray-600 !default;
-$success:       $green !default;
-$info:          $cyan !default;
-$warning:       $yellow !default;
-$danger:        $red !default;
-$light:         $gray-100 !default;
-$dark:          $gray-800 !default;
+$white:                     #ffffff !default;
+$gray-100:                  #f8f9fa !default;
+$gray-200:                  #e9ecef !default;
+$gray-300:                  #dee2e6 !default;
+$gray-400:                  #ced4da !default;
+$gray-500:                  #adb5bd !default;
+$gray-600:                  #6c757d !default;
+$gray-700:                  #495057 !default;
+$gray-800:                  #343a40 !default;
+$gray-900:                  #212529 !default;
+$black:                     #000000 !default;
 
 // ----------------------------------------------------------------
 
@@ -96,7 +49,7 @@ $font-size-root:              null !default;
 // ----------------------------------------------------------------
 
 // 字体
-$font-family-sans-serif:      Medium, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-family-sans-serif:      Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
 $font-family-base:            $font-family-sans-serif !default;
 
 // ----------------------------------------------------------------
@@ -115,6 +68,7 @@ $font-weight-base:            500 !default;
 $line-height-base:            24px !default;
 $line-height-lg:              32px !default;
 $line-height-sm:              16px !default;
+$line-height-border:          22px !default;
 
 // ----------------------------------------------------------------
 
@@ -140,11 +94,7 @@ $body-text-align:           null !default;
 // 边框 和 border radius
 
 $border-width:                1px !default;
-$border-color:                $gray-300 !default;
-
 $border-radius:               2px !default;
-$border-radius-lg:            .3rem !default;
-$border-radius-sm:            .2rem !default;
 
 // ----------------------------------------------------------------
 
@@ -223,29 +173,121 @@ $btn-background-link-hover:   transparent !default;
 $btn-background-link-active:  transparent  !default;
 
 // ----------------------------------------------------------------
-
 // ----------------------------------------------------------------
-
 // ----------------------------------------------------------------
 
 //input
 
-$input-padding-y:                       0px !default;
-$input-padding-x:                       6px !default;
-$input-font-family:                     $font-family-base !default;
-$input-font-size:                       $font-size-base !default;
-$input-font-weight:                     500 !default;
-$input-line-height:                     22px !default;
-$input-border-radius:                   $border-radius !default;
+$input-padding-y:                          0px !default;
+$input-padding-x:                          6px !default;
+$input-font-family:                        $font-family-base !default;
+$input-font-size:                          $font-size-base !default;
+$input-font-weight:                        500 !default;
+$input-line-height:                        $line-height-border !default;
+$input-border-radius:                      $border-radius !default;
 
-$input-background:                      #0C0F0E !default;
-$input-color:                           $words-supporting !default;
-$input-border:                          1px solid $basic-btn !default;
+$input-background:                         #0C0F0E !default;
+$input-color:                              $words-supporting !default;
+$input-border:                             1px solid $basic-btn !default;
 
-$input-background-hover:                $btn-hover !default;
+$input-background-hover:                   $btn-hover !default;
 
-$input-color-focus:                     $words-high-light !default;
-$input-border-focus:                    1px solid $words-high-light !default;
+$input-color-focus:                        $words-high-light !default;
+$input-border-focus:                       1px solid $words-high-light !default;
+
+$input-background-disabled:                $input-background !default;
+$input-color-disabled:                     $words-disable !default;
+$input-border-disabled:                    $input-border !default;
+
+// icon-only
+// normal
+$input-background-icon-only:               transparent !default;
+$input-color-icon-only:                    $words-normal !default;
+$input-border-icon-only:                   1px solid transparent !default;
+// hover
+$input-background-icon-only-hover:         $input-background-hover !default;
+$input-color-icon-only-hover:              $words-normal !default;
+$input-border-icon-only-hover:             1px solid $input-background-hover !default;
+// focus
+$input-background-icon-only-focus:         $input-background !default;
+$input-color-icon-only-focus:              $input-color-focus !default;
+$input-border-icon-only-focus:             1px solid $input-color-focus !default;
+// disabled
+$input-background-icon-only-disabled:      $input-background-icon-only !default;
+$input-color-icon-only-disabled:           $input-color-disabled !default;
+$input-border-icon-only-disabled:          1px solid transparent !default;
 
 // ----------------------------------------------------------------
 
+// search - input
+// normal
+$input-search-background:                  $element-background !default;
+$input-search-color:                       $words-supporting !default;
+$input-search-border:                      1px solid $basic-btn !default;
+// hover
+$input-search-background-hover:            #0A2420 !default;
+$input-search-color-hover:                 $words-supporting !default;
+$input-search-border-hover:                1px solid $basic-btn !default;
+// focus
+$input-search-background-focus:            $element-background !default;
+$input-search-color-focus:                 $words-high-light !default;
+$input-search-border-focus:                1px solid $words-high-light !default;
+// disabled
+$input-search-background-disabled:         $basic-btn !default;
+$input-search-color-disabled:              $words-disable !default;
+$input-search-border-disabled:             1px solid $basic-btn !default;
+
+// ----------------------------------------------------------------
+
+// input-number
+
+$input-number-line-height:                 $input-line-height;
+// normal
+$input-number-background:                  $element-background !default;
+$input-number-color:                       $input-search-color !default;
+$input-number-border:                      $input-search-border !default;
+// hover
+$input-number-background-hover:            $element-background !default;
+$input-number-color-hover:                 $input-search-color-hover !default;
+$input-number-border-hover:                $input-search-border-hover !default;
+// focus
+$input-number-background-focus:            $element-background !default;
+$input-number-color-focus:                 $input-search-color-focus !default;
+$input-number-border-focus:                $input-search-border-focus !default;
+// disabled
+$input-number-background-disabled:         $element-background !default;
+$input-number-color-disabled:              $input-search-color-disabled !default;
+$input-number-border-disabled:             $input-search-border-disabled !default;
+
+// ----------------------------------------------------------------
+// ----------------------------------------------------------------
+// ----------------------------------------------------------------
+
+// select
+
+// basic
+$select-line-height:                        $line-height-border !default;
+$select-font-size:                          $font-size-base !default;
+$select-radius:                             $border-radius !default;
+$select-padding:                            0 4px !default;
+$select-font-weight:                        $font-weight-base !default;
+
+// normal
+$select-background:                         $element-background !default;
+$select-color:                              $words-normal !default;
+$select-border:                             1px solid $basic-btn !default;
+
+// hover
+$select-background-hover:                   $btn-hover !default;
+$select-color-hover:                        $words-normal !default;
+$select-border-hover:                       1px solid $basic-btn !default;
+
+// focus
+$select-background-focus:                   $element-background !default;
+$select-color-focus:                        $words-normal !default;
+$select-border-focus:                       1px solid $words-high-light !default;
+
+// disabled
+$select-background-disabled:                $element-background !default;
+$select-color-disabled:                     $words-disable !default;
+$select-border-disabled:                    1px solid $basic-btn !default;
