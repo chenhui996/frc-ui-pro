@@ -18,8 +18,8 @@ const SelectPage = () => {
         clearIcon={<FiSearch />}
         // suffixIcon={<FiSearch />}
       >
-        <Select.Option value="jack">Jack</Select.Option>
-        <Select.Option value="lucy">Lucy</Select.Option>
+        <FRCSelect.Option value="jack">Jack</FRCSelect.Option>
+        <FRCSelect.Option value="lucy">Lucy</FRCSelect.Option>
       </Select>
 
       <Select
@@ -29,8 +29,8 @@ const SelectPage = () => {
         clearIcon={<FiSearch />}
         showSearch
       >
-        <Select.Option value="jack">Jack</Select.Option>
-        <Select.Option value="lucy">Lucy</Select.Option>
+        <FRCSelect.Option value="jack">Jack</FRCSelect.Option>
+        <FRCSelect.Option value="lucy">Lucy</FRCSelect.Option>
       </Select>
 
       <Select
@@ -43,14 +43,14 @@ const SelectPage = () => {
         mode="multiple"
         loading
       >
-        <Select.Option value="jack">Jack1231231231</Select.Option>
-        <Select.Option value="lucy1">Lucyasdasdaxz</Select.Option>
-        <Select.Option value="jack2">Jack12312</Select.Option>
-        <Select.Option value="lucy3">Lucydsadavc</Select.Option>
-        <Select.Option value="jack4">Jackdsad</Select.Option>
-        <Select.Option value="lucy5">Lucy213</Select.Option>
-        <Select.Option value="jack6">Jack</Select.Option>
-        <Select.Option value="lucy7">Lucy</Select.Option>
+        <FRCSelect.Option value="jack">Jack1231231231</FRCSelect.Option>
+        <FRCSelect.Option value="lucy1">Lucyasdasdaxz</FRCSelect.Option>
+        <FRCSelect.Option value="jack2">Jack12312</FRCSelect.Option>
+        <FRCSelect.Option value="lucy3">Lucydsadavc</FRCSelect.Option>
+        <FRCSelect.Option value="jack4">Jackdsad</FRCSelect.Option>
+        <FRCSelect.Option value="lucy5">Lucy213</FRCSelect.Option>
+        <FRCSelect.Option value="jack6">Jack</FRCSelect.Option>
+        <FRCSelect.Option value="lucy7">Lucy</FRCSelect.Option>
       </Select>
 
       <Select
@@ -60,38 +60,38 @@ const SelectPage = () => {
         defaultValue={['china']}
         optionLabelProp="label"
       >
-        <Select.Option value="china" label="China">
+        <FRCSelect.Option value="china" label="China">
           <div className="demo-option-label-item">
             <span role="img" aria-label="China">
               🇨🇳
             </span>
             China (中国)
           </div>
-        </Select.Option>
-        <Select.Option value="usa" label="USA">
+        </FRCSelect.Option>
+        <FRCSelect.Option value="usa" label="USA">
           <div className="demo-option-label-item">
             <span role="img" aria-label="USA">
               🇺🇸
             </span>
             USA (美国)
           </div>
-        </Select.Option>
-        <Select.Option value="japan" label="Japan">
+        </FRCSelect.Option>
+        <FRCSelect.Option value="japan" label="Japan">
           <div className="demo-option-label-item">
             <span role="img" aria-label="Japan">
               🇯🇵
             </span>
             Japan (日本)
           </div>
-        </Select.Option>
-        <Select.Option value="korea" label="Korea">
+        </FRCSelect.Option>
+        <FRCSelect.Option value="korea" label="Korea">
           <div className="demo-option-label-item">
             <span role="img" aria-label="Korea">
               🇰🇷
             </span>
             Korea (韩国)
           </div>
-        </Select.Option>
+        </FRCSelect.Option>
       </Select>
 
       <Divider style={{backgroundColor: '#1e1e1e', height: 1, marginTop: 16}} />
@@ -105,16 +105,16 @@ const SelectPage = () => {
         prefixIcon={<FiSearch />}
         dropdownClassName="asdasdsadasdas"
       >
-        <Select.Option value="jack">Jack</Select.Option>
-        <Select.Option value="lucy">Lucy</Select.Option>
-        <Select.Option value="jack1">Jack1</Select.Option>
-        <Select.Option value="lucy2">Lucy2</Select.Option>
-        <Select.Option value="jack3">Jack3</Select.Option>
-        <Select.Option value="lucy4">Lucy4</Select.Option>
-        <Select.Option value="jack5">Jack5</Select.Option>
-        <Select.Option value="lucy6">Lucy6</Select.Option>
-        <Select.Option value="jack7">Jack7</Select.Option>
-        <Select.Option value="lucy8">Lucy8</Select.Option>
+        <FRCSelect.Option value="jack">Jack</FRCSelect.Option>
+        <FRCSelect.Option value="lucy">Lucy</FRCSelect.Option>
+        <FRCSelect.Option value="jack1">Jack1</FRCSelect.Option>
+        <FRCSelect.Option value="lucy2">Lucy2</FRCSelect.Option>
+        <FRCSelect.Option value="jack3">Jack3</FRCSelect.Option>
+        <FRCSelect.Option value="lucy4">Lucy4</FRCSelect.Option>
+        <FRCSelect.Option value="jack5">Jack5</FRCSelect.Option>
+        <FRCSelect.Option value="lucy6">Lucy6</FRCSelect.Option>
+        <FRCSelect.Option value="jack7">Jack7</FRCSelect.Option>
+        <FRCSelect.Option value="lucy8">Lucy8</FRCSelect.Option>
       </FRCSelect>
 
       <FRCSelect
@@ -122,8 +122,8 @@ const SelectPage = () => {
         style={{marginRight: 16, width: 240}}
         allowClear
       >
-        <Select.Option value="jack">Jack</Select.Option>
-        <Select.Option value="lucy">Lucy</Select.Option>
+        <FRCSelect.Option value="jack">Jack</FRCSelect.Option>
+        <FRCSelect.Option value="lucy">Lucy</FRCSelect.Option>
       </FRCSelect>
 
       <FRCSelect
@@ -134,16 +134,16 @@ const SelectPage = () => {
         dropdownClassName="asdasdsadasdas"
         loading
       >
-        <Select.Option value="jack">Jack</Select.Option>
-        <Select.Option value="lucy">Lucy</Select.Option>
-        <Select.Option value="jack1">Jack1</Select.Option>
-        <Select.Option value="lucy2">Lucy2</Select.Option>
-        <Select.Option value="jack3">Jack3</Select.Option>
-        <Select.Option value="lucy4">Lucy4</Select.Option>
-        <Select.Option value="jack5">Jack5</Select.Option>
-        <Select.Option value="lucy6">Lucy6</Select.Option>
-        <Select.Option value="jack7">Jack7</Select.Option>
-        <Select.Option value="lucy8">Lucy8</Select.Option>
+        <FRCSelect.Option value="jack">Jack</FRCSelect.Option>
+        <FRCSelect.Option value="lucy">Lucy</FRCSelect.Option>
+        <FRCSelect.Option value="jack1">Jack1</FRCSelect.Option>
+        <FRCSelect.Option value="lucy2">Lucy2</FRCSelect.Option>
+        <FRCSelect.Option value="jack3">Jack3</FRCSelect.Option>
+        <FRCSelect.Option value="lucy4">Lucy4</FRCSelect.Option>
+        <FRCSelect.Option value="jack5">Jack5</FRCSelect.Option>
+        <FRCSelect.Option value="lucy6">Lucy6</FRCSelect.Option>
+        <FRCSelect.Option value="jack7">Jack7</FRCSelect.Option>
+        <FRCSelect.Option value="lucy8">Lucy8</FRCSelect.Option>
       </FRCSelect>
 
       <FRCSelect
@@ -152,8 +152,8 @@ const SelectPage = () => {
         allowClear
         disabled
       >
-        <Select.Option value="jack">Jack</Select.Option>
-        <Select.Option value="lucy">Lucy</Select.Option>
+        <FRCSelect.Option value="jack">Jack</FRCSelect.Option>
+        <FRCSelect.Option value="lucy">Lucy</FRCSelect.Option>
       </FRCSelect>
 
       <FRCSelect
@@ -164,8 +164,8 @@ const SelectPage = () => {
         prefixIcon={<FiSearch />}
         loading
       >
-        <Select.Option value="jack">Jack</Select.Option>
-        <Select.Option value="lucy">Lucy</Select.Option>
+        <FRCSelect.Option value="jack">Jack</FRCSelect.Option>
+        <FRCSelect.Option value="lucy">Lucy</FRCSelect.Option>
       </FRCSelect>
 
       <Divider style={{backgroundColor: '#1e1e1e', height: 1, marginTop: 16}} />
@@ -178,16 +178,16 @@ const SelectPage = () => {
         showSearch
         allowClear
       >
-        <Select.Option value="jack">Jack</Select.Option>
-        <Select.Option value="lucy">Lucy</Select.Option>
-        <Select.Option value="jack1">Jack1</Select.Option>
-        <Select.Option value="lucy2">Lucy2</Select.Option>
-        <Select.Option value="jack3">Jack3</Select.Option>
-        <Select.Option value="lucy4">Lucy4</Select.Option>
-        <Select.Option value="jack5">Jack5</Select.Option>
-        <Select.Option value="lucy6">Lucy6</Select.Option>
-        <Select.Option value="jack7">Jack7</Select.Option>
-        <Select.Option value="lucy8">Lucy8</Select.Option>
+        <FRCSelect.Option value="jack">Jack</FRCSelect.Option>
+        <FRCSelect.Option value="lucy">Lucy</FRCSelect.Option>
+        <FRCSelect.Option value="jack1">Jack1</FRCSelect.Option>
+        <FRCSelect.Option value="lucy2">Lucy2</FRCSelect.Option>
+        <FRCSelect.Option value="jack3">Jack3</FRCSelect.Option>
+        <FRCSelect.Option value="lucy4">Lucy4</FRCSelect.Option>
+        <FRCSelect.Option value="jack5">Jack5</FRCSelect.Option>
+        <FRCSelect.Option value="lucy6">Lucy6</FRCSelect.Option>
+        <FRCSelect.Option value="jack7">Jack7</FRCSelect.Option>
+        <FRCSelect.Option value="lucy8">Lucy8</FRCSelect.Option>
       </FRCSelect>
 
       <FRCSelect
@@ -197,16 +197,16 @@ const SelectPage = () => {
         allowClear
         loading
       >
-        <Select.Option value="jack">Jack</Select.Option>
-        <Select.Option value="lucy">Lucy</Select.Option>
-        <Select.Option value="jack1">Jack1</Select.Option>
-        <Select.Option value="lucy2">Lucy2</Select.Option>
-        <Select.Option value="jack3">Jack3</Select.Option>
-        <Select.Option value="lucy4">Lucy4</Select.Option>
-        <Select.Option value="jack5">Jack5</Select.Option>
-        <Select.Option value="lucy6">Lucy6</Select.Option>
-        <Select.Option value="jack7">Jack7</Select.Option>
-        <Select.Option value="lucy8">Lucy8</Select.Option>
+        <FRCSelect.Option value="jack">Jack</FRCSelect.Option>
+        <FRCSelect.Option value="lucy">Lucy</FRCSelect.Option>
+        <FRCSelect.Option value="jack1">Jack1</FRCSelect.Option>
+        <FRCSelect.Option value="lucy2">Lucy2</FRCSelect.Option>
+        <FRCSelect.Option value="jack3">Jack3</FRCSelect.Option>
+        <FRCSelect.Option value="lucy4">Lucy4</FRCSelect.Option>
+        <FRCSelect.Option value="jack5">Jack5</FRCSelect.Option>
+        <FRCSelect.Option value="lucy6">Lucy6</FRCSelect.Option>
+        <FRCSelect.Option value="jack7">Jack7</FRCSelect.Option>
+        <FRCSelect.Option value="lucy8">Lucy8</FRCSelect.Option>
       </FRCSelect>
 
       <FRCSelect
@@ -216,8 +216,8 @@ const SelectPage = () => {
         allowClear
         disabled
       >
-        <Select.Option value="jack">Jack</Select.Option>
-        <Select.Option value="lucy">Lucy</Select.Option>
+        <FRCSelect.Option value="jack">Jack</FRCSelect.Option>
+        <FRCSelect.Option value="lucy">Lucy</FRCSelect.Option>
       </FRCSelect>
 
       <FRCSelect
@@ -228,8 +228,8 @@ const SelectPage = () => {
         disabled
         loading
       >
-        <Select.Option value="jack">Jack</Select.Option>
-        <Select.Option value="lucy">Lucy</Select.Option>
+        <FRCSelect.Option value="jack">Jack</FRCSelect.Option>
+        <FRCSelect.Option value="lucy">Lucy</FRCSelect.Option>
       </FRCSelect>
 
       <Divider style={{backgroundColor: '#1e1e1e', height: 1, marginTop: 16}} />
@@ -244,18 +244,18 @@ const SelectPage = () => {
         prefixIcon={<FiAlertCircle />}
         extendSuffixIcon={<FiAlertCircle />}
       >
-        <Select.Option value="jack">
+        <FRCSelect.Option value="jack">
           Jack12312312312312312312312312
-        </Select.Option>
-        <Select.Option value="lucy">Lucy</Select.Option>
-        <Select.Option value="jack1">Jack1</Select.Option>
-        <Select.Option value="lucy2">Lucy2</Select.Option>
-        <Select.Option value="jack3">Jack3</Select.Option>
-        <Select.Option value="lucy4">Lucy4</Select.Option>
-        <Select.Option value="jack5">Jack5</Select.Option>
-        <Select.Option value="lucy6">Lucy6</Select.Option>
-        <Select.Option value="jack7">Jack7</Select.Option>
-        <Select.Option value="lucy8">Lucy8</Select.Option>
+        </FRCSelect.Option>
+        <FRCSelect.Option value="lucy">Lucy</FRCSelect.Option>
+        <FRCSelect.Option value="jack1">Jack1</FRCSelect.Option>
+        <FRCSelect.Option value="lucy2">Lucy2</FRCSelect.Option>
+        <FRCSelect.Option value="jack3">Jack3</FRCSelect.Option>
+        <FRCSelect.Option value="lucy4">Lucy4</FRCSelect.Option>
+        <FRCSelect.Option value="jack5">Jack5</FRCSelect.Option>
+        <FRCSelect.Option value="lucy6">Lucy6</FRCSelect.Option>
+        <FRCSelect.Option value="jack7">Jack7</FRCSelect.Option>
+        <FRCSelect.Option value="lucy8">Lucy8</FRCSelect.Option>
       </FRCSelect>
 
       <FRCSelect
@@ -266,8 +266,8 @@ const SelectPage = () => {
         prefixIcon={<FiSearch />}
         extendSuffixIcon={<FiAlertCircle />}
       >
-        <Select.Option value="jack">Jack</Select.Option>
-        <Select.Option value="lucy">Lucy</Select.Option>
+        <FRCSelect.Option value="jack">Jack</FRCSelect.Option>
+        <FRCSelect.Option value="lucy">Lucy</FRCSelect.Option>
       </FRCSelect>
 
       <FRCSelect
@@ -279,8 +279,8 @@ const SelectPage = () => {
         extendSuffixIcon={<FiAlertCircle />}
         loading
       >
-        <Select.Option value="jack">Jack</Select.Option>
-        <Select.Option value="lucy">Lucy</Select.Option>
+        <FRCSelect.Option value="jack">Jack</FRCSelect.Option>
+        <FRCSelect.Option value="lucy">Lucy</FRCSelect.Option>
       </FRCSelect>
 
       <FRCSelect
@@ -291,8 +291,8 @@ const SelectPage = () => {
         disabled
         prefixIcon={<FiSearch />}
       >
-        <Select.Option value="jack">Jack</Select.Option>
-        <Select.Option value="lucy">Lucy</Select.Option>
+        <FRCSelect.Option value="jack">Jack</FRCSelect.Option>
+        <FRCSelect.Option value="lucy">Lucy</FRCSelect.Option>
       </FRCSelect>
 
       <FRCSelect
@@ -304,8 +304,8 @@ const SelectPage = () => {
         prefixIcon={<FiSearch />}
         loading
       >
-        <Select.Option value="jack">Jack</Select.Option>
-        <Select.Option value="lucy">Lucy</Select.Option>
+        <FRCSelect.Option value="jack">Jack</FRCSelect.Option>
+        <FRCSelect.Option value="lucy">Lucy</FRCSelect.Option>
       </FRCSelect>
 
       <Divider style={{backgroundColor: '#1e1e1e', height: 1, marginTop: 16}} />
@@ -319,20 +319,20 @@ const SelectPage = () => {
         allowClear
         showSearch
       >
-        <Select.Option value="jack">
+        <FRCSelect.Option value="jack">
           Jack12312312312312312312312312
-        </Select.Option>
-        <Select.Option value="lucy">Lucy123</Select.Option>
-        <Select.Option value="jack1">Jack13241241234131</Select.Option>
-        <Select.Option value="lucy2">
+        </FRCSelect.Option>
+        <FRCSelect.Option value="lucy">Lucy123</FRCSelect.Option>
+        <FRCSelect.Option value="jack1">Jack13241241234131</FRCSelect.Option>
+        <FRCSelect.Option value="lucy2">
           Jack12312312312312312312312312
-        </Select.Option>
-        <Select.Option value="jack3">Jack3dasdas</Select.Option>
-        <Select.Option value="lucy4">Lucy4xzc</Select.Option>
-        <Select.Option value="jack5">Jack5</Select.Option>
-        <Select.Option value="lucy6">Lucy6zxqeq</Select.Option>
-        <Select.Option value="jack7">Jack7</Select.Option>
-        <Select.Option value="lucy8">Lucy82312</Select.Option>
+        </FRCSelect.Option>
+        <FRCSelect.Option value="jack3">Jack3dasdas</FRCSelect.Option>
+        <FRCSelect.Option value="lucy4">Lucy4xzc</FRCSelect.Option>
+        <FRCSelect.Option value="jack5">Jack5</FRCSelect.Option>
+        <FRCSelect.Option value="lucy6">Lucy6zxqeq</FRCSelect.Option>
+        <FRCSelect.Option value="jack7">Jack7</FRCSelect.Option>
+        <FRCSelect.Option value="lucy8">Lucy82312</FRCSelect.Option>
       </FRCSelect>
 
       <FRCSelect
@@ -344,20 +344,20 @@ const SelectPage = () => {
         prefixIcon={<FiSearch />}
         showSearch
       >
-        <Select.Option value="jack">
+        <FRCSelect.Option value="jack">
           Jack12312312312312312312312312
-        </Select.Option>
-        <Select.Option value="lucy">Lucy123</Select.Option>
-        <Select.Option value="jack1">Jack13241241234131</Select.Option>
-        <Select.Option value="lucy2">
+        </FRCSelect.Option>
+        <FRCSelect.Option value="lucy">Lucy123</FRCSelect.Option>
+        <FRCSelect.Option value="jack1">Jack13241241234131</FRCSelect.Option>
+        <FRCSelect.Option value="lucy2">
           Jack12312312312312312312312312
-        </Select.Option>
-        <Select.Option value="jack3">Jack3dasdas</Select.Option>
-        <Select.Option value="lucy4">Lucy4xzc</Select.Option>
-        <Select.Option value="jack5">Jack5</Select.Option>
-        <Select.Option value="lucy6">Lucy6zxqeq</Select.Option>
-        <Select.Option value="jack7">Jack7</Select.Option>
-        <Select.Option value="lucy8">Lucy82312</Select.Option>
+        </FRCSelect.Option>
+        <FRCSelect.Option value="jack3">Jack3dasdas</FRCSelect.Option>
+        <FRCSelect.Option value="lucy4">Lucy4xzc</FRCSelect.Option>
+        <FRCSelect.Option value="jack5">Jack5</FRCSelect.Option>
+        <FRCSelect.Option value="lucy6">Lucy6zxqeq</FRCSelect.Option>
+        <FRCSelect.Option value="jack7">Jack7</FRCSelect.Option>
+        <FRCSelect.Option value="lucy8">Lucy82312</FRCSelect.Option>
       </FRCSelect>
 
       <FRCSelect
@@ -370,20 +370,20 @@ const SelectPage = () => {
         showSearch
         loading
       >
-        <Select.Option value="jack">
+        <FRCSelect.Option value="jack">
           Jack12312312312312312312312312
-        </Select.Option>
-        <Select.Option value="lucy">Lucy123</Select.Option>
-        <Select.Option value="jack1">Jack13241241234131</Select.Option>
-        <Select.Option value="lucy2">
+        </FRCSelect.Option>
+        <FRCSelect.Option value="lucy">Lucy123</FRCSelect.Option>
+        <FRCSelect.Option value="jack1">Jack13241241234131</FRCSelect.Option>
+        <FRCSelect.Option value="lucy2">
           Jack12312312312312312312312312
-        </Select.Option>
-        <Select.Option value="jack3">Jack3dasdas</Select.Option>
-        <Select.Option value="lucy4">Lucy4xzc</Select.Option>
-        <Select.Option value="jack5">Jack5</Select.Option>
-        <Select.Option value="lucy6">Lucy6zxqeq</Select.Option>
-        <Select.Option value="jack7">Jack7</Select.Option>
-        <Select.Option value="lucy8">Lucy82312</Select.Option>
+        </FRCSelect.Option>
+        <FRCSelect.Option value="jack3">Jack3dasdas</FRCSelect.Option>
+        <FRCSelect.Option value="lucy4">Lucy4xzc</FRCSelect.Option>
+        <FRCSelect.Option value="jack5">Jack5</FRCSelect.Option>
+        <FRCSelect.Option value="lucy6">Lucy6zxqeq</FRCSelect.Option>
+        <FRCSelect.Option value="jack7">Jack7</FRCSelect.Option>
+        <FRCSelect.Option value="lucy8">Lucy82312</FRCSelect.Option>
       </FRCSelect>
 
       <FRCSelect
@@ -396,20 +396,20 @@ const SelectPage = () => {
         showSearch
         disabled
       >
-        <Select.Option value="jack">
+        <FRCSelect.Option value="jack">
           Jack12312312312312312312312312
-        </Select.Option>
-        <Select.Option value="lucy">Lucy123</Select.Option>
-        <Select.Option value="jack1">Jack13241241234131</Select.Option>
-        <Select.Option value="lucy2">
+        </FRCSelect.Option>
+        <FRCSelect.Option value="lucy">Lucy123</FRCSelect.Option>
+        <FRCSelect.Option value="jack1">Jack13241241234131</FRCSelect.Option>
+        <FRCSelect.Option value="lucy2">
           Jack12312312312312312312312312
-        </Select.Option>
-        <Select.Option value="jack3">Jack3dasdas</Select.Option>
-        <Select.Option value="lucy4">Lucy4xzc</Select.Option>
-        <Select.Option value="jack5">Jack5</Select.Option>
-        <Select.Option value="lucy6">Lucy6zxqeq</Select.Option>
-        <Select.Option value="jack7">Jack7</Select.Option>
-        <Select.Option value="lucy8">Lucy82312</Select.Option>
+        </FRCSelect.Option>
+        <FRCSelect.Option value="jack3">Jack3dasdas</FRCSelect.Option>
+        <FRCSelect.Option value="lucy4">Lucy4xzc</FRCSelect.Option>
+        <FRCSelect.Option value="jack5">Jack5</FRCSelect.Option>
+        <FRCSelect.Option value="lucy6">Lucy6zxqeq</FRCSelect.Option>
+        <FRCSelect.Option value="jack7">Jack7</FRCSelect.Option>
+        <FRCSelect.Option value="lucy8">Lucy82312</FRCSelect.Option>
       </FRCSelect>
 
       <FRCSelect
@@ -423,20 +423,20 @@ const SelectPage = () => {
         disabled
         loading
       >
-        <Select.Option value="jack">
+        <FRCSelect.Option value="jack">
           Jack12312312312312312312312312
-        </Select.Option>
-        <Select.Option value="lucy">Lucy123</Select.Option>
-        <Select.Option value="jack1">Jack13241241234131</Select.Option>
-        <Select.Option value="lucy2">
+        </FRCSelect.Option>
+        <FRCSelect.Option value="lucy">Lucy123</FRCSelect.Option>
+        <FRCSelect.Option value="jack1">Jack13241241234131</FRCSelect.Option>
+        <FRCSelect.Option value="lucy2">
           Jack12312312312312312312312312
-        </Select.Option>
-        <Select.Option value="jack3">Jack3dasdas</Select.Option>
-        <Select.Option value="lucy4">Lucy4xzc</Select.Option>
-        <Select.Option value="jack5">Jack5</Select.Option>
-        <Select.Option value="lucy6">Lucy6zxqeq</Select.Option>
-        <Select.Option value="jack7">Jack7</Select.Option>
-        <Select.Option value="lucy8">Lucy82312</Select.Option>
+        </FRCSelect.Option>
+        <FRCSelect.Option value="jack3">Jack3dasdas</FRCSelect.Option>
+        <FRCSelect.Option value="lucy4">Lucy4xzc</FRCSelect.Option>
+        <FRCSelect.Option value="jack5">Jack5</FRCSelect.Option>
+        <FRCSelect.Option value="lucy6">Lucy6zxqeq</FRCSelect.Option>
+        <FRCSelect.Option value="jack7">Jack7</FRCSelect.Option>
+        <FRCSelect.Option value="lucy8">Lucy82312</FRCSelect.Option>
       </FRCSelect>
 
       <Divider style={{backgroundColor: '#1e1e1e', height: 1, marginTop: 16}} />
@@ -451,20 +451,20 @@ const SelectPage = () => {
         showSearch
         maxTagCount={'responsive'}
       >
-        <Select.Option value="jack">
+        <FRCSelect.Option value="jack">
           Jack12312312312312312312312312
-        </Select.Option>
-        <Select.Option value="lucy">Lucy123</Select.Option>
-        <Select.Option value="jack1">Jack13241241234131</Select.Option>
-        <Select.Option value="lucy2">
+        </FRCSelect.Option>
+        <FRCSelect.Option value="lucy">Lucy123</FRCSelect.Option>
+        <FRCSelect.Option value="jack1">Jack13241241234131</FRCSelect.Option>
+        <FRCSelect.Option value="lucy2">
           Jack12312312312312312312312312
-        </Select.Option>
-        <Select.Option value="jack3">Jack3dasdas</Select.Option>
-        <Select.Option value="lucy4">Lucy4xzc</Select.Option>
-        <Select.Option value="jack5">Jack5</Select.Option>
-        <Select.Option value="lucy6">Lucy6zxqeq</Select.Option>
-        <Select.Option value="jack7">Jack7</Select.Option>
-        <Select.Option value="lucy8">Lucy82312</Select.Option>
+        </FRCSelect.Option>
+        <FRCSelect.Option value="jack3">Jack3dasdas</FRCSelect.Option>
+        <FRCSelect.Option value="lucy4">Lucy4xzc</FRCSelect.Option>
+        <FRCSelect.Option value="jack5">Jack5</FRCSelect.Option>
+        <FRCSelect.Option value="lucy6">Lucy6zxqeq</FRCSelect.Option>
+        <FRCSelect.Option value="jack7">Jack7</FRCSelect.Option>
+        <FRCSelect.Option value="lucy8">Lucy82312</FRCSelect.Option>
       </FRCSelect>
 
       <FRCSelect
@@ -476,20 +476,20 @@ const SelectPage = () => {
         maxTagCount={'responsive'}
         prefixIcon={<FiSearch />}
       >
-        <Select.Option value="jack">
+        <FRCSelect.Option value="jack">
           Jack12312312312312312312312312
-        </Select.Option>
-        <Select.Option value="lucy">Lucy123</Select.Option>
-        <Select.Option value="jack1">Jack13241241234131</Select.Option>
-        <Select.Option value="lucy2">
+        </FRCSelect.Option>
+        <FRCSelect.Option value="lucy">Lucy123</FRCSelect.Option>
+        <FRCSelect.Option value="jack1">Jack13241241234131</FRCSelect.Option>
+        <FRCSelect.Option value="lucy2">
           Jack12312312312312312312312312
-        </Select.Option>
-        <Select.Option value="jack3">Jack3dasdas</Select.Option>
-        <Select.Option value="lucy4">Lucy4xzc</Select.Option>
-        <Select.Option value="jack5">Jack5</Select.Option>
-        <Select.Option value="lucy6">Lucy6zxqeq</Select.Option>
-        <Select.Option value="jack7">Jack7</Select.Option>
-        <Select.Option value="lucy8">Lucy82312</Select.Option>
+        </FRCSelect.Option>
+        <FRCSelect.Option value="jack3">Jack3dasdas</FRCSelect.Option>
+        <FRCSelect.Option value="lucy4">Lucy4xzc</FRCSelect.Option>
+        <FRCSelect.Option value="jack5">Jack5</FRCSelect.Option>
+        <FRCSelect.Option value="lucy6">Lucy6zxqeq</FRCSelect.Option>
+        <FRCSelect.Option value="jack7">Jack7</FRCSelect.Option>
+        <FRCSelect.Option value="lucy8">Lucy82312</FRCSelect.Option>
       </FRCSelect>
 
       <FRCSelect
@@ -502,20 +502,20 @@ const SelectPage = () => {
         prefixIcon={<FiSearch />}
         loading
       >
-        <Select.Option value="jack">
+        <FRCSelect.Option value="jack">
           Jack12312312312312312312312312
-        </Select.Option>
-        <Select.Option value="lucy">Lucy123</Select.Option>
-        <Select.Option value="jack1">Jack13241241234131</Select.Option>
-        <Select.Option value="lucy2">
+        </FRCSelect.Option>
+        <FRCSelect.Option value="lucy">Lucy123</FRCSelect.Option>
+        <FRCSelect.Option value="jack1">Jack13241241234131</FRCSelect.Option>
+        <FRCSelect.Option value="lucy2">
           Jack12312312312312312312312312
-        </Select.Option>
-        <Select.Option value="jack3">Jack3dasdas</Select.Option>
-        <Select.Option value="lucy4">Lucy4xzc</Select.Option>
-        <Select.Option value="jack5">Jack5</Select.Option>
-        <Select.Option value="lucy6">Lucy6zxqeq</Select.Option>
-        <Select.Option value="jack7">Jack7</Select.Option>
-        <Select.Option value="lucy8">Lucy82312</Select.Option>
+        </FRCSelect.Option>
+        <FRCSelect.Option value="jack3">Jack3dasdas</FRCSelect.Option>
+        <FRCSelect.Option value="lucy4">Lucy4xzc</FRCSelect.Option>
+        <FRCSelect.Option value="jack5">Jack5</FRCSelect.Option>
+        <FRCSelect.Option value="lucy6">Lucy6zxqeq</FRCSelect.Option>
+        <FRCSelect.Option value="jack7">Jack7</FRCSelect.Option>
+        <FRCSelect.Option value="lucy8">Lucy82312</FRCSelect.Option>
       </FRCSelect>
 
       <FRCSelect
@@ -527,93 +527,20 @@ const SelectPage = () => {
         maxTagCount={'responsive'}
         disabled
       >
-        <Select.Option value="jack">
+        <FRCSelect.Option value="jack">
           Jack12312312312312312312312312
-        </Select.Option>
-        <Select.Option value="lucy">Lucy123</Select.Option>
-        <Select.Option value="jack1">Jack13241241234131</Select.Option>
-        <Select.Option value="lucy2">
+        </FRCSelect.Option>
+        <FRCSelect.Option value="lucy">Lucy123</FRCSelect.Option>
+        <FRCSelect.Option value="jack1">Jack13241241234131</FRCSelect.Option>
+        <FRCSelect.Option value="lucy2">
           Jack12312312312312312312312312
-        </Select.Option>
-        <Select.Option value="jack3">Jack3dasdas</Select.Option>
-        <Select.Option value="lucy4">Lucy4xzc</Select.Option>
-        <Select.Option value="jack5">Jack5</Select.Option>
-        <Select.Option value="lucy6">Lucy6zxqeq</Select.Option>
-        <Select.Option value="jack7">Jack7</Select.Option>
-        <Select.Option value="lucy8">Lucy82312</Select.Option>
-      </FRCSelect>
-
-      <FRCSelect
-        mode="multiple"
-        placeholder="Search to Select"
-        style={{marginRight: 16, width: 240}}
-        allowClear
-        showSearch
-        maxTagCount={'responsive'}
-        disabled
-        loading
-      >
-        <Select.Option value="jack">
-          Jack12312312312312312312312312
-        </Select.Option>
-        <Select.Option value="lucy">Lucy123</Select.Option>
-      </FRCSelect>
-
-      <Divider style={{backgroundColor: '#1e1e1e', height: 1, marginTop: 16}} />
-
-      <h3>auto '...' search select - multiple</h3>
-
-      <FRCSelect
-        mode="multiple"
-        placeholder="Search to Select"
-        style={{marginRight: 16, width: 240}}
-        allowClear
-        showSearch
-        maxTagCount={'responsive'}
-      >
-        <Select.OptGroup label="Manager">
-          <Select.Option value="jack">Jack</Select.Option>
-          <Select.Option value="lucy">Lucy</Select.Option>
-        </Select.OptGroup>
-        <Select.OptGroup label="Engineer">
-          <Select.Option value="Yiminghe">yiminghe</Select.Option>
-        </Select.OptGroup>
-      </FRCSelect>
-
-      <FRCSelect
-        mode="multiple"
-        placeholder="Search to Select"
-        style={{marginRight: 16, width: 240}}
-        allowClear
-        showSearch
-        maxTagCount={'responsive'}
-        loading
-      >
-        <Select.OptGroup label="Manager">
-          <Select.Option value="jack">Jack</Select.Option>
-          <Select.Option value="lucy">Lucy</Select.Option>
-        </Select.OptGroup>
-        <Select.OptGroup label="Engineer">
-          <Select.Option value="Yiminghe">yiminghe</Select.Option>
-        </Select.OptGroup>
-      </FRCSelect>
-
-      <FRCSelect
-        mode="multiple"
-        placeholder="Search to Select"
-        style={{marginRight: 16, width: 240}}
-        allowClear
-        showSearch
-        maxTagCount={'responsive'}
-        disabled
-      >
-        <Select.OptGroup label="Manager">
-          <Select.Option value="jack">Jack</Select.Option>
-          <Select.Option value="lucy">Lucy</Select.Option>
-        </Select.OptGroup>
-        <Select.OptGroup label="Engineer">
-          <Select.Option value="Yiminghe">yiminghe</Select.Option>
-        </Select.OptGroup>
+        </FRCSelect.Option>
+        <FRCSelect.Option value="jack3">Jack3dasdas</FRCSelect.Option>
+        <FRCSelect.Option value="lucy4">Lucy4xzc</FRCSelect.Option>
+        <FRCSelect.Option value="jack5">Jack5</FRCSelect.Option>
+        <FRCSelect.Option value="lucy6">Lucy6zxqeq</FRCSelect.Option>
+        <FRCSelect.Option value="jack7">Jack7</FRCSelect.Option>
+        <FRCSelect.Option value="lucy8">Lucy82312</FRCSelect.Option>
       </FRCSelect>
 
       <FRCSelect
@@ -626,13 +553,10 @@ const SelectPage = () => {
         disabled
         loading
       >
-        <Select.OptGroup label="Manager">
-          <Select.Option value="jack">Jack</Select.Option>
-          <Select.Option value="lucy">Lucy</Select.Option>
-        </Select.OptGroup>
-        <Select.OptGroup label="Engineer">
-          <Select.Option value="Yiminghe">yiminghe</Select.Option>
-        </Select.OptGroup>
+        <FRCSelect.Option value="jack">
+          Jack12312312312312312312312312
+        </FRCSelect.Option>
+        <FRCSelect.Option value="lucy">Lucy123</FRCSelect.Option>
       </FRCSelect>
 
       <Divider style={{backgroundColor: '#1e1e1e', height: 1, marginTop: 16}} />
@@ -649,7 +573,7 @@ const SelectPage = () => {
         removeMenuItemSelectedIcon={true}
         optionLabelProp="label"
       >
-        <Select.Option value="jack" label="China">
+        <FRCSelect.Option value="jack" label="China">
           <div
             style={{
               display: 'flex',
@@ -661,8 +585,8 @@ const SelectPage = () => {
             </span>
             China (中国)
           </div>
-        </Select.Option>
-        <Select.Option value="lucy" label="USA">
+        </FRCSelect.Option>
+        <FRCSelect.Option value="lucy" label="USA">
           <div
             style={{
               display: 'flex',
@@ -674,7 +598,7 @@ const SelectPage = () => {
             </span>
             USA (美国)
           </div>
-        </Select.Option>
+        </FRCSelect.Option>
       </FRCSelect>
       <FRCSelect
         mode="multiple"
@@ -687,7 +611,7 @@ const SelectPage = () => {
         optionLabelProp="label"
         loading
       >
-        <Select.Option value="jack" label="China">
+        <FRCSelect.Option value="jack" label="China">
           <div
             style={{
               display: 'flex',
@@ -699,8 +623,8 @@ const SelectPage = () => {
             </span>
             China (中国)
           </div>
-        </Select.Option>
-        <Select.Option value="lucy" label="USA">
+        </FRCSelect.Option>
+        <FRCSelect.Option value="lucy" label="USA">
           <div
             style={{
               display: 'flex',
@@ -712,7 +636,7 @@ const SelectPage = () => {
             </span>
             USA (美国)
           </div>
-        </Select.Option>
+        </FRCSelect.Option>
       </FRCSelect>
 
       <FRCSelect
@@ -726,7 +650,7 @@ const SelectPage = () => {
         optionLabelProp="label"
         disabled
       >
-        <Select.Option value="jack" label="China">
+        <FRCSelect.Option value="jack" label="China">
           <div
             style={{
               display: 'flex',
@@ -738,8 +662,8 @@ const SelectPage = () => {
             </span>
             China (中国)
           </div>
-        </Select.Option>
-        <Select.Option value="lucy" label="USA">
+        </FRCSelect.Option>
+        <FRCSelect.Option value="lucy" label="USA">
           <div
             style={{
               display: 'flex',
@@ -751,7 +675,7 @@ const SelectPage = () => {
             </span>
             USA (美国)
           </div>
-        </Select.Option>
+        </FRCSelect.Option>
       </FRCSelect>
 
       <FRCSelect
@@ -766,7 +690,7 @@ const SelectPage = () => {
         loading
         disabled
       >
-        <Select.Option value="jack" label="China">
+        <FRCSelect.Option value="jack" label="China">
           <div
             style={{
               display: 'flex',
@@ -778,8 +702,8 @@ const SelectPage = () => {
             </span>
             China (中国)
           </div>
-        </Select.Option>
-        <Select.Option value="lucy" label="USA">
+        </FRCSelect.Option>
+        <FRCSelect.Option value="lucy" label="USA">
           <div
             style={{
               display: 'flex',
@@ -791,7 +715,7 @@ const SelectPage = () => {
             </span>
             USA (美国)
           </div>
-        </Select.Option>
+        </FRCSelect.Option>
       </FRCSelect>
 
       <Divider style={{backgroundColor: '#1e1e1e', height: 1, marginTop: 16}} />
@@ -807,9 +731,9 @@ const SelectPage = () => {
         // maxTagCount={'responsive'}
         removeMenuItemSelectedIcon={true}
         optionLabelProp="label"
-        defaultValue={['china','usa','japan','korea']}
+        defaultValue={['china', 'usa', 'japan', 'korea']}
       >
-        <Select.OptGroup
+        <FRCSelect.OptGroup
           label={
             <div style={{display: 'flex', justifyContent: 'space-between'}}>
               <div style={{fontSize: 12}}>Category 01</div>
@@ -821,7 +745,7 @@ const SelectPage = () => {
             </div>
           }
         >
-          <Select.Option value="china" label="China">
+          <FRCSelect.Option value="china" label="China">
             <div
               style={{
                 display: 'flex',
@@ -834,8 +758,8 @@ const SelectPage = () => {
               </span>
               China (中国)
             </div>
-          </Select.Option>
-          <Select.Option value="usa" label="USA">
+          </FRCSelect.Option>
+          <FRCSelect.Option value="usa" label="USA">
             <div
               style={{
                 display: 'flex',
@@ -848,9 +772,9 @@ const SelectPage = () => {
               </span>
               USA (美国)
             </div>
-          </Select.Option>
-        </Select.OptGroup>
-        <Select.OptGroup
+          </FRCSelect.Option>
+        </FRCSelect.OptGroup>
+        <FRCSelect.OptGroup
           label={
             <div style={{display: 'flex', justifyContent: 'space-between'}}>
               <div style={{fontSize: 12}}>Category 02</div>
@@ -862,7 +786,7 @@ const SelectPage = () => {
             </div>
           }
         >
-          <Select.Option value="japan" label="Japan">
+          <FRCSelect.Option value="japan" label="Japan">
             <div
               style={{
                 display: 'flex',
@@ -875,8 +799,8 @@ const SelectPage = () => {
               </span>
               Japan (日本)
             </div>
-          </Select.Option>
-          <Select.Option value="korea" label="Korea">
+          </FRCSelect.Option>
+          <FRCSelect.Option value="korea" label="Korea">
             <div
               style={{
                 display: 'flex',
@@ -889,8 +813,8 @@ const SelectPage = () => {
               </span>
               Korea (韩国)
             </div>
-          </Select.Option>
-        </Select.OptGroup>
+          </FRCSelect.Option>
+        </FRCSelect.OptGroup>
       </FRCSelect>
 
       <FRCSelect
@@ -902,9 +826,9 @@ const SelectPage = () => {
         maxTagCount={'responsive'}
         removeMenuItemSelectedIcon={true}
         optionLabelProp="label"
-        defaultValue={['china','usa','japan','korea']}
+        defaultValue={['china', 'usa', 'japan', 'korea']}
       >
-        <Select.OptGroup
+        <FRCSelect.OptGroup
           label={
             <div style={{display: 'flex', justifyContent: 'space-between'}}>
               <div style={{fontSize: 12}}>Category 01</div>
@@ -916,7 +840,7 @@ const SelectPage = () => {
             </div>
           }
         >
-          <Select.Option value="china" label="China">
+          <FRCSelect.Option value="china" label="China">
             <div
               style={{
                 display: 'flex',
@@ -929,8 +853,8 @@ const SelectPage = () => {
               </span>
               China (中国)
             </div>
-          </Select.Option>
-          <Select.Option value="usa" label="USA">
+          </FRCSelect.Option>
+          <FRCSelect.Option value="usa" label="USA">
             <div
               style={{
                 display: 'flex',
@@ -943,9 +867,9 @@ const SelectPage = () => {
               </span>
               USA (美国)
             </div>
-          </Select.Option>
-        </Select.OptGroup>
-        <Select.OptGroup
+          </FRCSelect.Option>
+        </FRCSelect.OptGroup>
+        <FRCSelect.OptGroup
           label={
             <div style={{display: 'flex', justifyContent: 'space-between'}}>
               <div style={{fontSize: 12}}>Category 02</div>
@@ -957,7 +881,7 @@ const SelectPage = () => {
             </div>
           }
         >
-          <Select.Option value="japan" label="Japan">
+          <FRCSelect.Option value="japan" label="Japan">
             <div
               style={{
                 display: 'flex',
@@ -970,8 +894,8 @@ const SelectPage = () => {
               </span>
               Japan (日本)
             </div>
-          </Select.Option>
-          <Select.Option value="korea" label="Korea">
+          </FRCSelect.Option>
+          <FRCSelect.Option value="korea" label="Korea">
             <div
               style={{
                 display: 'flex',
@@ -984,8 +908,8 @@ const SelectPage = () => {
               </span>
               Korea (韩国)
             </div>
-          </Select.Option>
-        </Select.OptGroup>
+          </FRCSelect.Option>
+        </FRCSelect.OptGroup>
       </FRCSelect>
 
       <FRCSelect
@@ -999,7 +923,7 @@ const SelectPage = () => {
         optionLabelProp="label"
         disabled
       >
-        <Select.OptGroup
+        <FRCSelect.OptGroup
           label={
             <div style={{display: 'flex', justifyContent: 'space-between'}}>
               <div style={{fontSize: 12}}>Category 01</div>
@@ -1011,7 +935,7 @@ const SelectPage = () => {
             </div>
           }
         >
-          <Select.Option value="china" label="China">
+          <FRCSelect.Option value="china" label="China">
             <div
               style={{
                 display: 'flex',
@@ -1024,8 +948,8 @@ const SelectPage = () => {
               </span>
               China (中国)
             </div>
-          </Select.Option>
-          <Select.Option value="usa" label="USA">
+          </FRCSelect.Option>
+          <FRCSelect.Option value="usa" label="USA">
             <div
               style={{
                 display: 'flex',
@@ -1038,9 +962,9 @@ const SelectPage = () => {
               </span>
               USA (美国)
             </div>
-          </Select.Option>
-        </Select.OptGroup>
-        <Select.OptGroup
+          </FRCSelect.Option>
+        </FRCSelect.OptGroup>
+        <FRCSelect.OptGroup
           label={
             <div style={{display: 'flex', justifyContent: 'space-between'}}>
               <div style={{fontSize: 12}}>Category 02</div>
@@ -1052,7 +976,7 @@ const SelectPage = () => {
             </div>
           }
         >
-          <Select.Option value="japan" label="Japan">
+          <FRCSelect.Option value="japan" label="Japan">
             <div
               style={{
                 display: 'flex',
@@ -1065,8 +989,8 @@ const SelectPage = () => {
               </span>
               Japan (日本)
             </div>
-          </Select.Option>
-          <Select.Option value="korea" label="Korea">
+          </FRCSelect.Option>
+          <FRCSelect.Option value="korea" label="Korea">
             <div
               style={{
                 display: 'flex',
@@ -1079,8 +1003,8 @@ const SelectPage = () => {
               </span>
               Korea (韩国)
             </div>
-          </Select.Option>
-        </Select.OptGroup>
+          </FRCSelect.Option>
+        </FRCSelect.OptGroup>
       </FRCSelect>
 
       <FRCSelect
@@ -1095,7 +1019,7 @@ const SelectPage = () => {
         disabled
         loading
       >
-        <Select.OptGroup
+        <FRCSelect.OptGroup
           label={
             <div style={{display: 'flex', justifyContent: 'space-between'}}>
               <div style={{fontSize: 12}}>Category 01</div>
@@ -1107,7 +1031,7 @@ const SelectPage = () => {
             </div>
           }
         >
-          <Select.Option value="china" label="China">
+          <FRCSelect.Option value="china" label="China">
             <div
               style={{
                 display: 'flex',
@@ -1120,8 +1044,8 @@ const SelectPage = () => {
               </span>
               China (中国)
             </div>
-          </Select.Option>
-          <Select.Option value="usa" label="USA">
+          </FRCSelect.Option>
+          <FRCSelect.Option value="usa" label="USA">
             <div
               style={{
                 display: 'flex',
@@ -1134,9 +1058,9 @@ const SelectPage = () => {
               </span>
               USA (美国)
             </div>
-          </Select.Option>
-        </Select.OptGroup>
-        <Select.OptGroup
+          </FRCSelect.Option>
+        </FRCSelect.OptGroup>
+        <FRCSelect.OptGroup
           label={
             <div style={{display: 'flex', justifyContent: 'space-between'}}>
               <div style={{fontSize: 12}}>Category 02</div>
@@ -1148,7 +1072,7 @@ const SelectPage = () => {
             </div>
           }
         >
-          <Select.Option value="japan" label="Japan">
+          <FRCSelect.Option value="japan" label="Japan">
             <div
               style={{
                 display: 'flex',
@@ -1161,8 +1085,8 @@ const SelectPage = () => {
               </span>
               Japan (日本)
             </div>
-          </Select.Option>
-          <Select.Option value="korea" label="Korea">
+          </FRCSelect.Option>
+          <FRCSelect.Option value="korea" label="Korea">
             <div
               style={{
                 display: 'flex',
@@ -1175,8 +1099,393 @@ const SelectPage = () => {
               </span>
               Korea (韩国)
             </div>
-          </Select.Option>
-        </Select.OptGroup>
+          </FRCSelect.Option>
+        </FRCSelect.OptGroup>
+      </FRCSelect>
+
+      <Divider style={{backgroundColor: '#1e1e1e', height: 1, marginTop: 16}} />
+
+      <h3>group - custom - search select - single</h3>
+
+      <FRCSelect
+        // mode="multiple"
+        placeholder="Search to Select"
+        style={{marginRight: 16, width: 240}}
+        allowClear
+        showSearch
+        // maxTagCount={'responsive'}
+        removeMenuItemSelectedIcon={true}
+        optionLabelProp="label"
+        defaultValue={['china', 'usa', 'japan', 'korea']}
+      >
+        <FRCSelect.OptGroup
+          label={
+            <div style={{display: 'flex', justifyContent: 'space-between'}}>
+              <div style={{fontSize: 12}}>Category 01</div>
+              <div>
+                <Button type="link" style={{color: '#136C5E'}}>
+                  Link/More
+                </Button>
+              </div>
+            </div>
+          }
+        >
+          <FRCSelect.Option value="china" label="China">
+            <div
+              style={{
+                display: 'flex',
+                justifyContent: 'space-between',
+                paddingLeft: '10px',
+              }}
+            >
+              <span role="img" aria-label="China">
+                🇨🇳
+              </span>
+              China (中国)
+            </div>
+          </FRCSelect.Option>
+          <FRCSelect.Option value="usa" label="USA">
+            <div
+              style={{
+                display: 'flex',
+                justifyContent: 'space-between',
+                paddingLeft: '10px',
+              }}
+            >
+              <span role="img" aria-label="USA">
+                🇺🇸
+              </span>
+              USA (美国)
+            </div>
+          </FRCSelect.Option>
+        </FRCSelect.OptGroup>
+        <FRCSelect.OptGroup
+          label={
+            <div style={{display: 'flex', justifyContent: 'space-between'}}>
+              <div style={{fontSize: 12}}>Category 02</div>
+              <div>
+                <Button type="link" style={{color: '#136C5E'}}>
+                  Link/More
+                </Button>
+              </div>
+            </div>
+          }
+        >
+          <FRCSelect.Option value="japan" label="Japan">
+            <div
+              style={{
+                display: 'flex',
+                justifyContent: 'space-between',
+                paddingLeft: '10px',
+              }}
+            >
+              <span role="img" aria-label="Japan">
+                🇯🇵
+              </span>
+              Japan (日本)
+            </div>
+          </FRCSelect.Option>
+          <FRCSelect.Option value="korea" label="Korea">
+            <div
+              style={{
+                display: 'flex',
+                justifyContent: 'space-between',
+                paddingLeft: '10px',
+              }}
+            >
+              <span role="img" aria-label="Korea">
+                🇰🇷
+              </span>
+              Korea (韩国)
+            </div>
+          </FRCSelect.Option>
+        </FRCSelect.OptGroup>
+      </FRCSelect>
+
+      <FRCSelect
+        // mode="multiple"
+        placeholder="Search to Select"
+        style={{marginRight: 16, width: 240}}
+        allowClear
+        showSearch
+        maxTagCount={'responsive'}
+        removeMenuItemSelectedIcon={true}
+        optionLabelProp="label"
+        // defaultValue={['china', 'usa', 'japan', 'korea']}
+      >
+        <FRCSelect.OptGroup
+          label={
+            <div style={{display: 'flex', justifyContent: 'space-between'}}>
+              <div style={{fontSize: 12}}>Category 01</div>
+              <div>
+                <Button type="link" style={{color: '#136C5E'}}>
+                  Link/More
+                </Button>
+              </div>
+            </div>
+          }
+        >
+          <FRCSelect.Option value="china" label="China">
+            <div
+              style={{
+                display: 'flex',
+                justifyContent: 'space-between',
+                paddingLeft: '10px',
+              }}
+            >
+              <span role="img" aria-label="China">
+                🇨🇳
+              </span>
+              China (中国)
+            </div>
+          </FRCSelect.Option>
+          <FRCSelect.Option value="usa" label="USA">
+            <div
+              style={{
+                display: 'flex',
+                justifyContent: 'space-between',
+                paddingLeft: '10px',
+              }}
+            >
+              <span role="img" aria-label="USA">
+                🇺🇸
+              </span>
+              USA (美国)
+            </div>
+          </FRCSelect.Option>
+        </FRCSelect.OptGroup>
+        <FRCSelect.OptGroup
+          label={
+            <div style={{display: 'flex', justifyContent: 'space-between'}}>
+              <div style={{fontSize: 12}}>Category 02</div>
+              <div>
+                <Button type="link" style={{color: '#136C5E'}}>
+                  Link/More
+                </Button>
+              </div>
+            </div>
+          }
+        >
+          <FRCSelect.Option value="japan" label="Japan">
+            <div
+              style={{
+                display: 'flex',
+                justifyContent: 'space-between',
+                paddingLeft: '10px',
+              }}
+            >
+              <span role="img" aria-label="Japan">
+                🇯🇵
+              </span>
+              Japan (日本)
+            </div>
+          </FRCSelect.Option>
+          <FRCSelect.Option value="korea" label="Korea">
+            <div
+              style={{
+                display: 'flex',
+                justifyContent: 'space-between',
+                paddingLeft: '10px',
+              }}
+            >
+              <span role="img" aria-label="Korea">
+                🇰🇷
+              </span>
+              Korea (韩国)
+            </div>
+          </FRCSelect.Option>
+        </FRCSelect.OptGroup>
+      </FRCSelect>
+
+      <FRCSelect
+        // mode="multiple"
+        placeholder="Search to Select"
+        style={{marginRight: 16, width: 240}}
+        allowClear
+        showSearch
+        maxTagCount={'responsive'}
+        removeMenuItemSelectedIcon={true}
+        optionLabelProp="label"
+        disabled
+      >
+        <FRCSelect.OptGroup
+          label={
+            <div style={{display: 'flex', justifyContent: 'space-between'}}>
+              <div style={{fontSize: 12}}>Category 01</div>
+              <div>
+                <Button type="link" style={{color: '#136C5E'}}>
+                  Link/More
+                </Button>
+              </div>
+            </div>
+          }
+        >
+          <FRCSelect.Option value="china" label="China">
+            <div
+              style={{
+                display: 'flex',
+                justifyContent: 'space-between',
+                paddingLeft: '10px',
+              }}
+            >
+              <span role="img" aria-label="China">
+                🇨🇳
+              </span>
+              China (中国)
+            </div>
+          </FRCSelect.Option>
+          <FRCSelect.Option value="usa" label="USA">
+            <div
+              style={{
+                display: 'flex',
+                justifyContent: 'space-between',
+                paddingLeft: '10px',
+              }}
+            >
+              <span role="img" aria-label="USA">
+                🇺🇸
+              </span>
+              USA (美国)
+            </div>
+          </FRCSelect.Option>
+        </FRCSelect.OptGroup>
+        <FRCSelect.OptGroup
+          label={
+            <div style={{display: 'flex', justifyContent: 'space-between'}}>
+              <div style={{fontSize: 12}}>Category 02</div>
+              <div>
+                <Button type="link" style={{color: '#136C5E'}}>
+                  Link/More
+                </Button>
+              </div>
+            </div>
+          }
+        >
+          <FRCSelect.Option value="japan" label="Japan">
+            <div
+              style={{
+                display: 'flex',
+                justifyContent: 'space-between',
+                paddingLeft: '10px',
+              }}
+            >
+              <span role="img" aria-label="Japan">
+                🇯🇵
+              </span>
+              Japan (日本)
+            </div>
+          </FRCSelect.Option>
+          <FRCSelect.Option value="korea" label="Korea">
+            <div
+              style={{
+                display: 'flex',
+                justifyContent: 'space-between',
+                paddingLeft: '10px',
+              }}
+            >
+              <span role="img" aria-label="Korea">
+                🇰🇷
+              </span>
+              Korea (韩国)
+            </div>
+          </FRCSelect.Option>
+        </FRCSelect.OptGroup>
+      </FRCSelect>
+
+      <FRCSelect
+        // mode="multiple"
+        placeholder="Search to Select"
+        style={{marginRight: 16, width: 240}}
+        allowClear
+        showSearch
+        maxTagCount={'responsive'}
+        removeMenuItemSelectedIcon={true}
+        optionLabelProp="label"
+        disabled
+        loading
+      >
+        <FRCSelect.OptGroup
+          label={
+            <div style={{display: 'flex', justifyContent: 'space-between'}}>
+              <div style={{fontSize: 12}}>Category 01</div>
+              <div>
+                <Button type="link" style={{color: '#136C5E'}}>
+                  Link/More
+                </Button>
+              </div>
+            </div>
+          }
+        >
+          <FRCSelect.Option value="china" label="China">
+            <div
+              style={{
+                display: 'flex',
+                justifyContent: 'space-between',
+                paddingLeft: '10px',
+              }}
+            >
+              <span role="img" aria-label="China">
+                🇨🇳
+              </span>
+              China (中国)
+            </div>
+          </FRCSelect.Option>
+          <FRCSelect.Option value="usa" label="USA">
+            <div
+              style={{
+                display: 'flex',
+                justifyContent: 'space-between',
+                paddingLeft: '10px',
+              }}
+            >
+              <span role="img" aria-label="USA">
+                🇺🇸
+              </span>
+              USA (美国)
+            </div>
+          </FRCSelect.Option>
+        </FRCSelect.OptGroup>
+        <FRCSelect.OptGroup
+          label={
+            <div style={{display: 'flex', justifyContent: 'space-between'}}>
+              <div style={{fontSize: 12}}>Category 02</div>
+              <div>
+                <Button type="link" style={{color: '#136C5E'}}>
+                  Link/More
+                </Button>
+              </div>
+            </div>
+          }
+        >
+          <FRCSelect.Option value="japan" label="Japan">
+            <div
+              style={{
+                display: 'flex',
+                justifyContent: 'space-between',
+                paddingLeft: '10px',
+              }}
+            >
+              <span role="img" aria-label="Japan">
+                🇯🇵
+              </span>
+              Japan (日本)
+            </div>
+          </FRCSelect.Option>
+          <FRCSelect.Option value="korea" label="Korea">
+            <div
+              style={{
+                display: 'flex',
+                justifyContent: 'space-between',
+                paddingLeft: '10px',
+              }}
+            >
+              <span role="img" aria-label="Korea">
+                🇰🇷
+              </span>
+              Korea (韩国)
+            </div>
+          </FRCSelect.Option>
+        </FRCSelect.OptGroup>
       </FRCSelect>
 
       <Divider style={{backgroundColor: '#1e1e1e', height: 1, marginTop: 16}} />
