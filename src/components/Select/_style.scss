@@ -30,6 +30,9 @@
   }
   .ant-select-selector {
     padding: $select-padding;
+    .ant-select-selection-search {
+      left: 4px;
+    }
   }
   .ant-select-selection-placeholder {
     color: $words-supporting;
@@ -79,7 +82,7 @@
   }
 }
 
-// select-dropdown-single
+// select-dropdown
 .frc-select.ant-select-dropdown {
   background-color: $select-background;
   border: 1px solid $select-background-hover;
@@ -89,13 +92,19 @@
     font-size: $font-size-base;
     line-height: $line-height-base;
     min-height: 0;
-    padding: 0 12px;
+    padding: 0 8px;
     font-weight: $select-font-weight;
   }
   // prve active
   .ant-select-item-option-selected {
     background-color: transparent;
     color: $words-high-light !important;
+    .ant-select-item-option-state {
+      color: $words-high-light !important;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
   }
   // now active
   .ant-select-item-option-active {
@@ -106,6 +115,35 @@
     width: 4px !important;
     .rc-virtual-list-scrollbar-thumb {
       background-color: $basic-btn !important;
+    }
+  }
+  &.frc-select-remove-selected-icon {
+    .ant-select-item-option-state {
+      display: none !important;
+    }
+  }
+  // group
+  .ant-select-item-group {
+    padding-top: 8px;
+    &::before {
+      content: '';
+      position: absolute;
+      border-color: #253330;
+      border-top-style: solid;
+      border-width: 1px;
+      height: 0;
+      top: 1.3em;
+      left: 4px;
+      margin-top: -1em;
+      transform: rotate(0deg);
+      width: calc(100% - 8px);
+    }
+    // clear first group border top
+    &:nth-child(1) {
+      padding-top: 0;
+      &::before {
+        display: none;
+      }
     }
   }
 }
@@ -171,6 +209,9 @@
     line-height: 1em;
   }
   .ant-select-selector {
+    .ant-select-selection-search {
+      left: 0px;
+    }
     .ant-select-selection-item {
       padding-inline-end: 0;
       line-height: 16px;

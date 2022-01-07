@@ -1,12 +1,13 @@
 import React, {FC, useState, useEffect, useRef} from 'react'
 import classNames from 'classnames'
 import Select, {SelectProps} from 'antd/es/select'
-import {FiSearch, FiX} from 'react-icons/fi'
+import {FiSearch, FiX, FiCheck} from 'react-icons/fi'
 import ReactDOM from 'react-dom'
 
 export interface FRCSelectProps extends SelectProps {
   prefixIcon?: React.ReactNode
   extendSuffixIcon?: React.ReactNode
+  removeMenuItemSelectedIcon?: boolean
 }
 
 const addPrefixNode = (nodes: any, prefixIcon: React.ReactNode) => {
@@ -39,6 +40,7 @@ export const FRCSelect: FC<FRCSelectProps> = (props) => {
     extendSuffixIcon,
     disabled,
     dropdownClassName,
+    removeMenuItemSelectedIcon,
     onDropdownVisibleChange,
     ...restProps
   } = props
@@ -57,7 +59,7 @@ export const FRCSelect: FC<FRCSelectProps> = (props) => {
 
   const classesDropdown = classNames('frc-select', dropdownClassName, {
     [`frc-select-prefix-dropdown`]: prefixIcon,
-    [`test-test`]: openDropdown,
+    [`frc-select-remove-selected-icon`]: removeMenuItemSelectedIcon,
   })
 
   const options = {
@@ -97,6 +99,8 @@ FRCSelect.defaultProps = {
   showArrow: true,
   clearIcon: <FiX />,
   prefixIcon: null,
+  menuItemSelectedIcon: <FiCheck />,
+  removeMenuItemSelectedIcon: false,
 }
 
 export default FRCSelect
