@@ -203,3 +203,138 @@
     }
   }
 }
+
+// ----------------------------------------------------------------
+
+@mixin radio-style(
+  // normal
+  $background,
+  $color,
+  $border,
+  $background-icon,
+  $border-icon,
+  // hover
+  $hover-background,
+  $hover-color,
+  $hover-border,
+  $hover-background-icon,
+  $hover-border-icon,
+  // active
+  $active-background,
+  $active-color,
+  $active-border,
+  $active-background-icon,
+  $active-border-icon,
+  // focus
+  $focus-background,
+  $focus-color,
+  $focus-border,
+  $focus-background-icon,
+  $focus-border-icon,
+  // diabled
+  $disabled-background,
+  $disabled-color,
+  $disabled-border,
+  $disabled-background-icon,
+  $disabled-border-icon,
+  $disabled-background-icon-inner
+) {
+  background: $background;
+  color: $color;
+  border: $border;
+  // normal icon
+  .ant-radio {
+    .ant-radio-inner {
+      background: $background-icon;
+      border: $border-icon;
+    }
+  }
+  // hover
+  &:hover {
+    background: $hover-background;
+    color: $hover-color;
+    border: $hover-border;
+    // hover icon
+    .ant-radio {
+      .ant-radio-inner {
+        background: $hover-background-icon;
+        border: $hover-border-icon;
+      }
+      // checked hover
+      &.ant-radio-checked {
+        .ant-radio-inner {
+          background: $hover-background-icon;
+        }
+      }
+    }
+  }
+  // active
+  &:active {
+    background: $active-background;
+    color: $active-color;
+    border: $active-border;
+    // active icon
+    .ant-radio {
+      .ant-radio-inner {
+        background: $active-background-icon;
+        border: $active-border-icon;
+        &::after {
+          background-color: $disabled-background-icon-inner;
+          transform: scale(0.5);
+          opacity: 1;
+        }
+      }
+      // checked active
+      &.ant-radio-checked {
+        .ant-radio-inner {
+          background: $active-background-icon;
+        }
+      }
+    }
+  }
+  // focus
+  &:focus,
+  .ant-radio.ant-radio-checked {
+    background: $focus-background;
+    color: $focus-color;
+    border: $focus-border;
+    // icon
+    &::after {
+      border: $focus-border;
+    }
+    + * {
+      color: $focus-color;
+    }
+    // focus icon
+    .ant-radio-inner {
+      background: $focus-background-icon;
+      border: $focus-border-icon;
+      &::after {
+        background-color: $focus-color;
+      }
+    }
+  }
+  // disabled
+  &:disabled,
+  &.ant-radio-wrapper-disabled {
+    // background: $disabled-background !important;
+    color: $disabled-color !important;
+    border: $disabled-border !important;
+    // disabled icon
+    .ant-radio {
+      &.ant-radio-checked,
+      &.ant-radio-disabled {
+        .ant-radio-inner {
+          background: $disabled-background-icon !important;
+          border: $disabled-border-icon !important;
+          &::after {
+            background-color: $disabled-background-icon-inner !important;
+          }
+        }
+        + * {
+          color: $disabled-color;
+        }
+      }
+    }
+  }
+}

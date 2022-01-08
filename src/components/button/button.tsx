@@ -39,9 +39,15 @@ export const FRCButton: FC<FRCButtonProps> = (props) => {
     [`frc-btn-icon-only`]: !children,
   })
 
+  const options = {
+    className: classes,
+    loading,
+    ...restProps,
+  }
+
   // main
   return (
-    <Button className={classes} loading={loading} {...restProps}>
+    <Button {...options}>
       <span className="lead-child-box">
         {children}
         {type === 'lead' && children && (
