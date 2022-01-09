@@ -358,3 +358,35 @@ $radio-border-disabled:                     none !default;
 $radio-background-disabled-icon:            $element-background !default;
 $radio-border-disabled-icon:                1px solid $basic-btn !default;
 $radio-background-disabled-icon-inner:      $basic-btn !default;
+
+// ----------------------------------------------------------------
+
+// radio - buttonType
+
+// normal
+$radio-solid-background:                    $element-background !default;
+$radio-solid-color:                         $words-normal !default;
+$radio-solid-border:                        none !default;
+
+// hover
+$radio-solid-background-hover:              $btn-hover !default;
+$radio-solid-color-hover:                   $words-normal !default;
+$radio-solid-border-hover:                  none !default;
+
+// active
+$radio-solid-background-active:             $part-plate !default;
+$radio-solid-color-active:                  $words-normal !default;
+$radio-solid-border-active:                 none !default;
+
+// focus
+$radio-solid-background-focus:              $basic-btn !default;
+$radio-solid-color-focus:                   $words-normal !default;
+$radio-solid-border-focus:                  none !default;
+
+// disable
+$radio-solid-background-disabled:           $element-background !default;
+$radio-solid-color-disabled:                $words-disable !default;
+$radio-solid-border-disabled:               none !default;
+
+$radio-solid-background-disabled-checked:   $basic-btn !default;
+

@@ -338,3 +338,58 @@
     }
   }
 }
+
+// ----------------------------------------------------------------
+
+@mixin radio-group-style(
+  // normal
+  $background,
+  $color,
+  $border,
+  // hover
+  $hover-background,
+  $hover-color,
+  $hover-border,
+  // active
+  $active-background,
+  $active-color,
+  $active-border,
+  // focus
+  $focus-background,
+  $focus-color,
+  $focus-border,
+  // diabled
+  $disabled-background,
+  $disabled-color,
+  $disabled-border,
+  $disabled-background-checked,
+) {
+  background: $background;
+  color: $color;
+  border: $border;
+  &:hover {
+    background: $hover-background;
+    color: $hover-color;
+    border: $hover-border;
+  }
+  &:active {
+    background: $active-background;
+    color: $active-color;
+    border: $active-border;
+  }
+  &:focus,
+  &.ant-radio-button-wrapper-checked {
+    background: $focus-background;
+    color: $focus-color;
+    border: $focus-border;
+  }
+  &:disabled,
+  &.ant-radio-button-wrapper-disabled {
+    &.ant-radio-button-wrapper-checked{
+      background: $disabled-background-checked !important;
+    }
+    background: $disabled-background !important;
+    color: $disabled-color !important;
+    border: $disabled-border !important;
+  }
+}

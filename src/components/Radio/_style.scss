@@ -61,3 +61,52 @@
     padding-left: 4px;
   }
 }
+
+.frc-radio-group.ant-radio-group {
+  &.ant-radio-group-solid {
+    background: transparent;
+    border: 1px solid $basic-btn;
+    border-radius: 2px;
+    .ant-radio-button-wrapper {
+      height: auto;
+      line-height: 22px;
+      border: none;
+      background: transparent;
+      font-size: 12px;
+      border-radius: 0px;
+      &::before {
+        opacity: 0;
+      }
+
+      .ant-radio-button-checked {
+        .ant-radio-button-input {
+          display: none;
+        }
+      }
+
+      @include radio-group-style(
+        // normal
+        $radio-solid-background,
+        $radio-solid-color,
+        $radio-solid-border,
+        // hover
+        $radio-solid-background-hover,
+        $radio-solid-color-hover,
+        $radio-solid-border-hover,
+        // active
+        $radio-solid-background-active,
+        $radio-solid-color-active,
+        $radio-solid-border-active,
+        // focus
+        $radio-solid-background-focus,
+        $radio-solid-color-focus,
+        $radio-solid-border-focus,
+        // disabled
+        $radio-solid-background-disabled,
+        $radio-solid-color-disabled,
+        $radio-solid-border-disabled,
+        $radio-solid-background-disabled-checked
+      );
+    }
+  }
+}
