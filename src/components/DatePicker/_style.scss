@@ -1,0 +1,30 @@
+.frc-date-picker.ant-picker {
+  line-height: $date-picker-line-height;
+  font-size: $font-size-base;
+  font-weight: $font-weight-base;
+  font-family: $font-family-base;
+  padding: 0 4px;
+  vertical-align: top;
+  // @include switch-style(
+  //   // normal
+  //   $switch-background,
+  //   $switch-color,
+  //   $switch-border,
+  //   $switch-background-icon,
+  //   // hover
+  //   $switch-background-hover,
+  //   $switch-color-hover,
+  //   // active
+  //   $switch-background-active,
+  //   $switch-color-active,
+  //   // focus
+  //   $switch-color-focus,
+  //   $switch-border-focus,
+  //   $switch-background-focus-icon,
+  //   // disabled
+  //   $switch-background-disabled,
+  //   $switch-color-disabled,
+  //   $switch-border-disabled,
+  //   $switch-background-disabled-icon
+  // );
+}

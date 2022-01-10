@@ -64,8 +64,7 @@
   $disabled-color,
   $disabled-border
 ) {
-  // input-style - normal ---------------------------------------------------------
-
+  // normal
   background: $background;
   color: $color;
   border: $border;
@@ -85,8 +84,7 @@
     color: $color;
   }
 
-  // input-style - hover ---------------------------------------------------------
-
+  // hover
   &:hover {
     color: $hover-color;
     background: $hover-background;
@@ -101,8 +99,7 @@
     }
   }
 
-  // input-style - focus ---------------------------------------------------------
-
+  // focus
   &.ant-input-affix-wrapper-focused,
   &.frc-input-active-start,
   &:focus {
@@ -122,8 +119,7 @@
     outline: 0;
   }
 
-  // input-style - disabled ---------------------------------------------------------
-
+  // disabled
   &.ant-input-affix-wrapper-disabled,
   .ant-input-search .ant-input-affix-wrapper-disabled,
   &.disabled,
