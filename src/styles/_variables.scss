@@ -442,3 +442,45 @@ $checkbox-background-disabled-icon:            $element-background !default;
 $checkbox-border-disabled-icon:                1px solid $basic-btn !default;
 $checkbox-background-disabled-icon-inner:      $basic-btn !default;
 
+// ----------------------------------------------------------------
+// ----------------------------------------------------------------
+// ----------------------------------------------------------------
+
+// switch
+
+// basic
+$switch-width:                               $line-height-base !default;
+$switch-height:                              $line-height-sm !default;
+$switch-line-height:                         $line-height-sm !default;
+
+// normal
+$switch-background:                          $element-background !default;
+$switch-color:                               $words-normal !default;
+$switch-border:                              1px solid $basic-btn !default;
+
+$switch-background-icon:                     $basic-btn !default;
+
+// hover
+$switch-background-hover:                    $btn-hover !default;
+$switch-color-hover:                         $words-normal !default;
+
+// active
+$switch-background-active:                   $part-plate !default;
+$switch-color-active:                        $words-normal !default;
+
+// focus
+$switch-color-focus:                         $words-high-light !default;
+$switch-border-focus:                        1px solid $words-high-light !default;
+
+$switch-background-focus-icon:               $words-high-light !default;
+
+// disable
+$switch-background-disabled:                 $element-background !default;
+$switch-color-disabled:                      $words-disable !default;
+$switch-border-disabled:                     1px solid $basic-btn !default;
+
+$switch-background-disabled-icon:            $basic-btn !default;
+
+
+
+

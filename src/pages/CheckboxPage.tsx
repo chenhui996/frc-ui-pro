@@ -74,6 +74,7 @@ const CheckboxPage = () => {
         indeterminate={indeterminate}
         onChange={onCheckAllChange}
         checked={checkAll}
+        disabled
       >
         Check all
       </FRCCheckbox>

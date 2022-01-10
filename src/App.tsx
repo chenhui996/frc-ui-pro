@@ -4,7 +4,8 @@ import React from 'react'
 // import InputNumber from './pages/InputNumberPage'
 // import SelectPage from './pages/SelectPage'
 // import RadioPage from './pages/RadioPage'
-import CheckboxPage from './pages/CheckboxPage'
+// import CheckboxPage from './pages/CheckboxPage'
+import SwitchPage from './pages/SwitchPage'
 
 function App() {
   return (
@@ -14,7 +15,8 @@ function App() {
       {/* <InputNumber /> */}
       {/* <SelectPage /> */}
       {/* <RadioPage /> */}
-      <CheckboxPage />
+      {/* <CheckboxPage /> */}
+      <SwitchPage />
     </div>
   )
 }

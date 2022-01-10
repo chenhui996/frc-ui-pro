@@ -459,3 +459,93 @@
     border: $disabled-border !important;
   }
 }
+
+// ----------------------------------------------------------------
+
+@mixin switch-style(
+  // normal
+  $background,
+  $color,
+  $border,
+  $background-icon,
+  // hover
+  $hover-background,
+  $hover-color,
+  // active
+  $active-background,
+  $active-color,
+  // focus
+  $focus-color,
+  $focus-border,
+  $focus-background-icon,
+  // diabled
+  $disabled-background,
+  $disabled-color,
+  $disabled-border,
+  $disabled-background-icon
+) {
+  // normal
+  background: $background;
+  border: $border;
+  .ant-switch-inner {
+    color: $color;
+  }
+  .ant-switch-handle {
+    &::before {
+      background-color: $background-icon;
+    }
+  }
+  // hover
+  &:hover {
+    background: $hover-background;
+    color: $hover-color;
+  }
+  // active
+  &:active {
+    background: $active-background;
+    color: $active-color;
+  }
+  // focus | checked
+  &:focus.ant-switch-checked,
+  &.ant-switch-checked {
+    box-shadow: none;
+    border: $focus-border;
+    .ant-switch-inner {
+      color: $focus-color;
+    }
+    .ant-switch-handle {
+      &::before {
+        background-color: $focus-background-icon;
+      }
+    }
+  }
+  // disabled
+  &:disabled,
+  &:disabled.ant-switch-checked:not(.ant-switch-loading) {
+    opacity: 1;
+    box-shadow: none;
+    background: $disabled-background !important;
+    border: $disabled-border !important;
+    .ant-switch-inner {
+      color: $disabled-color !important;
+    }
+    .ant-switch-handle {
+      &::before {
+        background-color: $disabled-background-icon !important;
+      }
+    }
+
+    &.ant-switch-checked.ant-switch-loading {
+      background: $disabled-background !important;
+      border: $focus-border !important;
+      .ant-switch-inner {
+        color: $focus-color !important;
+      }
+      .ant-switch-handle {
+        &::before {
+          background-color: $focus-background-icon !important;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,61 @@
+.frc-switch.ant-switch {
+  min-width: $switch-width;
+  height: $switch-height;
+  line-height: $switch-line-height;
+  font-size: $font-size-base;
+  font-weight: $font-weight-base;
+  font-family: $font-family-base;
+  .ant-switch-inner {
+    margin: 0 0 0 10px;
+    transform: scale(0.7) translateY(-1.5px);
+  }
+  // icon
+  .ant-switch-handle {
+    top: 3px;
+    left: 3px;
+    width: 8px;
+    height: 8px;
+    &::before {
+      right: 0 !important;
+    }
+    .ant-switch-loading-icon.anticon {
+      top: 1px;
+      color: $tittle-word !important;
+      font-size: 6px;
+    }
+  }
+  // checked
+  &.ant-switch-checked {
+    .ant-switch-handle {
+      left: calc(100% - 8px - 3px);
+      &::before {
+        left: 0 !important;
+      }
+    }
+    .ant-switch-inner {
+      margin: 0 10px 0 0;
+    }
+  }
+  @include switch-style(
+    // normal
+    $switch-background,
+    $switch-color,
+    $switch-border,
+    $switch-background-icon,
+    // hover
+    $switch-background-hover,
+    $switch-color-hover,
+    // active
+    $switch-background-active,
+    $switch-color-active,
+    // focus
+    $switch-color-focus,
+    $switch-border-focus,
+    $switch-background-focus-icon,
+    // disabled
+    $switch-background-disabled,
+    $switch-color-disabled,
+    $switch-border-disabled,
+    $switch-background-disabled-icon
+  );
+}
