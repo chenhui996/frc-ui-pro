@@ -206,7 +206,7 @@
 
 // ----------------------------------------------------------------
 
-@mixin radio-style(
+@mixin radio-checkbox-style(
   // normal
   $background,
   $color,
@@ -243,10 +243,20 @@
   color: $color;
   border: $border;
   // normal icon
-  .ant-radio {
+  .ant-radio,
+  .ant-checkbox {
     .ant-radio-inner {
       background: $background-icon;
       border: $border-icon;
+    }
+    .ant-checkbox-inner {
+      background: $background-icon;
+      border: $border-icon;
+      &::after {
+        border: $active-border-icon;
+        border-top: 0;
+        border-left: 0;
+      }
     }
   }
   // hover
@@ -255,14 +265,18 @@
     color: $hover-color;
     border: $hover-border;
     // hover icon
-    .ant-radio {
-      .ant-radio-inner {
+    .ant-radio,
+    .ant-checkbox {
+      .ant-radio-inner,
+      .ant-checkbox-inner {
         background: $hover-background-icon;
         border: $hover-border-icon;
       }
       // checked hover
-      &.ant-radio-checked {
-        .ant-radio-inner {
+      &.ant-radio-checked,
+      &.ant-checkbox-checked {
+        .ant-radio-inner,
+        .ant-checkbox-inner {
           background: $hover-background-icon;
         }
       }
@@ -274,7 +288,8 @@
     color: $active-color;
     border: $active-border;
     // active icon
-    .ant-radio {
+    .ant-radio,
+    .ant-checkbox {
       .ant-radio-inner {
         background: $active-background-icon;
         border: $active-border-icon;
@@ -284,9 +299,21 @@
           opacity: 1;
         }
       }
+      .ant-checkbox-inner {
+        background: $active-background-icon;
+        &::after {
+          transform: rotate(45deg) scale(1) translate(-50%, -50%);
+          border: $active-border-icon;
+          border-top: 0;
+          border-left: 0;
+          opacity: 1;
+        }
+      }
       // checked active
-      &.ant-radio-checked {
-        .ant-radio-inner {
+      &.ant-radio-checked,
+      &.ant-checkbox-checked {
+        .ant-radio-inner,
+        .ant-checkbox-inner {
           background: $active-background-icon;
         }
       }
@@ -294,7 +321,8 @@
   }
   // focus
   &:focus,
-  .ant-radio.ant-radio-checked {
+  .ant-radio.ant-radio-checked,
+  .ant-checkbox.ant-checkbox-checked {
     background: $focus-background;
     color: $focus-color;
     border: $focus-border;
@@ -311,17 +339,29 @@
       border: $focus-border-icon;
       &::after {
         background-color: $focus-color;
+        border-color: $focus-color;
+      }
+    }
+
+    .ant-checkbox-inner {
+      // background: $focus-background-icon;
+      border: $focus-border-icon;
+      &::after {
+        // background-color: $focus-color;
+        border-color: $focus-color;
       }
     }
   }
   // disabled
   &:disabled,
-  &.ant-radio-wrapper-disabled {
+  &.ant-radio-wrapper-disabled,
+  &.ant-checkbox-wrapper-disabled {
     // background: $disabled-background !important;
     color: $disabled-color !important;
     border: $disabled-border !important;
     // disabled icon
-    .ant-radio {
+    .ant-radio,
+    .ant-checkbox {
       &.ant-radio-checked,
       &.ant-radio-disabled {
         .ant-radio-inner {
@@ -333,6 +373,32 @@
         }
         + * {
           color: $disabled-color;
+        }
+      }
+
+      &.ant-checkbox-disabled {
+        .ant-checkbox-inner {
+          background: $disabled-background-icon !important;
+          border: $disabled-border-icon !important;
+          &::after {
+            opacity: 0;
+          }
+        }
+        + * {
+          color: $disabled-color !important;
+        }
+      }
+      &.ant-checkbox-checked.ant-checkbox-disabled {
+        .ant-checkbox-inner {
+          &::after {
+            border: $active-border-icon;
+            border-top: 0;
+            border-left: 0;
+            opacity: 1;
+          }
+        }
+        + * {
+          color: $disabled-color !important;
         }
       }
     }
@@ -362,7 +428,7 @@
   $disabled-background,
   $disabled-color,
   $disabled-border,
-  $disabled-background-checked,
+  $disabled-background-checked
 ) {
   background: $background;
   color: $color;
@@ -385,7 +451,7 @@
   }
   &:disabled,
   &.ant-radio-button-wrapper-disabled {
-    &.ant-radio-button-wrapper-checked{
+    &.ant-radio-button-wrapper-checked {
       background: $disabled-background-checked !important;
     }
     background: $disabled-background !important;

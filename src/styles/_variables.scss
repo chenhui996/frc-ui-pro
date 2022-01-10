@@ -390,3 +390,55 @@ $radio-solid-border-disabled:               none !default;
 
 $radio-solid-background-disabled-checked:   $basic-btn !default;
 
+// ----------------------------------------------------------------
+// ----------------------------------------------------------------
+// ----------------------------------------------------------------
+
+// checkbox
+
+// basic
+$checkbox-line-height:                         $line-height-base !default;
+$checkbox-font-size:                           $font-size-base !default;
+$checkbox-font-weight:                         $font-weight-base !default;
+
+// normal
+$checkbox-background:                          transparent !default;
+$checkbox-color:                               $words-normal !default;
+$checkbox-border:                              none !default;
+
+$checkbox-background-icon:                     $element-background !default;
+$checkbox-border-icon:                         1px solid $basic-btn !default;
+
+// hover
+$checkbox-background-hover:                    transparent !default;
+$checkbox-color-hover:                         $words-normal !default;
+$checkbox-border-hover:                        none !default;
+
+$checkbox-background-hover-icon:               $btn-hover !default;
+$checkbox-border-hover-icon:                   1px solid $basic-btn !default;
+
+// active
+$checkbox-background-active:                   transparent !default;
+$checkbox-color-active:                        $words-normal !default;
+$checkbox-border-active:                       none !default;
+
+$checkbox-background-active-icon:              $part-plate !default;
+$checkbox-border-active-icon:                  2px solid $basic-btn !default;
+
+// focus
+$checkbox-background-focus:                    transparent !default;
+$checkbox-color-focus:                         $words-high-light !default;
+$checkbox-border-focus:                        none !default;
+
+$checkbox-background-focus-icon:               $element-background !default;
+$checkbox-border-focus-icon:                   1px solid $words-high-light !default;
+
+// disable
+$checkbox-background-disabled:                 transparent !default;
+$checkbox-color-disabled:                      $words-disable !default;
+$checkbox-border-disabled:                     none !default;
+
+$checkbox-background-disabled-icon:            $element-background !default;
+$checkbox-border-disabled-icon:                1px solid $basic-btn !default;
+$checkbox-background-disabled-icon-inner:      $basic-btn !default;
+
