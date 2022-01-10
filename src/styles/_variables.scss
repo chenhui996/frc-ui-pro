@@ -199,19 +199,25 @@ $input-background-disabled:                $input-background !default;
 $input-color-disabled:                     $words-disable !default;
 $input-border-disabled:                    $input-border !default;
 
+// ----------------------------------------------------------------
+
 // icon-only
+
 // normal
 $input-background-icon-only:               transparent !default;
 $input-color-icon-only:                    $words-normal !default;
 $input-border-icon-only:                   1px solid transparent !default;
+
 // hover
 $input-background-icon-only-hover:         $input-background-hover !default;
 $input-color-icon-only-hover:              $words-normal !default;
 $input-border-icon-only-hover:             1px solid $input-background-hover !default;
+
 // focus
 $input-background-icon-only-focus:         $input-background !default;
 $input-color-icon-only-focus:              $input-color-focus !default;
 $input-border-icon-only-focus:             1px solid $input-color-focus !default;
+
 // disabled
 $input-background-icon-only-disabled:      $input-background-icon-only !default;
 $input-color-icon-only-disabled:           $input-color-disabled !default;
@@ -220,18 +226,22 @@ $input-border-icon-only-disabled:          1px solid transparent !default;
 // ----------------------------------------------------------------
 
 // search - input
+
 // normal
 $input-search-background:                  $element-background !default;
 $input-search-color:                       $words-supporting !default;
 $input-search-border:                      1px solid $basic-btn !default;
+
 // hover
 $input-search-background-hover:            #0A2420 !default;
 $input-search-color-hover:                 $words-supporting !default;
 $input-search-border-hover:                1px solid $basic-btn !default;
+
 // focus
 $input-search-background-focus:            $element-background !default;
 $input-search-color-focus:                 $words-high-light !default;
 $input-search-border-focus:                1px solid $words-high-light !default;
+
 // disabled
 $input-search-background-disabled:         $basic-btn !default;
 $input-search-color-disabled:              $words-disable !default;
@@ -241,19 +251,24 @@ $input-search-border-disabled:             1px solid $basic-btn !default;
 
 // input-number
 
+// basic
 $input-number-line-height:                 $input-line-height;
+
 // normal
 $input-number-background:                  $element-background !default;
 $input-number-color:                       $input-search-color !default;
 $input-number-border:                      $input-search-border !default;
+
 // hover
 $input-number-background-hover:            $element-background !default;
 $input-number-color-hover:                 $input-search-color-hover !default;
 $input-number-border-hover:                $input-search-border-hover !default;
+
 // focus
 $input-number-background-focus:            $element-background !default;
 $input-number-color-focus:                 $input-search-color-focus !default;
 $input-number-border-focus:                $input-search-border-focus !default;
+
 // disabled
 $input-number-background-disabled:         $element-background !default;
 $input-number-color-disabled:              $input-search-color-disabled !default;
@@ -291,3 +306,181 @@ $select-border-focus:                       1px solid $words-high-light !default
 $select-background-disabled:                $element-background !default;
 $select-color-disabled:                     $words-disable !default;
 $select-border-disabled:                    1px solid $basic-btn !default;
+
+// ----------------------------------------------------------------
+// ----------------------------------------------------------------
+// ----------------------------------------------------------------
+
+// radio
+
+// basic
+$radio-line-height:                         $line-height-base !default;
+$radio-font-size:                           $font-size-base !default;
+$radio-font-weight:                         $font-weight-base !default;
+
+// normal
+$radio-background:                          transparent !default;
+$radio-color:                               $words-normal !default;
+$radio-border:                              none !default;
+
+$radio-background-icon:                     $element-background !default;
+$radio-border-icon:                         1px solid $basic-btn !default;
+
+// hover
+$radio-background-hover:                    transparent !default;
+$radio-color-hover:                         $words-normal !default;
+$radio-border-hover:                        none !default;
+
+$radio-background-hover-icon:               $btn-hover !default;
+$radio-border-hover-icon:                   1px solid $basic-btn !default;
+
+// active
+$radio-background-active:                   transparent !default;
+$radio-color-active:                        $words-normal !default;
+$radio-border-active:                       none !default;
+
+$radio-background-active-icon:              $part-plate !default;
+$radio-border-active-icon:                  1px solid $basic-btn !default;
+
+// focus
+$radio-background-focus:                    transparent !default;
+$radio-color-focus:                         $words-high-light !default;
+$radio-border-focus:                        none !default;
+
+$radio-background-focus-icon:               $element-background !default;
+$radio-border-focus-icon:                   1px solid $words-high-light !default;
+
+// disable
+$radio-background-disabled:                 transparent !default;
+$radio-color-disabled:                      $words-disable !default;
+$radio-border-disabled:                     none !default;
+
+$radio-background-disabled-icon:            $element-background !default;
+$radio-border-disabled-icon:                1px solid $basic-btn !default;
+$radio-background-disabled-icon-inner:      $basic-btn !default;
+
+// ----------------------------------------------------------------
+
+// radio - buttonType
+
+// normal
+$radio-solid-background:                    $element-background !default;
+$radio-solid-color:                         $words-normal !default;
+$radio-solid-border:                        none !default;
+
+// hover
+$radio-solid-background-hover:              $btn-hover !default;
+$radio-solid-color-hover:                   $words-normal !default;
+$radio-solid-border-hover:                  none !default;
+
+// active
+$radio-solid-background-active:             $part-plate !default;
+$radio-solid-color-active:                  $words-normal !default;
+$radio-solid-border-active:                 none !default;
+
+// focus
+$radio-solid-background-focus:              $basic-btn !default;
+$radio-solid-color-focus:                   $words-normal !default;
+$radio-solid-border-focus:                  none !default;
+
+// disable
+$radio-solid-background-disabled:           $element-background !default;
+$radio-solid-color-disabled:                $words-disable !default;
+$radio-solid-border-disabled:               none !default;
+
+$radio-solid-background-disabled-checked:   $basic-btn !default;
+
+// ----------------------------------------------------------------
+// ----------------------------------------------------------------
+// ----------------------------------------------------------------
+
+// checkbox
+
+// basic
+$checkbox-line-height:                         $line-height-base !default;
+$checkbox-font-size:                           $font-size-base !default;
+$checkbox-font-weight:                         $font-weight-base !default;
+
+// normal
+$checkbox-background:                          transparent !default;
+$checkbox-color:                               $words-normal !default;
+$checkbox-border:                              none !default;
+
+$checkbox-background-icon:                     $element-background !default;
+$checkbox-border-icon:                         1px solid $basic-btn !default;
+
+// hover
+$checkbox-background-hover:                    transparent !default;
+$checkbox-color-hover:                         $words-normal !default;
+$checkbox-border-hover:                        none !default;
+
+$checkbox-background-hover-icon:               $btn-hover !default;
+$checkbox-border-hover-icon:                   1px solid $basic-btn !default;
+
+// active
+$checkbox-background-active:                   transparent !default;
+$checkbox-color-active:                        $words-normal !default;
+$checkbox-border-active:                       none !default;
+
+$checkbox-background-active-icon:              $part-plate !default;
+$checkbox-border-active-icon:                  2px solid $basic-btn !default;
+
+// focus
+$checkbox-background-focus:                    transparent !default;
+$checkbox-color-focus:                         $words-high-light !default;
+$checkbox-border-focus:                        none !default;
+
+$checkbox-background-focus-icon:               $element-background !default;
+$checkbox-border-focus-icon:                   1px solid $words-high-light !default;
+
+// disable
+$checkbox-background-disabled:                 transparent !default;
+$checkbox-color-disabled:                      $words-disable !default;
+$checkbox-border-disabled:                     none !default;
+
+$checkbox-background-disabled-icon:            $element-background !default;
+$checkbox-border-disabled-icon:                1px solid $basic-btn !default;
+$checkbox-background-disabled-icon-inner:      $basic-btn !default;
+
+// ----------------------------------------------------------------
+// ----------------------------------------------------------------
+// ----------------------------------------------------------------
+
+// switch
+
+// basic
+$switch-width:                               $line-height-base !default;
+$switch-height:                              $line-height-sm !default;
+$switch-line-height:                         $line-height-sm !default;
+
+// normal
+$switch-background:                          $element-background !default;
+$switch-color:                               $words-normal !default;
+$switch-border:                              1px solid $basic-btn !default;
+
+$switch-background-icon:                     $basic-btn !default;
+
+// hover
+$switch-background-hover:                    $btn-hover !default;
+$switch-color-hover:                         $words-normal !default;
+
+// active
+$switch-background-active:                   $part-plate !default;
+$switch-color-active:                        $words-normal !default;
+
+// focus
+$switch-color-focus:                         $words-high-light !default;
+$switch-border-focus:                        1px solid $words-high-light !default;
+
+$switch-background-focus-icon:               $words-high-light !default;
+
+// disable
+$switch-background-disabled:                 $element-background !default;
+$switch-color-disabled:                      $words-disable !default;
+$switch-border-disabled:                     1px solid $basic-btn !default;
+
+$switch-background-disabled-icon:            $basic-btn !default;
+
+
+
+

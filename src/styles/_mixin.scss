@@ -203,3 +203,349 @@
     }
   }
 }
+
+// ----------------------------------------------------------------
+
+@mixin radio-checkbox-style(
+  // normal
+  $background,
+  $color,
+  $border,
+  $background-icon,
+  $border-icon,
+  // hover
+  $hover-background,
+  $hover-color,
+  $hover-border,
+  $hover-background-icon,
+  $hover-border-icon,
+  // active
+  $active-background,
+  $active-color,
+  $active-border,
+  $active-background-icon,
+  $active-border-icon,
+  // focus
+  $focus-background,
+  $focus-color,
+  $focus-border,
+  $focus-background-icon,
+  $focus-border-icon,
+  // diabled
+  $disabled-background,
+  $disabled-color,
+  $disabled-border,
+  $disabled-background-icon,
+  $disabled-border-icon,
+  $disabled-background-icon-inner
+) {
+  background: $background;
+  color: $color;
+  border: $border;
+  // normal icon
+  .ant-radio,
+  .ant-checkbox {
+    .ant-radio-inner {
+      background: $background-icon;
+      border: $border-icon;
+    }
+    .ant-checkbox-inner {
+      background: $background-icon;
+      border: $border-icon;
+      &::after {
+        border: $active-border-icon;
+        border-top: 0;
+        border-left: 0;
+      }
+    }
+  }
+  // hover
+  &:hover {
+    background: $hover-background;
+    color: $hover-color;
+    border: $hover-border;
+    // hover icon
+    .ant-radio,
+    .ant-checkbox {
+      .ant-radio-inner,
+      .ant-checkbox-inner {
+        background: $hover-background-icon;
+        border: $hover-border-icon;
+      }
+      // checked hover
+      &.ant-radio-checked,
+      &.ant-checkbox-checked {
+        .ant-radio-inner,
+        .ant-checkbox-inner {
+          background: $hover-background-icon;
+        }
+      }
+    }
+  }
+  // active
+  &:active {
+    background: $active-background;
+    color: $active-color;
+    border: $active-border;
+    // active icon
+    .ant-radio,
+    .ant-checkbox {
+      .ant-radio-inner {
+        background: $active-background-icon;
+        border: $active-border-icon;
+        &::after {
+          background-color: $disabled-background-icon-inner;
+          transform: scale(0.5);
+          opacity: 1;
+        }
+      }
+      .ant-checkbox-inner {
+        background: $active-background-icon;
+        &::after {
+          transform: rotate(45deg) scale(1) translate(-50%, -50%);
+          border: $active-border-icon;
+          border-top: 0;
+          border-left: 0;
+          opacity: 1;
+        }
+      }
+      // checked active
+      &.ant-radio-checked,
+      &.ant-checkbox-checked {
+        .ant-radio-inner,
+        .ant-checkbox-inner {
+          background: $active-background-icon;
+        }
+      }
+    }
+  }
+  // focus
+  &:focus,
+  .ant-radio.ant-radio-checked,
+  .ant-checkbox.ant-checkbox-checked {
+    background: $focus-background;
+    color: $focus-color;
+    border: $focus-border;
+    // icon
+    &::after {
+      border: $focus-border;
+    }
+    + * {
+      color: $focus-color;
+    }
+    // focus icon
+    .ant-radio-inner {
+      background: $focus-background-icon;
+      border: $focus-border-icon;
+      &::after {
+        background-color: $focus-color;
+        border-color: $focus-color;
+      }
+    }
+
+    .ant-checkbox-inner {
+      // background: $focus-background-icon;
+      border: $focus-border-icon;
+      &::after {
+        // background-color: $focus-color;
+        border-color: $focus-color;
+      }
+    }
+  }
+  // disabled
+  &:disabled,
+  &.ant-radio-wrapper-disabled,
+  &.ant-checkbox-wrapper-disabled {
+    // background: $disabled-background !important;
+    color: $disabled-color !important;
+    border: $disabled-border !important;
+    // disabled icon
+    .ant-radio,
+    .ant-checkbox {
+      &.ant-radio-checked,
+      &.ant-radio-disabled {
+        .ant-radio-inner {
+          background: $disabled-background-icon !important;
+          border: $disabled-border-icon !important;
+          &::after {
+            background-color: $disabled-background-icon-inner !important;
+          }
+        }
+        + * {
+          color: $disabled-color;
+        }
+      }
+
+      &.ant-checkbox-disabled {
+        .ant-checkbox-inner {
+          background: $disabled-background-icon !important;
+          border: $disabled-border-icon !important;
+          &::after {
+            opacity: 0;
+          }
+        }
+        + * {
+          color: $disabled-color !important;
+        }
+      }
+      &.ant-checkbox-checked.ant-checkbox-disabled {
+        .ant-checkbox-inner {
+          &::after {
+            border: $active-border-icon;
+            border-top: 0;
+            border-left: 0;
+            opacity: 1;
+          }
+        }
+        + * {
+          color: $disabled-color !important;
+        }
+      }
+    }
+  }
+}
+
+// ----------------------------------------------------------------
+
+@mixin radio-group-style(
+  // normal
+  $background,
+  $color,
+  $border,
+  // hover
+  $hover-background,
+  $hover-color,
+  $hover-border,
+  // active
+  $active-background,
+  $active-color,
+  $active-border,
+  // focus
+  $focus-background,
+  $focus-color,
+  $focus-border,
+  // diabled
+  $disabled-background,
+  $disabled-color,
+  $disabled-border,
+  $disabled-background-checked
+) {
+  background: $background;
+  color: $color;
+  border: $border;
+  &:hover {
+    background: $hover-background;
+    color: $hover-color;
+    border: $hover-border;
+  }
+  &:active {
+    background: $active-background;
+    color: $active-color;
+    border: $active-border;
+  }
+  &:focus,
+  &.ant-radio-button-wrapper-checked {
+    background: $focus-background;
+    color: $focus-color;
+    border: $focus-border;
+  }
+  &:disabled,
+  &.ant-radio-button-wrapper-disabled {
+    &.ant-radio-button-wrapper-checked {
+      background: $disabled-background-checked !important;
+    }
+    background: $disabled-background !important;
+    color: $disabled-color !important;
+    border: $disabled-border !important;
+  }
+}
+
+// ----------------------------------------------------------------
+
+@mixin switch-style(
+  // normal
+  $background,
+  $color,
+  $border,
+  $background-icon,
+  // hover
+  $hover-background,
+  $hover-color,
+  // active
+  $active-background,
+  $active-color,
+  // focus
+  $focus-color,
+  $focus-border,
+  $focus-background-icon,
+  // diabled
+  $disabled-background,
+  $disabled-color,
+  $disabled-border,
+  $disabled-background-icon
+) {
+  // normal
+  background: $background;
+  border: $border;
+  .ant-switch-inner {
+    color: $color;
+  }
+  .ant-switch-handle {
+    &::before {
+      background-color: $background-icon;
+    }
+  }
+  // hover
+  &:hover {
+    background: $hover-background;
+    color: $hover-color;
+  }
+  // active
+  &:active {
+    background: $active-background;
+    color: $active-color;
+  }
+  // focus | checked
+  &:focus.ant-switch-checked,
+  &.ant-switch-checked {
+    box-shadow: none;
+    border: $focus-border;
+    .ant-switch-inner {
+      color: $focus-color;
+    }
+    .ant-switch-handle {
+      &::before {
+        background-color: $focus-background-icon;
+      }
+    }
+  }
+  // disabled
+  &:disabled,
+  &:disabled.ant-switch-checked:not(.ant-switch-loading) {
+    opacity: 1;
+    box-shadow: none;
+    background: $disabled-background !important;
+    border: $disabled-border !important;
+    .ant-switch-inner {
+      color: $disabled-color !important;
+    }
+    .ant-switch-handle {
+      &::before {
+        background-color: $disabled-background-icon !important;
+      }
+    }
+
+    &.ant-switch-checked.ant-switch-loading {
+      background: $disabled-background !important;
+      border: $focus-border !important;
+      .ant-switch-inner {
+        color: $focus-color !important;
+      }
+      .ant-switch-handle {
+        &::before {
+          background-color: $focus-background-icon !important;
+        }
+      }
+    }
+  }
+}
