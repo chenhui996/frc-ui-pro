@@ -495,14 +495,10 @@ $date-picker-background:                          $element-background !default;
 $date-picker-color:                               $words-normal !default;
 $date-picker-border:                              1px solid $basic-btn !default;
 
+$date-picker-color-icon:                          $words-normal !default;
+
 // hover
 $date-picker-background-hover:                    $btn-hover !default;
-$date-picker-color-hover:                         $words-normal !default;
-
-// active
-$date-picker-background-active:                   $part-plate !default;
-$date-picker-color-active:                        $words-normal !default;
-$date-picker-border-active:                              1px solid $basic-btn !default;
 
 // focus
 $date-picker-color-focus:                         $words-high-light !default;
@@ -512,6 +508,8 @@ $date-picker-border-focus:                        1px solid $words-high-light !d
 $date-picker-background-disabled:                 $element-background !default;
 $date-picker-color-disabled:                      $words-disable !default;
 $date-picker-border-disabled:                     1px solid $basic-btn !default;
+
+$date-picker-color-icon-disabled:                 $words-disable !default;
 
 
 

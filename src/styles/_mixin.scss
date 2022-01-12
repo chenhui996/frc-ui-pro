@@ -545,3 +545,72 @@
     }
   }
 }
+
+// ----------------------------------------------------------------
+
+@mixin date-picker-style(
+  // normal
+  $background,
+  $color,
+  $border,
+  $color-icon,
+  // hover
+  $hover-background,
+  // focus
+  $focus-color,
+  $focus-border,
+  // disable
+  $disabled-background,
+  $disabled-color,
+  $disabled-border,
+  $disabled-color-icon
+) {
+  // normal
+  background: $background;
+  border: $border;
+  .frc-date-picker-prefix,
+  .ant-picker-suffix,
+  .ant-picker-range-separator,
+  .ant-picker-range-separator * {
+    color: $color-icon;
+  }
+  input,
+  ::-webkit-input-placeholder {
+    color: $color;
+  }
+  &.frc-date-picker-work {
+    input {
+      color: $focus-color;
+    }
+  }
+  //hover
+  &:hover {
+    background: $hover-background;
+  }
+  // focus
+  &:focus,
+  &.ant-picker-focused {
+    box-shadow: none;
+    outline: 0;
+    border: $focus-border;
+    input {
+      color: $focus-color;
+    }
+  }
+  // disabled
+  &:disabled,
+  &.ant-picker-disabled {
+    background: $disabled-background !important;
+    border: $disabled-border !important;
+    .frc-date-picker-prefix,
+    .ant-picker-suffix,
+    .ant-picker-range-separator,
+    .ant-picker-range-separator * {
+      color: $disabled-color-icon !important;
+    }
+    input,
+    ::-webkit-input-placeholder {
+      color: $disabled-color !important;
+    }
+  }
+} ;

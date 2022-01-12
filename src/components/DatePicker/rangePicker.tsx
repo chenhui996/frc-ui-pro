@@ -1,6 +1,7 @@
 import React, {FC, useRef, useEffect, useState} from 'react'
 import classNames from 'classnames'
-import {DatePicker, DatePickerProps} from 'antd'
+import {DatePicker} from 'antd'
+import {RangePickerProps} from 'antd/es/date-picker/index'
 import {IoCalendarOutline} from 'react-icons/io5'
 import ReactDOM from 'react-dom'
 import {
@@ -12,12 +13,14 @@ import {
 import 'moment/locale/zh-cn'
 import locale from 'antd/es/date-picker/locale/zh_CN'
 
-interface FRCDatePickerCustomProps {
+const {RangePicker} = DatePicker
+
+interface FRCRangePickerCustomProps {
   prefixIcon?: React.ReactNode
   showTime?: boolean
 }
 
-export type FRCDatePickerProps = DatePickerProps & FRCDatePickerCustomProps
+export type FRCRangePickerProps = RangePickerProps & FRCRangePickerCustomProps
 
 const addPrefixNode = (nodes: any, prefixIcon: React.ReactNode) => {
   const addNode = document.createElement('div')
@@ -45,10 +48,8 @@ const insertFrcBtn = () => {
   btn?.setAttribute('class', btnClass + ' frc-btn frc-btn-primary')
 }
 
-export const FRCDatePicker: FC<FRCDatePickerProps> = (
-  props,
-) => {
-  const [dateValue, setDateValue] = useState('')
+export const FRCRangePicker: FC<FRCRangePickerProps> = (props) => {
+  const [dateValue, setDateValue] = useState(['', ''])
   const nodes = useRef(null)
 
   const {
@@ -69,7 +70,7 @@ export const FRCDatePicker: FC<FRCDatePickerProps> = (
 
   const classes = classNames('frc-date-picker', className, {
     [`frc-date-picker-work`]: dateValue,
-    [`frc-date-picker-suffix-icon`]: suffixIcon
+    [`frc-date-picker-suffix-icon`]: suffixIcon,
   })
 
   const classesDropdown = classNames(
@@ -84,15 +85,17 @@ export const FRCDatePicker: FC<FRCDatePickerProps> = (
     dropdownClassName: classesDropdown,
     showTime,
     suffixIcon,
-    onChange: (value: any, dateString: string) => {
-      onChange && onChange(value, dateString)
-      setDateValue(dateString)
+    onChange: (dates: any, dateStrings: [string, string]) => {
+      onChange && onChange(dates, dateStrings)
+      setDateValue(dateStrings)
     },
     onOpenChange: (open: boolean) => {
       onOpenChange && onOpenChange(open)
-      open && showTime && setTimeout(() => {
-        insertFrcBtn()
-      }, 0);
+      open &&
+        showTime &&
+        setTimeout(() => {
+          insertFrcBtn()
+        }, 0)
     },
     ...restProps,
   }
@@ -100,21 +103,22 @@ export const FRCDatePicker: FC<FRCDatePickerProps> = (
   // main
   return (
     <div ref={nodes} className="frc-date-picker-container">
-      <DatePicker {...options} />
+      <RangePicker {...options} />
     </div>
   )
 }
 
 // normal
-FRCDatePicker.defaultProps = {
+FRCRangePicker.defaultProps = {
   prefixIcon: <IoCalendarOutline />,
   suffixIcon: false,
-  showToday: false,
+  // showToday: false,
   superPrevIcon: <BackwardOutlined />,
   superNextIcon: <ForwardOutlined />,
   prevIcon: <CaretLeftOutlined />,
   nextIcon: <CaretRightOutlined />,
   locale: locale,
+  separator: <span style={{fontSize: 14}}>～</span>,
 }
 
-export default FRCDatePicker
+export default FRCRangePicker
