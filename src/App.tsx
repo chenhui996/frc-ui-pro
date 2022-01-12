@@ -5,7 +5,8 @@ import React from 'react'
 // import SelectPage from './pages/SelectPage'
 // import RadioPage from './pages/RadioPage'
 // import CheckboxPage from './pages/CheckboxPage'
-import SwitchPage from './pages/SwitchPage'
+// import SwitchPage from './pages/SwitchPage'
+import DatePickerPage from './pages/DataPickerPage'
 
 function App() {
   return (
@@ -16,7 +17,8 @@ function App() {
       {/* <SelectPage /> */}
       {/* <RadioPage /> */}
       {/* <CheckboxPage /> */}
-      <SwitchPage />
+      {/* <SwitchPage /> */}
+      <DatePickerPage />
     </div>
   )
 }

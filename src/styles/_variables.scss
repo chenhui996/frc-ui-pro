@@ -481,6 +481,36 @@ $switch-border-disabled:                     1px solid $basic-btn !default;
 
 $switch-background-disabled-icon:            $basic-btn !default;
 
+// ----------------------------------------------------------------
+// ----------------------------------------------------------------
+// ----------------------------------------------------------------
+
+// datePicker
+
+// basic
+$date-picker-line-height:                         $line-height-border !default;
+
+// normal
+$date-picker-background:                          $element-background !default;
+$date-picker-color:                               $words-normal !default;
+$date-picker-border:                              1px solid $basic-btn !default;
+
+$date-picker-color-icon:                          $words-normal !default;
+
+// hover
+$date-picker-background-hover:                    $btn-hover !default;
+
+// focus
+$date-picker-color-focus:                         $words-high-light !default;
+$date-picker-border-focus:                        1px solid $words-high-light !default;
+
+// disable
+$date-picker-background-disabled:                 $element-background !default;
+$date-picker-color-disabled:                      $words-disable !default;
+$date-picker-border-disabled:                     1px solid $basic-btn !default;
+
+$date-picker-color-icon-disabled:                 $words-disable !default;
+
 
 
 

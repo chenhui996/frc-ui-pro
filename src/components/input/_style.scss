@@ -112,26 +112,26 @@
   // inner input -> style clear
   .ant-input-affix-wrapper {
     padding: 0 6px;
-    line-height: $input-line-height;
+    line-height: 20px;
     font-weight: $input-font-weight;
     font-family: $input-font-family;
     @include input-style(
       // normal
       transparent,
       $input-color,
-      none,
+      1px solid transparent,
       // hover
       transparent,
       $input-color,
-      none,
+      1px solid transparent,
       // focus
       transparent,
       $input-color-focus,
-      none,
+      $input-border-focus,
       // disabled
       $input-background-disabled,
       $input-color-disabled,
-      none
+      1px solid transparent
     );
     // .ant-input-suffix {
     //   & .ant-input-clear-icon {

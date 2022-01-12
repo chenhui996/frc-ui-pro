@@ -64,8 +64,7 @@
   $disabled-color,
   $disabled-border
 ) {
-  // input-style - normal ---------------------------------------------------------
-
+  // normal
   background: $background;
   color: $color;
   border: $border;
@@ -85,8 +84,7 @@
     color: $color;
   }
 
-  // input-style - hover ---------------------------------------------------------
-
+  // hover
   &:hover {
     color: $hover-color;
     background: $hover-background;
@@ -101,8 +99,7 @@
     }
   }
 
-  // input-style - focus ---------------------------------------------------------
-
+  // focus
   &.ant-input-affix-wrapper-focused,
   &.frc-input-active-start,
   &:focus {
@@ -122,8 +119,7 @@
     outline: 0;
   }
 
-  // input-style - disabled ---------------------------------------------------------
-
+  // disabled
   &.ant-input-affix-wrapper-disabled,
   .ant-input-search .ant-input-affix-wrapper-disabled,
   &.disabled,
@@ -549,3 +545,72 @@
     }
   }
 }
+
+// ----------------------------------------------------------------
+
+@mixin date-picker-style(
+  // normal
+  $background,
+  $color,
+  $border,
+  $color-icon,
+  // hover
+  $hover-background,
+  // focus
+  $focus-color,
+  $focus-border,
+  // disable
+  $disabled-background,
+  $disabled-color,
+  $disabled-border,
+  $disabled-color-icon
+) {
+  // normal
+  background: $background;
+  border: $border;
+  .frc-date-picker-prefix,
+  .ant-picker-suffix,
+  .ant-picker-range-separator,
+  .ant-picker-range-separator * {
+    color: $color-icon;
+  }
+  input,
+  ::-webkit-input-placeholder {
+    color: $color;
+  }
+  &.frc-date-picker-work {
+    input {
+      color: $focus-color;
+    }
+  }
+  //hover
+  &:hover {
+    background: $hover-background;
+  }
+  // focus
+  &:focus,
+  &.ant-picker-focused {
+    box-shadow: none;
+    outline: 0;
+    border: $focus-border;
+    input {
+      color: $focus-color;
+    }
+  }
+  // disabled
+  &:disabled,
+  &.ant-picker-disabled {
+    background: $disabled-background !important;
+    border: $disabled-border !important;
+    .frc-date-picker-prefix,
+    .ant-picker-suffix,
+    .ant-picker-range-separator,
+    .ant-picker-range-separator * {
+      color: $disabled-color-icon !important;
+    }
+    input,
+    ::-webkit-input-placeholder {
+      color: $disabled-color !important;
+    }
+  }
+} ;
