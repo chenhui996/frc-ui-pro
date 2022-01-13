@@ -1,0 +1,403 @@
+// .frc-date-picker-container {
+//   display: inline-block;
+//   vertical-align: top;
+// }
+
+// .frc-date-picker.ant-picker {
+//   line-height: $date-picker-line-height;
+//   padding: 0 2px 0 4px;
+//   vertical-align: top;
+//   font-size: $font-size-base;
+//   font-weight: $font-weight-base;
+//   font-family: $font-family-base;
+//   input {
+//     line-height: $date-picker-line-height;
+//     font-size: $font-size-base;
+//     font-weight: $font-weight-base;
+//     font-family: $font-family-base;
+//   }
+//   .frc-date-picker-prefix {
+//     vertical-align: middle;
+//     font-size: 12px;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     margin-right: 4px;
+//   }
+//   // suffix
+//   .ant-picker-suffix {
+//     padding-right: 2px;
+//   }
+//   // clear icon
+//   .ant-picker-clear {
+//     background-color: #253330;
+//     color: $words-normal;
+//     border-radius: 2px;
+//     height: 16px;
+//     width: 16px;
+//     display: flex;
+//     align-items: center;
+//     justify-content: center;
+//     svg {
+//       display: none;
+//     }
+//     &::after {
+//       content: url("../../../public/close.svg");
+//     }
+//   }
+//   @include date-picker-style(
+//     // normal
+//     $date-picker-background,
+//     $date-picker-color,
+//     $date-picker-border,
+//     $date-picker-color-icon,
+//     // hover
+//     $date-picker-background-hover,
+//     // focus
+//     $date-picker-color-focus,
+//     $date-picker-border-focus,
+//     // disable
+//     $date-picker-background-disabled,
+//     $date-picker-color-disabled,
+//     $date-picker-border-disabled,
+//     $date-picker-color-icon-disabled
+//   );
+
+//   // RangePicker
+//   &.ant-picker-range {
+//     .ant-picker-active-bar {
+//       margin-left: 0;
+//       background: $words-high-light;
+//     }
+//     .ant-picker-clear {
+//       right: 2px;
+//     }
+//   }
+// }
+
+// // dropdown
+// .frc-date-picker-dropdown.ant-picker-dropdown {
+//   .ant-picker-panel-container {
+//     background: $date-picker-background;
+//     box-shadow: none;
+//     border: 1px solid $btn-hover;
+//     padding: 0 4px;
+//     .ant-picker-panel {
+//       border: none;
+//       // header
+//       .ant-picker-header,
+//       .ant-picker-header button {
+//         color: $words-normal;
+//         border-bottom-color: $basic-btn;
+//         font-size: 12px;
+//         line-height: 24px;
+//         margin-top: 1px;
+//         // margin-bottom: 2px;
+//         .ant-picker-header-view {
+//           line-height: 24px;
+//         }
+//         .ant-picker-header-super-prev-btn,
+//         .ant-picker-header-super-next-btn {
+//           span {
+//             font-size: 14px;
+//             transform: translateY(1px);
+//           }
+//         }
+//         // header btn
+//         .ant-picker-header-view {
+//           // 年份区间
+//           .ant-picker-decade-btn {
+//             padding-left: 22px;
+//             padding-right: 22px;
+//             &:hover {
+//               background: $btn-hover;
+//               border-radius: 2px;
+//             }
+//           }
+//           // 年份 | 月份
+//           .ant-picker-year-btn,
+//           .ant-picker-month-btn {
+//             padding-left: 4px;
+//             padding-right: 4px;
+//             &:hover {
+//               background: $btn-hover;
+//               border-radius: 2px;
+//             }
+//           }
+//         }
+//       }
+//       // body
+//       .ant-picker-body {
+//         padding: 0 4px;
+//         .ant-picker-content {
+//           width: auto;
+//           // basic date color
+//           th {
+//             color: $words-supporting;
+//             font-size: 12px;
+//           }
+//           .ant-picker-cell {
+//             color: $words-supporting;
+//             padding: 2px 0;
+//             .ant-picker-cell-inner {
+//               font-size: 12px;
+//               width: 24px;
+//               height: 24px;
+//             }
+//             &:hover {
+//               .ant-picker-cell-inner {
+//                 background: $btn-hover;
+//                 color: $words-normal;
+//               }
+//             }
+//             &:active {
+//               .ant-picker-cell-inner {
+//                 color: $words-high-light;
+//                 background: $part-plate;
+//               }
+//             }
+//           }
+//           // 日期 title | 当月
+//           .ant-picker-cell-in-view {
+//             color: $words-normal;
+//             // last day of the month
+//             &.ant-picker-cell-end {
+//               &::after {
+//                 content: "";
+//                 position: absolute;
+//                 border-top: 4px solid $words-high-light;
+//                 border-left: 2px solid transparent;
+//                 border-right: 2px solid transparent;
+//                 width: 4px;
+//                 height: 4px;
+//                 right: 12px;
+//                 top: 2px;
+//               }
+//             }
+//             &.ant-picker-cell-today {
+//               .ant-picker-cell-inner {
+//                 &::before {
+//                   border: 1px solid $basic-btn;
+//                 }
+//               }
+//             }
+//             &.ant-picker-cell-selected {
+//               .ant-picker-cell-inner {
+//                 color: $words-high-light;
+//                 background: $part-plate;
+//               }
+//             }
+//             &.ant-picker-cell-in-range,
+//             &.ant-picker-cell-range-start,
+//             &.ant-picker-cell-range-end {
+//               &::before {
+//                 background: transparent;
+//               }
+//               .ant-picker-cell-inner {
+//                 color: $words-high-light;
+//                 border-radius: 2px;
+//                 background: $btn-hover;
+//               }
+//             }
+//           }
+//           // // clear color -> 周六 周日
+//           // tbody {
+//           //   tr {
+//           //     td:nth-child(6),
+//           //     td:nth-child(7) {
+//           //       color: $words-disable;
+//           //     }
+//           //   }
+//           // }
+//         }
+//       }
+//       // today
+//       .ant-picker-footer {
+//         border-top-color: $basic-btn;
+//         text-align: left;
+//         padding-left: 8px;
+//         line-height: 28px;
+//         .ant-picker-ranges {
+//           padding: 0;
+//           line-height: 28px;
+//           .ant-picker-ok {
+//             button {
+//               margin-top: 3px;
+//               padding-left: 12.5px;
+//               padding-right: 12.5px;
+//             }
+//           }
+//         }
+//         .ant-picker-today-btn,
+//         .ant-picker-now-btn {
+//           font-size: 12px;
+//           text-decoration: none !important;
+//         }
+//         .ant-picker-footer-extra {
+//           // border-top: 1px solid $basic-btn;
+//           color: $words-normal;
+//           font-size: 12px;
+//           padding: 0;
+//         }
+//       }
+//       // day
+//       .ant-picker-date-panel {
+//         width: 196px;
+//       }
+//       // month | year
+//       .ant-picker-month-panel,
+//       .ant-picker-year-panel {
+//         width: 236px;
+//         .ant-picker-content {
+//           width: 100%;
+//           height: 215px;
+//           .ant-picker-cell-end {
+//             &::after {
+//               display: none;
+//             }
+//           }
+//         }
+//       }
+//       // decade
+//       .ant-picker-decade-panel {
+//         width: auto;
+//         .ant-picker-content {
+//           width: 250px;
+//           height: 215px;
+//         }
+//       }
+//       // time
+//       .ant-picker-time-panel {
+//         margin-left: 4px;
+//         padding-left: 4px;
+//         border-left-color: $basic-btn;
+//         // header
+//         .ant-picker-header {
+//           .ant-picker-header-view {
+//             line-height: 25px;
+//           }
+//         }
+//         // body
+//         .ant-picker-content {
+//           .ant-picker-time-panel-column {
+//             width: 40px;
+//             &:not(:first-child) {
+//               border-left-color: $basic-btn;
+//             }
+//             .ant-picker-time-panel-cell {
+//               .ant-picker-time-panel-cell-inner {
+//                 color: $words-normal;
+//                 font-size: 12px;
+//                 padding: 0;
+//                 text-align: center;
+//                 &:hover {
+//                   background: $basic-plate;
+//                   color: $words-high-light;
+//                 }
+//               }
+//               &.ant-picker-time-panel-cell-selected {
+//                 .ant-picker-time-panel-cell-inner {
+//                   background: $basic-plate;
+//                   color: $words-high-light;
+//                 }
+//               }
+//             }
+//             // scollbar
+//             &::-webkit-scrollbar {
+//               width: 4px;
+//               display: block;
+//             }
+//             &::-webkit-scrollbar-thumb {
+//               border-radius: 10px;
+//               background: $basic-btn;
+//             }
+//           }
+//         }
+//       }
+//       // week
+//       .ant-picker-week-panel {
+//         width: auto;
+//         .ant-picker-week-panel-row {
+//           &:hover {
+//             .ant-picker-cell-week,
+//             .ant-picker-cell {
+//               background: transparent;
+//               .ant-picker-cell-inner {
+//                 background: $basic-btn !important;
+//                 margin-left: 2px;
+//                 margin-right: 2px;
+//               }
+//             }
+//           }
+//           .ant-picker-cell-inner {
+//             margin-left: 2px;
+//             margin-right: 2px;
+//           }
+//           &.ant-picker-week-panel-row-selected {
+//             .ant-picker-cell-week,
+//             .ant-picker-cell {
+//               background: transparent;
+//               .ant-picker-cell-inner {
+//                 color: $words-high-light;
+//                 border-radius: 2px;
+//                 background: $btn-hover !important;
+//               }
+//             }
+//           }
+//         }
+//       }
+//       // quarter
+//       .ant-picker-quarter-panel {
+//         width: auto;
+//         .ant-picker-cell-inner {
+//           margin-left: 2px;
+//           margin-right: 2px;
+//         }
+//       }
+//     }
+//     // range
+//     .ant-picker-panels {
+//       .ant-picker-cell {
+//         &.ant-picker-cell-range-hover,
+//         &.ant-picker-cell-range-hover-start,
+//         &.ant-picker-cell-range-hover-end {
+//           background: transparent;
+//           .ant-picker-cell-inner {
+//             background: $part-plate;
+//             width: 24px;
+//             height: 24px;
+//             &::after {
+//               background: transparent !important;
+//             }
+//           }
+//           &::after {
+//             display: none;
+//           }
+//         }
+//         &.ant-picker-cell-disabled {
+//           color: $words-disable !important;
+//         }
+//       }
+//     }
+//     .ant-picker-panels + .ant-picker-footer {
+//       .ant-picker-footer-extra {
+//         border-top: 1px solid $basic-btn;
+//         color: $words-normal;
+//         font-size: 12px;
+//         padding: 0 8px;
+//       }
+//       .ant-picker-ranges {
+//         border-top: 1px solid $basic-btn;
+//         padding: 0;
+//         line-height: 28px;
+//         .ant-picker-ok {
+//           button {
+//             margin-top: 3px;
+//             padding-left: 12.5px;
+//             padding-right: 12.5px;
+//           }
+//         }
+//       }
+//     }
+//   }
+// }

@@ -120,10 +120,8 @@ $btn-line-height:             $line-height-base !default;
 // type - normal
 $btn-background-normal-top:      #213D38 !default;
 $btn-background-normal-bottom:   #18302C !default;
-
 // hover
 $btn-background-hover:           #0A2420 !default;
-
 // active
 $btn-background-active:          #1E2423 !default;
 
@@ -131,10 +129,8 @@ $btn-background-active:          #1E2423 !default;
 
 // type - primary
 $btn-background-primary:         #253330 !default;
-
 // hover
 $btn-background-primary-hover:   $btn-background-hover !default;
-
 // active
 $btn-background-primary-active:  $btn-background-active !default;
 
@@ -149,10 +145,8 @@ $btn-padding-lead-right:           2px !default;
 
 // type - gray
 $btn-background-gray:         #4A4D4C !default;
-
 // hover
 $btn-background-gray-hover:   #1E1E1E !default;
-
 // active
 $btn-background-gray-active:  #1E2423  !default;
 
@@ -165,10 +159,8 @@ $btn-border-width:               $border-width !default;
 
 // type - gray
 $btn-background-link:         transparent !default;
-
 // hover
 $btn-background-link-hover:   transparent !default;
-
 // active
 $btn-background-link-active:  transparent  !default;
 
@@ -510,6 +502,12 @@ $date-picker-color-disabled:                      $words-disable !default;
 $date-picker-border-disabled:                     1px solid $basic-btn !default;
 
 $date-picker-color-icon-disabled:                 $words-disable !default;
+
+// ----------------------------------------------------------------
+// ----------------------------------------------------------------
+// ----------------------------------------------------------------
+
+// timePicker
 
 
 
