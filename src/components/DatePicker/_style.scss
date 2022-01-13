@@ -42,7 +42,7 @@
       display: none;
     }
     &::after {
-      content: url('../../../public/close.svg');
+      content: url("../../../public/close.svg");
     }
   }
   @include date-picker-style(
@@ -141,6 +141,8 @@
             padding: 2px 0;
             .ant-picker-cell-inner {
               font-size: 12px;
+              width: 24px;
+              height: 24px;
             }
             &:hover {
               .ant-picker-cell-inner {
@@ -161,7 +163,7 @@
             // last day of the month
             &.ant-picker-cell-end {
               &::after {
-                content: '';
+                content: "";
                 position: absolute;
                 border-top: 4px solid $words-high-light;
                 border-left: 2px solid transparent;
@@ -362,6 +364,8 @@
           background: transparent;
           .ant-picker-cell-inner {
             background: $part-plate;
+            width: 24px;
+            height: 24px;
             &::after {
               background: transparent !important;
             }
