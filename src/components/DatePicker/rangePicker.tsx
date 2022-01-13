@@ -43,9 +43,13 @@ const addPrefixNode = (nodes: any, prefixIcon: React.ReactNode) => {
 }
 
 const insertFrcBtn = () => {
-  const btn = document.querySelector('.ant-picker-ok button')
-  const btnClass = btn?.getAttribute('class') || ''
-  btn?.setAttribute('class', btnClass + ' frc-btn frc-btn-primary')
+  const currentDoms = document.querySelectorAll('.ant-picker-ok button')
+  currentDoms && currentDoms.forEach(dom => {
+    const btnClass = dom?.getAttribute('class') || ''
+    if (btnClass.indexOf('frc-btn') === -1) {
+      dom?.setAttribute('class', btnClass + ' frc-btn frc-btn-primary')
+    }
+  })
 }
 
 export const FRCRangePicker: FC<FRCRangePickerProps> = (props) => {

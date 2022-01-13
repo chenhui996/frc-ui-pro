@@ -1,7 +1,7 @@
-import React, {FC, useRef, useEffect, useState} from 'react'
+import React, { FC, useRef, useEffect, useState } from 'react'
 import classNames from 'classnames'
-import {DatePicker, DatePickerProps} from 'antd'
-import {IoCalendarOutline} from 'react-icons/io5'
+import { DatePicker, DatePickerProps } from 'antd'
+import { IoCalendarOutline } from 'react-icons/io5'
 import ReactDOM from 'react-dom'
 import {
   BackwardOutlined,
@@ -40,9 +40,13 @@ const addPrefixNode = (nodes: any, prefixIcon: React.ReactNode) => {
 }
 
 const insertFrcBtn = () => {
-  const btn = document.querySelector('.ant-picker-ok button')
-  const btnClass = btn?.getAttribute('class') || ''
-  btn?.setAttribute('class', btnClass + ' frc-btn frc-btn-primary')
+  const currentDoms = document.querySelectorAll('.ant-picker-ok button')
+  currentDoms && currentDoms.forEach(dom => {
+    const btnClass = dom?.getAttribute('class') || ''
+    if (btnClass.indexOf('frc-btn') === -1) {
+      dom?.setAttribute('class', btnClass + ' frc-btn frc-btn-primary')
+    }
+  })
 }
 
 export const FRCDatePicker: FC<FRCDatePickerProps> = (

@@ -386,6 +386,18 @@
         font-size: 12px;
         padding: 0 8px;
       }
+      .ant-picker-ranges {
+        border-top: 1px solid $basic-btn;
+        padding: 0;
+        line-height: 28px;
+        .ant-picker-ok {
+          button {
+            margin-top: 3px;
+            padding-left: 12.5px;
+            padding-right: 12.5px;
+          }
+        }
+      }
     }
   }
 }
