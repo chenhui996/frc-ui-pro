@@ -1,6 +1,7 @@
-import React, { FC, useRef, useEffect, useState } from 'react'
+import React, {FC, useRef, useEffect, useState} from 'react'
 import classNames from 'classnames'
-import { TimePicker, TimePickerProps } from 'antd'
+import {TimePicker} from 'antd'
+import {TimeRangePickerProps} from 'antd/es/time-picker'
 import ReactDOM from 'react-dom'
 import {
   BackwardOutlined,
@@ -12,14 +13,16 @@ import {
 import 'moment/locale/zh-cn'
 import locale from 'antd/es/date-picker/locale/zh_CN'
 
+const {RangePicker} = TimePicker
+
 const FORMAT_COLUMNS = ['HH:mm', 'HH', 'mm', 'ss', 'mm A', 'mm a'];
 
-interface FRCTimePickerCustomProps {
+interface FRCRangeTimePickerCustomProps {
   prefixIcon?: React.ReactNode
   showTime?: boolean
 }
 
-export type FRCTimePickerProps = TimePickerProps & FRCTimePickerCustomProps
+export type FRCRangeTimePickerProps = TimeRangePickerProps & FRCRangeTimePickerCustomProps
 
 const addPrefixNode = (nodes: any, prefixIcon: React.ReactNode) => {
   const addNode = document.createElement('div')
@@ -51,19 +54,18 @@ const insertFrcBtn = () => {
   })
 }
 
-export const FRCTimePicker: FC<FRCTimePickerProps> = (
-  props,
-) => {
-  const [dateValue, setDateValue] = useState('')
+export const FRCRangeTimePicker: FC<FRCRangeTimePickerProps> = (props) => {
+  const [dateValue, setDateValue] = useState(['', ''])
   const nodes = useRef(null)
 
   const {
     className,
     prefixIcon,
-    popupClassName,
+    dropdownClassName,
     showTime,
     suffixIcon,
     format,
+    popupClassName,
     onChange,
     onOpenChange,
     ...restProps
@@ -91,18 +93,18 @@ export const FRCTimePicker: FC<FRCTimePickerProps> = (
     className: classes,
     prefixIcon,
     popupClassName: classesDropdown,
-    showTime,
     suffixIcon,
     format,
-    onChange: (value: any, dateString: string) => {
-      onChange && onChange(value, dateString)
-      setDateValue(dateString)
+    onChange: (dates: any, dateStrings: [string, string]) => {
+      onChange && onChange(dates, dateStrings)
+      setDateValue(dateStrings)
     },
     onOpenChange: (open: boolean) => {
       onOpenChange && onOpenChange(open)
-      open && setTimeout(() => {
-        insertFrcBtn()
-      }, 0);
+      open &&
+        setTimeout(() => {
+          insertFrcBtn()
+        }, 0)
     },
     ...restProps,
   }
@@ -110,20 +112,22 @@ export const FRCTimePicker: FC<FRCTimePickerProps> = (
   // main
   return (
     <div ref={nodes} className="frc-date-picker-container">
-      <TimePicker {...options} />
+      <RangePicker {...options} />
     </div>
   )
 }
 
 // normal
-FRCTimePicker.defaultProps = {
+FRCRangeTimePicker.defaultProps = {
   prefixIcon: <ClockCircleOutlined />,
   suffixIcon: false,
+  // showToday: false,
   superPrevIcon: <BackwardOutlined />,
   superNextIcon: <ForwardOutlined />,
   prevIcon: <CaretLeftOutlined />,
   nextIcon: <CaretRightOutlined />,
   locale: locale,
+  separator: <span style={{fontSize: 14}}>～</span>,
 }
 
-export default FRCTimePicker
+export default FRCRangeTimePicker
