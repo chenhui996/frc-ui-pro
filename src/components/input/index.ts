@@ -1,6 +1,6 @@
 import {FC} from 'react'
-import FRCInput, {FRCInputProps} from './Input'
-import FRCSearch, {FRCSearchProps} from './Search'
+import FRCInput, {FRCInputProps} from './input'
+import FRCSearch, {FRCSearchProps} from './search'
 
 export type FrcInputComponent = FC<FRCInputProps> & {
   Search: FC<FRCSearchProps>

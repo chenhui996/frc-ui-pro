@@ -1,3 +1,11 @@
+// global
+@mixin flex-center($direction) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: $direction;
+}
+
 // button
 @mixin button-size($padding-y, $padding-x, $font-size, $border-raduis) {
   padding: $padding-y $padding-x;
@@ -613,4 +621,13 @@
       color: $disabled-color !important;
     }
   }
-} ;
+}
+
+// ----------------------------------------------------------------
+
+@mixin modal-style($background, $color, $border, $border-radius) {
+  background: $background;
+  color: $color;
+  border: $border;
+  border-radius: $border-radius;
+}

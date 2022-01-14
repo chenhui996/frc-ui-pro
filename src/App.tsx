@@ -7,7 +7,8 @@ import React from 'react'
 // import CheckboxPage from './pages/CheckboxPage'
 // import SwitchPage from './pages/SwitchPage'
 // import DatePickerPage from './pages/DataPickerPage'
-import TimePickerPage from './pages/TimePickerPage'
+// import TimePickerPage from './pages/TimePickerPage'
+import ModalPage from './pages/ModalPage'
 
 function App() {
   return (
@@ -20,7 +21,8 @@ function App() {
       {/* <CheckboxPage /> */}
       {/* <SwitchPage /> */}
       {/* <DatePickerPage /> */}
-      <TimePickerPage />
+      {/* <TimePickerPage /> */}
+      <ModalPage />
     </div>
   )
 }

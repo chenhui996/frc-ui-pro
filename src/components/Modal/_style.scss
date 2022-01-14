@@ -1,0 +1,36 @@
+.frc-modal.ant-modal {
+  .ant-modal-content {
+    @include modal-style($modal-background, $modal-color, $modal-border, $modal-border-radius);
+    * {
+      font-size: 12px;
+      color: $words-normal;
+    }
+    // close icon
+    .ant-modal-close {
+      .ant-modal-close-x {
+        height: 24px;
+        width: 24px;
+        line-height: $modal-line-height;
+      }
+    }
+    // header
+    .ant-modal-header {
+      @include flex-center(column);
+      background-color: transparent;
+      line-height: $modal-line-height;
+      min-height: $modal-min-height;
+      padding: 0;
+      border: none;
+    }
+    // body
+    .ant-modal-body {
+      padding: 16px 24px;
+    }
+    // footer
+    .ant-modal-footer {
+      @include flex-center(row);
+      border: none;
+      padding: 8px 24px;
+    }
+  }
+}

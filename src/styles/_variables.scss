@@ -95,11 +95,7 @@ $body-text-align:           null !default;
 
 $border-width:                1px !default;
 $border-radius:               2px !default;
-
-// ----------------------------------------------------------------
-
-// Spacing
-// $spacer: 1rem !default;
+$border-radius-lg:            4px !default;
 
 // ----------------------------------------------------------------
 
@@ -507,7 +503,18 @@ $date-picker-color-icon-disabled:                 $words-disable !default;
 // ----------------------------------------------------------------
 // ----------------------------------------------------------------
 
-// timePicker
+// modal
+
+// basic
+$modal-line-height:                               $line-height-base !default;
+$modal-min-height:                                $line-height-base !default;
+$modal-border-radius:                             $border-radius-lg !default;
+
+// normal
+$modal-background:                                $basic-plate !default;
+$modal-color:                                     $words-normal !default;
+$modal-border:                                    2px solid $tittle-word !default;
+
 
 
 
