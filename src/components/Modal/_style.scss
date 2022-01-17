@@ -1,10 +1,13 @@
 .frc-modal.ant-modal {
   .ant-modal-content {
-    @include modal-style($modal-background, $modal-color, $modal-border, $modal-border-radius);
-    * {
-      font-size: 12px;
-      color: $words-normal;
-    }
+    @include modal-style(
+      $modal-background,
+      $modal-color,
+      $modal-border,
+      $modal-border-radius,
+      $modal-font-size-text,
+      $modal-font-weight
+    );
     // close icon
     .ant-modal-close {
       .ant-modal-close-x {
@@ -21,10 +24,22 @@
       min-height: $modal-min-height;
       padding: 0;
       border: none;
+      .ant-modal-title {
+        font-size: 12px;
+        color: $words-normal;
+      }
     }
     // body
     .ant-modal-body {
       padding: 16px 24px;
+      .ant-modal-confirm-title {
+        font-size: $modal-font-size-title;
+        color: $words-normal;
+      }
+      .ant-modal-confirm-content {
+        font-size: 12px;
+        color: $words-normal;
+      }
     }
     // footer
     .ant-modal-footer {

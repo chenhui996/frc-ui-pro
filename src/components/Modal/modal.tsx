@@ -1,23 +1,24 @@
-import React, { FC, useRef } from 'react'
+import React, { FC } from 'react'
 import classNames from 'classnames'
 import Modal, { ModalProps } from 'antd/es/modal'
 import Button from '../Button/index'
 
-const ModalFooter = (props: any) => {
-  const { onOk, onCancel, ...restProps } = props
+export const ModalFooter = (props: ModalProps) => {
+  const { onOk, onCancel, confirmLoading } = props
 
   return (
     <>
       <Button type="gray" onClick={onCancel} style={{ width: 60 }}>取消</Button>
-      <Button type="primary" onClick={onOk} style={{ width: 120 }}>
+      <Button loading={confirmLoading} type="primary" onClick={onOk} style={{ width: 120 }}>
         确定
       </Button>
-
     </>
   )
 }
 
-export const FRCModal: FC<ModalProps> = (props) => {
+export type FRCModalProps = ModalProps
+
+export const FRCModal: FC<FRCModalProps> = (props) => {
   const {
     className,
     children,
@@ -27,19 +28,15 @@ export const FRCModal: FC<ModalProps> = (props) => {
   const classes = classNames('frc-modal', className, {
   })
 
-  const nodeRef = useRef(null);
-
   const options = {
     className: classes,
-    footer: footer || <ModalFooter {...restProps} />,
+    footer: footer || <ModalFooter {...{ ...restProps }} />,
     ...restProps,
   }
 
   // main
   return (
-    <div ref={nodeRef}>
-      <Modal {...options}>{children}</Modal>
-    </div>
+    <Modal {...options}>{children}</Modal>
 
   )
 }
@@ -47,6 +44,8 @@ export const FRCModal: FC<ModalProps> = (props) => {
 // normal
 FRCModal.defaultProps = {
   width: 320,
+  maskClosable: false,
+  keyboard:false,
 }
 
 export default FRCModal

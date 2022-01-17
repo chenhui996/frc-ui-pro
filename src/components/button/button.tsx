@@ -16,7 +16,7 @@ interface BaseButtonProps {
   type?: ButtonType
 }
 
-type FRCButtonProps = Omit<ButtonProps, 'type' | 'danger'> & BaseButtonProps
+export type FRCButtonProps = Omit<ButtonProps, 'type' | 'danger'> & BaseButtonProps
 
 export const FRCButton: FC<FRCButtonProps> = (props) => {
   const {
