@@ -42,7 +42,7 @@
       display: none;
     }
     &::after {
-      content: url('../../../public/close.svg');
+      content: url("../../../public/close.svg");
     }
   }
   @include date-picker-style(
@@ -77,11 +77,21 @@
 
 // dropdown
 .frc-date-picker-dropdown.ant-picker-dropdown {
+  &.ant-picker-dropdown-range {
+    padding: 0;
+  }
+  .ant-picker-range-arrow {
+    // &::after {
+    //   border-color: $basic-btn $basic-btn transparent transparent;
+    // }
+    display: none;
+  }
   .ant-picker-panel-container {
     background: $date-picker-background;
     box-shadow: none;
     border: 1px solid $btn-hover;
     padding: 0 4px;
+    // normal
     .ant-picker-panel {
       border: none;
       // header
@@ -92,7 +102,6 @@
         font-size: 12px;
         line-height: 24px;
         margin-top: 1px;
-        // margin-bottom: 2px;
         .ant-picker-header-view {
           line-height: 24px;
         }
@@ -141,6 +150,8 @@
             padding: 2px 0;
             .ant-picker-cell-inner {
               font-size: 12px;
+              width: 24px;
+              height: 24px;
             }
             &:hover {
               .ant-picker-cell-inner {
@@ -161,7 +172,7 @@
             // last day of the month
             &.ant-picker-cell-end {
               &::after {
-                content: '';
+                content: "";
                 position: absolute;
                 border-top: 4px solid $words-high-light;
                 border-left: 2px solid transparent;
@@ -230,12 +241,16 @@
         .ant-picker-now-btn {
           font-size: 12px;
           text-decoration: none !important;
+          color: $words-normal;
         }
         .ant-picker-footer-extra {
           // border-top: 1px solid $basic-btn;
           color: $words-normal;
           font-size: 12px;
           padding: 0;
+          &:not(:last-child) {
+            border-bottom: 1px solid $basic-btn;
+          }
         }
       }
       // day
@@ -252,6 +267,12 @@
           .ant-picker-cell-end {
             &::after {
               display: none;
+            }
+          }
+          .ant-picker-cell {
+            .ant-picker-cell-inner {
+              width: auto;
+              height: auto;
             }
           }
         }
@@ -362,6 +383,8 @@
           background: transparent;
           .ant-picker-cell-inner {
             background: $part-plate;
+            width: 24px;
+            height: 24px;
             &::after {
               background: transparent !important;
             }
@@ -375,12 +398,28 @@
         }
       }
     }
+    // range footer
     .ant-picker-panels + .ant-picker-footer {
       .ant-picker-footer-extra {
         border-top: 1px solid $basic-btn;
         color: $words-normal;
         font-size: 12px;
         padding: 0 8px;
+        &:not(:last-child) {
+          border-bottom: 1px solid transparent;
+        }
+      }
+      .ant-picker-ranges {
+        border-top: 1px solid $basic-btn;
+        padding: 0;
+        line-height: 28px;
+        .ant-picker-ok {
+          button {
+            margin-top: 3px;
+            padding-left: 12.5px;
+            padding-right: 12.5px;
+          }
+        }
       }
     }
   }

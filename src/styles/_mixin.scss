@@ -1,3 +1,11 @@
+// global
+@mixin flex-center($direction) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: $direction;
+}
+
 // button
 @mixin button-size($padding-y, $padding-x, $font-size, $border-raduis) {
   padding: $padding-y $padding-x;
@@ -32,6 +40,12 @@
   }
   &:disabled,
   &.disabled {
+    * {
+      cursor: not-allowed !important;
+      color: $disable-color !important;
+      background: $disable-background !important;
+    }
+    cursor: not-allowed !important;
     color: $disable-color !important;
     background: $disable-background !important;
   }
@@ -613,4 +627,22 @@
       color: $disabled-color !important;
     }
   }
-} ;
+}
+
+// ----------------------------------------------------------------
+
+@mixin modal-style(
+  $background,
+  $color,
+  $border,
+  $border-radius,
+  $font-size,
+  $font-weight
+) {
+  background: $background;
+  color: $color;
+  border: $border;
+  border-radius: $border-radius;
+  font-size: $font-size;
+  font-weight: $font-weight;
+}

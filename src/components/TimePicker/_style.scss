@@ -1,0 +1,60 @@
+// --> TimePicker _style.scss covered by DatePicker _style.scss
+.frc-date-picker.frc-time-picker.ant-picker {
+  @include date-picker-style(
+    // normal
+    $date-picker-background,
+    $words-supporting,
+    $date-picker-border,
+    $date-picker-color-icon,
+    // hover
+    $date-picker-background-hover,
+    // focus
+    $date-picker-color-focus,
+    $date-picker-border-focus,
+    // disable
+    $date-picker-background-disabled,
+    $date-picker-color-disabled,
+    $date-picker-border-disabled,
+    $date-picker-color-icon-disabled
+  );
+}
+
+// dropdown
+.frc-date-picker-dropdown.ant-picker-dropdown.frc-time-picker-dropdown {
+  .ant-picker-panel-container {
+    .ant-picker-time-panel {
+      margin-left: 0px;
+      padding-left: 0px;
+    }
+  }
+  &.frc-time-picker-dropdown-now-float {
+    .ant-picker-panel-container {
+      .ant-picker-panel {
+        .ant-picker-footer {
+          padding-left: 0px;
+          padding-bottom: 4px;
+          .ant-picker-ranges {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            .ant-picker-ok {
+              margin-left: 0px;
+            }
+          }
+        }
+      }
+      .ant-picker-panels + .ant-picker-footer {
+        .ant-picker-ranges {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          .ant-picker-ok {
+            margin-left: 0px;
+          }
+        }
+      }
+    }
+  }
+}

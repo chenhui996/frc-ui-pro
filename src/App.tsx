@@ -6,11 +6,13 @@ import React from 'react'
 // import RadioPage from './pages/RadioPage'
 // import CheckboxPage from './pages/CheckboxPage'
 // import SwitchPage from './pages/SwitchPage'
-import DatePickerPage from './pages/DataPickerPage'
+// import DatePickerPage from './pages/DataPickerPage'
+// import TimePickerPage from './pages/TimePickerPage'
+import ModalPage from './pages/ModalPage'
 
 function App() {
   return (
-    <div className="App" style={{paddingBottom: 500}}>
+    <div className="App" style={{ paddingBottom: 500 }}>
       {/* <ButtonPage /> */}
       {/* <InputPage /> */}
       {/* <InputNumber /> */}
@@ -18,7 +20,9 @@ function App() {
       {/* <RadioPage /> */}
       {/* <CheckboxPage /> */}
       {/* <SwitchPage /> */}
-      <DatePickerPage />
+      {/* <DatePickerPage /> */}
+      {/* <TimePickerPage /> */}
+      <ModalPage />
     </div>
   )
 }
