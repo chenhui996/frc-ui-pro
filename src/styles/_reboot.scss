@@ -5,35 +5,53 @@ body {
   font-weight: $font-weight-base !important;
   line-height: $line-height-base !important;
   color: $body-color !important;
+  color: #ccc !important;
   text-align: $body-text-align !important;
-  background-color: $body-bg !important; // 2
-  -webkit-text-size-adjust: 100% !important; // 3
-  -webkit-tap-highlight-color: rgba($new-data, 0) !important; // 4
-  padding: 20px !important;
+  // background-color: $body-bg !important; // 2
+  // -webkit-text-size-adjust: 100% !important; // 3
+  // -webkit-tap-highlight-color: rgba($new-data, 0) !important; // 4
+  // padding: 20px !important;
+  ul {
+    padding-inline-start: 20px;
+  }
+  .docs-story > div {
+    background: #101414;
+    margin: 0;
+    background-size: 50px 50px, 50px 50px, 10px 10px, 10px 10px !important;
+    background-position: 16px 16px, 16px 16px, 16px 16px, 16px 16px !important;
+    background-blend-mode: difference !important;
+    background-image: linear-gradient(
+        rgba(130, 130, 130, 0.2) 1px,
+        transparent 1px
+      ),
+      linear-gradient(90deg, rgba(130, 130, 130, 0.2) 1px, transparent 1px),
+      linear-gradient(rgba(130, 130, 130, 0.1) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(130, 130, 130, 0.1) 1px, transparent 1px) !important;
+  }
+  &.sb-main-padded.sb-show-main {
+    padding: 30px !important;
+    background-size: 50px 50px, 50px 50px, 10px 10px, 10px 10px !important;
+    background-position: 16px 16px, 16px 16px, 16px 16px, 16px 16px !important;
+    background-blend-mode: difference !important;
+    background-image: linear-gradient(
+        rgba(130, 130, 130, 0.2) 1px,
+        transparent 1px
+      ),
+      linear-gradient(90deg, rgba(130, 130, 130, 0.2) 1px, transparent 1px),
+      linear-gradient(rgba(130, 130, 130, 0.1) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(130, 130, 130, 0.1) 1px, transparent 1px) !important;
+  }
 }
 
-// ----------------------------------------------------------------
-
-// // Links
-// a {
-//   color: $link-color !important;
-//   text-decoration: $link-decoration !important;
-
-//   &:hover {
-//     color: $link-hover-color !important;
-//     text-decoration: $link-hover-decoration !important;
-//   }
-// }
-
-// ----------------------------------------------------------------
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color: $body-color !important;
+.sbdocs-wrapper {
+  background-size: 50px 50px, 50px 50px, 10px 10px, 10px 10px !important;
+  background-position: 16px 16px, 16px 16px, 16px 16px, 16px 16px !important;
+  background-blend-mode: difference !important;
+  background-image: linear-gradient(
+      rgba(130, 130, 130, 0.1) 1px,
+      transparent 1px
+    ),
+    linear-gradient(90deg, rgba(130, 130, 130, 0.1) 1px, transparent 1px),
+    linear-gradient(rgba(130, 130, 130, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(130, 130, 130, 0.05) 1px, transparent 1px) !important;
 }
-
-// ----------------------------------------------------------------

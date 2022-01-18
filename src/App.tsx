@@ -1,5 +1,5 @@
 import React from 'react'
-// import ButtonPage from './pages/ButtonPage'
+import ButtonPage from './pages/ButtonPage'
 // import InputPage from './pages/InputPage'
 // import InputNumber from './pages/InputNumberPage'
 // import SelectPage from './pages/SelectPage'
@@ -8,12 +8,12 @@ import React from 'react'
 // import SwitchPage from './pages/SwitchPage'
 // import DatePickerPage from './pages/DataPickerPage'
 // import TimePickerPage from './pages/TimePickerPage'
-import ModalPage from './pages/ModalPage'
+// import ModalPage from './pages/ModalPage'
 
 function App() {
   return (
     <div className="App" style={{ paddingBottom: 500 }}>
-      {/* <ButtonPage /> */}
+      <ButtonPage />
       {/* <InputPage /> */}
       {/* <InputNumber /> */}
       {/* <SelectPage /> */}
@@ -22,7 +22,7 @@ function App() {
       {/* <SwitchPage /> */}
       {/* <DatePickerPage /> */}
       {/* <TimePickerPage /> */}
-      <ModalPage />
+      {/* <ModalPage /> */}
     </div>
   )
 }
