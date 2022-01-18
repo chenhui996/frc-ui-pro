@@ -37,14 +37,9 @@ export const parameters = {
   },
 }
 
-const titleStyle: React.CSSProperties = {
-  color: '#FFEBC8',
-}
-
 export const decorators = [
   (Story) => (
     <div className="storybook-demo" style={{ margin: -10 }}>
-      {/* <h5 style={titleStyle}>组件演示</h5> */}
       <Story />
     </div>
   ),
