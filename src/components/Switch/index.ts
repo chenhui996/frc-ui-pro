@@ -1,4 +1,2 @@
-// import {FC} from 'react'
-import FRCSwitch from './switch'
-
-export default FRCSwitch
+import Switch from './switch-core'
+export default Switch

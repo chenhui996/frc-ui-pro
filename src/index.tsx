@@ -1,18 +1,14 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import './styles/index.scss';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+// import './index.css';
+import { default as Button } from './components/Button'
+import { default as Checkbox } from './components/Checkbox'
+import { default as DatePicker } from './components/DatePicker'
+import { default as Input } from './components/Input'
+import { default as InputNumber } from './components/InputNumber'
+import { default as Modal } from './components/Modal'
+import { default as Radio } from './components/Radio'
+import { default as Select } from './components/Select'
+import { default as Switch } from './components/Switch'
+import { default as TimePicker } from './components/TimePicker'
 
-ReactDOM.render(
-  // <React.StrictMode>
-    <App />,
-  // </React.StrictMode>,
-  document.getElementById('root')
-);
+export { Button, Checkbox, DatePicker, Input, InputNumber, Modal, Radio, Select, Switch, TimePicker }
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
