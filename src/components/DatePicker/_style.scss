@@ -42,7 +42,8 @@
       display: none;
     }
     &::after {
-      content: url("../../../public/close.svg");
+      // content: url("../../../public/close.svg");
+      content: url("../public/close.svg");
     }
   }
   @include date-picker-style(

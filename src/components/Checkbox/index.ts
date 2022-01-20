@@ -1,10 +1,9 @@
 import {FC} from 'react'
-import FRCCheckbox from './checkbox'
+import FRCCheckbox, {FrcCheckboxProps} from './checkbox'
 import FRCCheckboxGroup from './checkboxGroup'
-import {CheckboxProps} from 'antd/es/checkbox/Checkbox'
 import {CheckboxGroupProps} from 'antd/es/checkbox/Group'
 
-export type FRCCheckboxComponent = FC<CheckboxProps> & {
+export type FRCCheckboxComponent = FC<FrcCheckboxProps> & {
   Group: FC<CheckboxGroupProps>
 }
 
