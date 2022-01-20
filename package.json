@@ -1,11 +1,11 @@
 {
   "name": "frc-ui-pro-dev",
-  "version": "0.1.2",
+  "version": "0.1.10",
   "author": "chenhui996",
   "private": false,
-  "main": "dist/index.js",
-  "module": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "dist/src/index.js",
+  "module": "dist/src/index.js",
+  "types": "dist/src/index.d.ts",
   "license": "MIT",
   "keywords": [
     "Component",
@@ -43,11 +43,12 @@
   "scripts": {
     "start": "react-scripts start",
     "clean": "rimraf ./dist",
-    "build": "npm run clean && npm run build-ts && npm run build-css",
+    "build": "npm run clean && npm run build-ts && npm run build-css && npm run cp-public",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "build-ts": "tsc -p tsconfig.build.json",
-    "build-css": "node-sass ./src/styles/index.scss ./dist/index.css",
+    "build-css": "node-sass ./src/styles/index.scss ./dist/src/styles/global/index.css",
+    "cp-public": "cp -R ./public ./dist",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public",
     "prepublishOnly": "npm run build"
