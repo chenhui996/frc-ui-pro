@@ -1,0 +1,11 @@
+import FRCModal from './modal';
+import { Confirm, Info, Warning, Error } from './methods';
+import { Modal } from 'antd';
+var TransModal = FRCModal;
+TransModal.confirm = Confirm;
+TransModal.info = Info;
+TransModal.warning = Warning;
+TransModal.error = Error;
+TransModal.destroyAll = Modal.destroyAll;
+TransModal.useModal = Modal.useModal;
+export default TransModal;

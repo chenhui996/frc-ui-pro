@@ -5,14 +5,17 @@ body {
   font-weight: $font-weight-base !important;
   line-height: $line-height-base !important;
   color: $body-color !important;
-  color: #ccc !important;
+  color: $body-color !important;
   text-align: $body-text-align !important;
-  // background-color: $body-bg !important; // 2
+  background-color: $body-bg !important; // 2
   // -webkit-text-size-adjust: 100% !important; // 3
   // -webkit-tap-highlight-color: rgba($new-data, 0) !important; // 4
-  // padding: 20px !important;
+  padding: 20px !important;
   ul {
     padding-inline-start: 20px;
+  }
+  h3{
+    color: $body-color !important;
   }
   .docs-story > div {
     background: #101414;
