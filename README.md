@@ -15,7 +15,7 @@ Frc-ui-pro 是基于 Ant Design 设计体系，二次封装的 React UI 组件�
 ## 安装
 
 ```shell
-$npm install frc-ui-pro --save
+$npm install frc-ui-pro-dev --save
 ```
 
 ## 引入样式文件
