@@ -1,3 +1,9 @@
+.storybook-demo {
+  > .frc-switch {
+    margin: 8px 8px 8px 0;
+  }
+}
+
 .frc-switch.ant-switch {
   min-width: $switch-width;
   height: $switch-height;

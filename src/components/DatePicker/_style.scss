@@ -1,3 +1,7 @@
+.storybook-demo > .frc-date-picker-container {
+  margin: 8px 8px 8px 0;
+}
+
 .frc-date-picker-container {
   display: inline-block;
   vertical-align: top;
@@ -53,7 +57,10 @@
     $date-picker-color-icon,
     // hover
     $date-picker-background-hover,
+    $date-picker-color-hover,
+    $date-picker-border-hover,
     // focus
+    $date-picker-background-focus,
     $date-picker-color-focus,
     $date-picker-border-focus,
     // disable
@@ -271,7 +278,7 @@
           }
           .ant-picker-cell {
             .ant-picker-cell-inner {
-              width: auto;
+              width: 60px;
               height: auto;
             }
           }
@@ -283,6 +290,10 @@
         .ant-picker-content {
           width: 250px;
           height: 215px;
+        }
+        .ant-picker-cell-inner {
+          width: auto !important;
+          height: auto !important;
         }
       }
       // time
@@ -371,6 +382,8 @@
         .ant-picker-cell-inner {
           margin-left: 2px;
           margin-right: 2px;
+          width: 60px !important;
+          height: auto !important;
         }
       }
     }
@@ -421,6 +434,11 @@
           }
         }
       }
+    }
+    // disabled
+    .ant-picker-cell-disabled,
+    .ant-picker-time-panel-cell-disabled .ant-picker-time-panel-cell-inner {
+      color: $date-picker-color-disabled !important;
     }
   }
 }

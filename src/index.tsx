@@ -1,14 +1,15 @@
 // import './index.css';
-import { default as Button } from './components/Button'
-import { default as Checkbox } from './components/Checkbox'
-import { default as DatePicker } from './components/DatePicker'
-import { default as Input } from './components/Input'
-import { default as InputNumber } from './components/InputNumber'
-import { default as Modal } from './components/Modal'
-import { default as Radio } from './components/Radio'
-import { default as Select } from './components/Select'
-import { default as Switch } from './components/Switch'
-import { default as TimePicker } from './components/TimePicker'
-
-export { Button, Checkbox, DatePicker, Input, InputNumber, Modal, Radio, Select, Switch, TimePicker }
+export { default as Button } from './components/Button'
+export { default as Checkbox } from './components/Checkbox'
+export { default as DatePicker } from './components/DatePicker'
+export { default as Input } from './components/Input'
+export { default as InputNumber } from './components/InputNumber'
+export { default as Modal } from './components/Modal'
+export { default as Radio } from './components/Radio'
+export { default as Select } from './components/Select'
+export { default as Switch } from './components/Switch'
+export { default as TimePicker } from './components/TimePicker'
+export { default as Socket } from './components/Socket';
+export { default as Loading } from './components/loading';
+export { default as Error } from './components/Error';
 

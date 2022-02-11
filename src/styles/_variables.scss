@@ -248,7 +248,7 @@ $input-number-color:                       $input-search-color !default;
 $input-number-border:                      $input-search-border !default;
 
 // hover
-$input-number-background-hover:            $element-background !default;
+$input-number-background-hover:            $btn-hover !default;
 $input-number-color-hover:                 $input-search-color-hover !default;
 $input-number-border-hover:                $input-search-border-hover !default;
 
@@ -487,8 +487,11 @@ $date-picker-color-icon:                          $words-normal !default;
 
 // hover
 $date-picker-background-hover:                    $btn-hover !default;
+$date-picker-color-hover:                         $words-normal !default;
+$date-picker-border-hover:                        1px solid $basic-btn !default;
 
 // focus
+$date-picker-background-focus:                    $element-background !default;
 $date-picker-color-focus:                         $words-high-light !default;
 $date-picker-border-focus:                        1px solid $words-high-light !default;
 

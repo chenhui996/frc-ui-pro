@@ -1,5 +1,13 @@
+.storybook-demo {
+  > .frc-input-number {
+    margin: 8px 8px 8px 0;
+  }
+}
+
 // normal
-.frc-input-number.ant-input-number {
+.frc-input-number.ant-input-number,
+.frc-input-number.ant-input-number-affix-wrapper,
+.frc-input-number.ant-input-number-group-wrapper {
   // basic size
   @include input-number-style(
     // normal
@@ -101,30 +109,15 @@
   .ant-input-number-prefix {
     color: $words-normal;
     font-size: 12px;
+    margin-inline-end: 0px;
   }
 }
 
 // addonBefore and addonAfter
 .frc-input-number.ant-input-number-group-wrapper {
-  @include input-number-style(
-    // normal
-    $input-number-background,
-    $input-number-color,
-    $input-number-border,
-    // hover
-    $input-number-background-hover,
-    $input-number-color-hover,
-    $input-number-border-hover,
-    // focuse
-    $input-number-background-focus,
-    $input-number-color-focus,
-    $input-number-border-focus,
-    // disabled
-    $input-number-background-disabled,
-    $input-number-color-disabled,
-    $input-number-border-disabled
-  );
-  .ant-input-number {
+  .ant-input-number,
+  .ant-input-number-affix-wrapper {
+    padding-inline-start: 0px;
     @include input-number-style(
       // normal
       none,
@@ -146,6 +139,14 @@
     .ant-input-number-input {
       padding: 0;
     }
+    .ant-input-number-prefix {
+      color: $words-normal;
+      font-size: 12px;
+      margin-inline-end: 0px;
+      margin-right: 2px;
+      margin-left: -2px;
+      z-index: 10;
+    }
   }
   border-radius: 2px;
   line-height: $input-number-line-height;
@@ -153,6 +154,7 @@
     display: inline-flex;
     vertical-align: top;
     .ant-input-number-group-addon {
+      width: auto;
       min-width: 22px;
       background-color: transparent;
       border: none;
@@ -170,16 +172,32 @@
 // ----------------------------------------------------------------
 
 // no border
-.frc-input-number-no-border{
+.frc-input-number-no-border {
   border: none !important;
 }
 
 // normal working color
-.frc-input-number.frc-input-number-enter{
+.frc-input-number.frc-input-number-enter {
   color: $words-normal !important;
 }
 
 // normal stop working color
-.frc-input-number.frc-input-number-active-stop{
+.frc-input-number.frc-input-number-active-stop {
   color: $words-supporting !important;
+}
+
+// ----------------------------------------------------------------
+
+// clear style -> antd
+.frc-input-number.ant-input-number-affix-wrapper:not(.ant-input-number-affix-wrapper-disabled) {
+  &:hover {
+    border-color: $basic-btn;
+  }
+}
+
+.frc-input-number
+  .ant-input-number-group-addon
+  .ant-select.ant-select-single:not(.ant-select-customize-input)
+  .ant-select-selector {
+  border: none !important;
 }

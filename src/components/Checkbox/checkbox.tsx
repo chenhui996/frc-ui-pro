@@ -15,6 +15,10 @@ export interface BaseCheckboxProps {
   indeterminate?: boolean
   /** 变化时回调函数 */
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void
+  /** 移除焦点 */
+  blur?: () => void
+  /** 获取焦点 */
+  focus?: () => void
 }
 
 export type FrcCheckboxProps = BaseCheckboxProps & CheckboxProps

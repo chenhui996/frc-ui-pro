@@ -1,7 +1,17 @@
+.storybook-demo {
+  > .frc-input {
+    margin: 8px 8px 8px 0;
+    &.frc-input-text-area {
+      margin: 0;
+    }
+  }
+}
+
 .frc-input.ant-input,
+.frc-input.frc-input-text-area .ant-input,
 .frc-input.ant-input-affix-wrapper,
 .frc-input.ant-input-search {
-  width: 120px;
+  // width: 120px;
   box-sizing: border-box;
   position: relative;
   cursor: pointer;
@@ -165,7 +175,6 @@
       line-height: 0;
       color: $words-disable;
     }
-    
   }
 
   .ant-input-affix-wrapper-disabled + .ant-input-group-addon {
@@ -227,6 +236,26 @@
   align-items: center;
   transform: translateY(-50%);
   right: 6px;
+  .ant-input-password-icon {
+    @include input-style(
+      // normal
+      transparent,
+      $input-color-icon-only,
+      none,
+      // hover
+      transparent,
+      $input-color-icon-only-hover,
+      none,
+      // focus
+      transparent,
+      $input-color-icon-only-focus,
+      none,
+      // disabled
+      transparent,
+      $input-color-icon-only-disabled,
+      none
+    );
+  }
 }
 
 // normal working
@@ -253,4 +282,26 @@
 
 .frc-input-search-focus {
   border: $input-border-focus;
+}
+
+// showCount
+.frc-input.ant-input-textarea-show-count {
+  @include input-style(
+    // normal
+    transparent,
+    $input-color,
+    none,
+    // hover
+    transparent,
+    $input-color,
+    none,
+    // focus
+    transparent,
+    $words-normal,
+    none,
+    // disabled
+    transparent,
+    $input-color-disabled,
+    none
+  );
 }

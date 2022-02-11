@@ -1,8 +1,10 @@
-// import { FC } from 'react'
+import { FC } from 'react'
 import classNames from 'classnames'
 import Modal, { ModalFuncProps } from 'antd/es/modal'
 
-const Warning: (e: ModalFuncProps) => void = (props) => {
+import { FRCMethodProps } from './confirm'
+
+export const Warning: FC<FRCMethodProps> = (props) => {
   const {
     className,
     cancelButtonProps,
@@ -34,7 +36,22 @@ const Warning: (e: ModalFuncProps) => void = (props) => {
   }
 
   // main
-  return Modal.warning(options)
+  return <>{Modal.warning(options)}</>
+}
+
+// normal
+Warning.defaultProps = {
+  autoFocusButton: 'ok',
+  cancelText: '取消',
+  centered: false,
+  closable: false,
+  keyboard: true,
+  mask: true,
+  maskClosable: false,
+  okText: '确定',
+  okType: 'primary',
+  width: 416,
+  zIndex: 1000
 }
 
 export default Warning

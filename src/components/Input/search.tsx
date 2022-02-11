@@ -1,16 +1,19 @@
-import React, {FC, useState} from 'react'
+import React, { FC, useState } from 'react'
 import classNames from 'classnames'
-import Input, {SearchProps} from 'antd/es/input'
-import {FiSearch} from 'react-icons/fi'
+import Input, { SearchProps } from 'antd/es/input'
+import { FiSearch } from 'react-icons/fi'
 
-const {Search} = Input
-
-type InputType = 'default' | 'icon-only'
-interface BaseInputProps {
-  type?: InputType
+const { Search } = Input
+export interface BaseInputProps {
+  /** 是否有确认按钮，可设为按钮文字。该属性会与 addonAfter 冲突。 */
+  enterButton?: boolean | React.ReactNode
+  /** 加载中 */
+  loading?: boolean
+  /** 点击搜索图标、清除图标，或按下回车键时的回调 */
+  onSearch?: (value: string) => void
 }
 
-export type FRCSearchProps = SearchProps & BaseInputProps
+export type FRCSearchProps = BaseInputProps & SearchProps
 
 export const FRCSearch: FC<FRCSearchProps> = (props) => {
   const [keyDownEnter, setKeyDownEnter] = useState(false)
@@ -20,7 +23,6 @@ export const FRCSearch: FC<FRCSearchProps> = (props) => {
     bordered,
     prefix,
     loading,
-    type,
     value,
     onChange,
     onKeyDown,
@@ -31,7 +33,6 @@ export const FRCSearch: FC<FRCSearchProps> = (props) => {
     [`frc-input-no-border`]: !bordered,
     [`frc-input-enter`]: keyDownEnter,
     [`frc-input-prefix`]: prefix,
-    [`frc-input-${type}`]: type,
     [`frc-input-search-loading`]: loading,
   })
 
@@ -39,9 +40,8 @@ export const FRCSearch: FC<FRCSearchProps> = (props) => {
     className: classes,
     ...restProps,
     bordered,
-    prefix: !prefix && type === 'icon-only' ? <FiSearch /> : prefix,
+    prefix,
     loading,
-    type,
     value,
     onKeyDown: (e: any) => {
       onKeyDown && onKeyDown(e)
@@ -65,6 +65,8 @@ export const FRCSearch: FC<FRCSearchProps> = (props) => {
 FRCSearch.defaultProps = {
   bordered: true,
   enterButton: <FiSearch />,
+  loading: false,
+  type: 'default'
 }
 
 export default FRCSearch

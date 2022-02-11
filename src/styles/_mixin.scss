@@ -26,8 +26,8 @@
   color: $color;
   background: $background;
   &:hover {
-    color: $hover-color;
-    background: $hover-background;
+    color: $hover-color !important;
+    background: $hover-background !important;
   }
   &:active,
   &.active {
@@ -39,7 +39,8 @@
     background: $background;
   }
   &:disabled,
-  &.disabled {
+  &.disabled,
+  &.ant-btn[disabled] {
     * {
       cursor: not-allowed !important;
       color: $disable-color !important;
@@ -85,7 +86,9 @@
   // normal style -> link clear icon style
   .anticon.ant-input-clear-icon-has-suffix,
   &.anticon.ant-input-clear-icon-has-suffix,
-  .anticon.ant-input-clear-icon {
+  .anticon.ant-input-clear-icon,
+  &.ant-input-textarea-show-count::after,
+  .ant-input-show-count-suffix {
     color: $color;
     font-size: 10px;
   }
@@ -108,7 +111,8 @@
     .anticon.ant-input-clear-icon-has-suffix,
     &.anticon.ant-input-clear-icon-has-suffix,
     .anticon.ant-input-clear-icon,
-    .ant-input-group-addon .ant-input-search-button {
+    .ant-input-group-addon .ant-input-search-button,
+    .ant-input-show-count-suffix {
       color: $hover-color;
     }
   }
@@ -133,11 +137,12 @@
     outline: 0;
   }
 
-  // disabled
+  // // disabled
+  &.disabled,
+  &[disabled],
   &.ant-input-affix-wrapper-disabled,
   .ant-input-search .ant-input-affix-wrapper-disabled,
-  &.disabled,
-  &[disabled] {
+  &.frc-input-text-area-disabled {
     .ant-input {
       cursor: not-allowed !important;
     }
@@ -152,6 +157,22 @@
     // deep
     ::-webkit-input-placeholder {
       color: $disabled-color;
+    }
+    // suffix icon
+    .ant-input-suffix,
+    .ant-input-prefix {
+      cursor: not-allowed !important;
+      color: $disabled-color !important;
+      .ant-input-password-icon,
+      .ant-input-show-count-suffix {
+        cursor: not-allowed !important;
+        color: $disabled-color !important;
+      }
+    }
+    // textArea
+    &::after {
+      cursor: not-allowed !important;
+      color: $disabled-color !important;
     }
   }
 }
@@ -177,24 +198,36 @@
   $disabled-color,
   $disabled-border
 ) {
+  // normal
   background: $background;
   color: $color;
   border: $border;
+
+  // hover
   &:hover {
     background: $hover-background;
     color: $hover-color;
     border: $hover-border;
   }
+
+  // focus
   &:focus,
   &.ant-input-number-focused,
   &.ant-input-number-affix-wrapper-focused,
-  &.ant-select-focused {
-    background: $focus-background;
+  &.ant-select-focused,
+  &.frc-input-number-focus {
+    z-index: 10 !important;
+    background: $focus-background !important;
     color: $focus-color !important;
-    border: $focus-border;
+    border: $focus-border !important;
     outline: 0;
     box-shadow: none;
+    &.frc-input-number-no-border {
+      border: none !important;
+    }
   }
+
+  // disabled
   &:disabled,
   &.frc-input-number-disabled,
   &.ant-select-disabled {
@@ -205,11 +238,28 @@
     .ant-input-number-group-addon,
     .ant-select-selector,
     .ant-select-selection-placeholder,
-    .ant-select-arrow {
+    .ant-select-arrow,
+    &.frc-input-number-no-border {
       color: $disabled-color !important;
       background: $disabled-background !important;
-      border: none;
+      border: none !important;
       cursor: not-allowed !important;
+    }
+
+    &.ant-select-multiple{
+      .ant-select-selection-item{
+        padding-inline-end: 6px !important;
+      }
+    }
+
+
+    // follow
+    &::-webkit-input-placeholder {
+      color: $disabled-color;
+    }
+    // deep
+    ::-webkit-input-placeholder {
+      color: $disabled-color;
     }
   }
 }
@@ -570,7 +620,10 @@
   $color-icon,
   // hover
   $hover-background,
+  $hover-color,
+  $hover-border,
   // focus
+  $focus-background,
   $focus-color,
   $focus-border,
   // disable
@@ -600,6 +653,8 @@
   //hover
   &:hover {
     background: $hover-background;
+    color: $hover-color;
+    border: $hover-border;
   }
   // focus
   &:focus,
@@ -607,6 +662,7 @@
     box-shadow: none;
     outline: 0;
     border: $focus-border;
+    background: $focus-background;
     input {
       color: $focus-color;
     }

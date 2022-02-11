@@ -1,0 +1,30 @@
+.storybook-demo .frc-error-wrapper .frc-btn {
+  margin: 0;
+}
+
+.frc-error-wrapper {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  padding-top: 200px;
+
+  .frc-error {
+    width: 300px;
+    display: inline-block;
+    padding: 10px;
+    @include modal-style(
+      $modal-background,
+      $modal-color,
+      $modal-border,
+      $modal-border-radius,
+      $modal-font-size-text,
+      $modal-font-weight
+    );
+  }
+
+  .frc-error-title {
+    font-size: $modal-font-size-title;
+    margin-bottom: 20px;
+    color: $words-high-light;
+  }
+}

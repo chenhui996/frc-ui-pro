@@ -1,8 +1,10 @@
-// import { FC } from 'react'
+import { FC } from 'react'
 import classNames from 'classnames'
 import Modal, { ModalFuncProps } from 'antd/es/modal'
 
-const Confirm: (e: ModalFuncProps) => void = (props) => {
+import { FRCMethodProps } from './confirm'
+
+export const Success: FC<FRCMethodProps> = (props) => {
   const {
     className,
     cancelButtonProps,
@@ -34,7 +36,22 @@ const Confirm: (e: ModalFuncProps) => void = (props) => {
   }
 
   // main
-  return Modal.confirm(options)
+  return <>{Modal.success(options)}</>
 }
 
-export default Confirm
+// normal
+Success.defaultProps = {
+  autoFocusButton: 'ok',
+  cancelText: '取消',
+  centered: false,
+  closable: false,
+  keyboard: true,
+  mask: true,
+  maskClosable: false,
+  okText: '确定',
+  okType: 'primary',
+  width: 416,
+  zIndex: 1000
+}
+
+export default Success

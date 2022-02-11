@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
 import classNames from 'classnames'
-import AntdButton, { ButtonProps } from 'antd/es/button'
+import {Button as AntdButton,  ButtonProps } from 'antd'
 
 import { CaretRightOutlined } from '@ant-design/icons'
 
@@ -58,6 +58,7 @@ export const Button: FC<FRCButtonProps> = (props) => {
   const options = {
     className: classes,
     loading,
+    href,
     ...restProps,
   }
 
