@@ -1,7 +1,7 @@
-import React, {FC, useRef, useEffect, useState} from 'react'
+import React, { FC, useRef, useEffect, useState } from 'react'
 import classNames from 'classnames'
-import {TimePicker} from 'antd'
-import {TimeRangePickerProps} from 'antd/es/time-picker'
+import { TimePicker } from 'antd'
+import { TimeRangePickerProps } from 'antd/es/time-picker'
 import ReactDOM from 'react-dom'
 import {
   BackwardOutlined,
@@ -13,16 +13,20 @@ import {
 import 'moment/locale/zh-cn'
 import locale from 'antd/es/date-picker/locale/zh_CN'
 
-const {RangePicker} = TimePicker
+const { RangePicker } = TimePicker
 
 const FORMAT_COLUMNS = ['HH:mm', 'HH', 'mm', 'ss', 'mm A', 'mm a'];
 
 interface FRCRangeTimePickerCustomProps {
+  /** 前缀图标 */
   prefixIcon?: React.ReactNode
+  /** 显示此刻 */
   showTime?: boolean
+  /** 始末时间是否自动排序 */
+  order?: number
 }
 
-export type FRCRangeTimePickerProps = TimeRangePickerProps & FRCRangeTimePickerCustomProps
+export type FRCRangeTimePickerProps = FRCRangeTimePickerCustomProps & TimeRangePickerProps
 
 const addPrefixNode = (nodes: any, prefixIcon: React.ReactNode) => {
   const addNode = document.createElement('div')
@@ -127,7 +131,7 @@ FRCRangeTimePicker.defaultProps = {
   prevIcon: <CaretLeftOutlined />,
   nextIcon: <CaretRightOutlined />,
   locale: locale,
-  separator: <span style={{fontSize: 14}}>～</span>,
+  separator: <span style={{ fontSize: 14 }}>～</span>,
 }
 
 export default FRCRangeTimePicker

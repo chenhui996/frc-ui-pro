@@ -1,28 +1,22 @@
-// import FRCSelect from './select'
-// export default FRCSelect
+import { FC } from 'react'
+import FRCSelect, { FRCSelectProps } from './select'
+import FRCSelectOption, { FRCSelectOptionProps } from './option'
+import OptGroup, { FRCSelectOptGroupProps } from './optGroup'
 
-import {FC} from 'react'
-import FRCSelect, {FRCSelectProps} from './select'
-import Select, {OptionProps} from 'antd/es/select'
+import Select from 'antd/es/select'
 
-const {OptGroup, Option} = Select
-
-interface OptgroupProps {
-  key?: string
-  label?: string | React.ReactNode
-  children: React.ReactNode
-//   [prop: string]: any
-}
+const { OptGroup: AntdOptGroup } = Select
 
 export type FrcSelectComponent = FC<FRCSelectProps> & {
-  Option: FC<OptionProps>
-} & {
-  OptGroup: FC<OptgroupProps>
+  Option: FC<FRCSelectOptionProps>
+  OptGroup: FC<FRCSelectOptGroupProps>
+  OptGroupApi: FC<FRCSelectOptGroupProps>
 }
 
 const TransSelect = FRCSelect as FrcSelectComponent
 
-TransSelect.Option = Option
-TransSelect.OptGroup = OptGroup
+TransSelect.Option = FRCSelectOption
+TransSelect.OptGroup = AntdOptGroup
+TransSelect.OptGroupApi = OptGroup
 
 export default TransSelect

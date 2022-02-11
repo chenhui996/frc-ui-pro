@@ -11,9 +11,16 @@
     // close icon
     .ant-modal-close {
       .ant-modal-close-x {
+        color: $modal-color;
         height: 24px;
         width: 24px;
         line-height: $modal-line-height;
+        span {
+          vertical-align: 0;
+          svg {
+            font-size: 12px;
+          }
+        }
       }
     }
     // header

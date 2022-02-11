@@ -1,24 +1,29 @@
 import { FC } from 'react'
-import FRCModal, { FRCModalProps } from './modal';
-import { Confirm, Info, Warning, Error } from './methods';
-import { Modal, ModalFuncProps } from 'antd'
+import Modal, { FRCModalProps } from './modal';
+import { Confirm, Info, Warning, Error, Success } from './methods';
+import { Modal as AntdModal, ModalFuncProps } from 'antd'
+import { FRCMethodProps } from './methods/confirm'
+
 
 export type FRCModalComponent = FC<FRCModalProps> & {
-    confirm: (e: ModalFuncProps) => void;
-    info: (e: ModalFuncProps) => void;
-    warning: (e: ModalFuncProps) => void;
-    error: (e: ModalFuncProps) => void;
+    confirm: FC<FRCMethodProps>;
+    info: FC<FRCMethodProps>;
+    warning: FC<FRCMethodProps>;
+    success: FC<FRCMethodProps>;
+    error: FC<FRCMethodProps>;
     destroyAll: () => void;
-    useModal: () => void;
+    // useModal: () => void;
 }
 
-const TransModal = FRCModal as FRCModalComponent
+
+const TransModal = Modal as FRCModalComponent
 TransModal.confirm = Confirm
 TransModal.info = Info
 TransModal.warning = Warning
+TransModal.success = Success
 TransModal.error = Error
-TransModal.destroyAll = Modal.destroyAll
-TransModal.useModal = Modal.useModal
+TransModal.destroyAll = AntdModal.destroyAll
+// TransModal.useModal = useModalTest
 
 
 export default TransModal

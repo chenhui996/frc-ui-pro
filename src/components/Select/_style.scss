@@ -1,9 +1,20 @@
+.storybook-demo {
+  > .frc-select,
+  > .frc-select-container {
+    margin: 8px 8px 8px 0;
+  }
+}
+
 .frc-select-container {
   display: inline-block;
   vertical-align: top;
+  // width: 100%;
+  min-width: 120px;
 }
 
-.frc-select.ant-select {
+.frc-select.ant-select.ant-select-single,
+.frc-select.ant-select.ant-select-multiple {
+  min-width: 120px;
   @include input-number-style(
     // normal
     $select-background,
@@ -30,6 +41,7 @@
   }
   .ant-select-selector {
     padding: $select-padding;
+    margin-right: 14px;
     .ant-select-selection-search {
       left: 4px;
     }
@@ -126,7 +138,7 @@
   .ant-select-item-group {
     padding-top: 8px;
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       border-color: #253330;
       border-top-style: solid;
